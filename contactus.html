@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Mediaquery CSS -->
+    <link rel="stylesheet" href="./mediaquery.css">
+    <!-- Font Awesome CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Jquery Js Link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./jquery-3.6.0.js "></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            /* #cdcfdb
+                #9A73E0 */
+        }
+
+        body {
+            background-color: #9A73E0;
+        }
+
+        .container1 {
+            width: 100%;
+            height: 70vh;
+            background-color: #171717;
+            clip-path: polygon(0% 0, 100% 0%, 100% 60%, 0% 100%);
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: -1;
+        }
+
+        .contactus {
+            margin: 70px auto;
+            width: 80%;
+            min-height: 100vh;
+            background-color: transparent;
+            z-index: 999;
+            border-radius: 5px;
+            display: flex;
+            color: #ffffff;
+            position: relative;
+            background: linear-gradient(135deg, rgba(55, 39, 80, 0.575), rgba(55, 39, 80, 0.575));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+        }
+
+        .contactus .socialgets {
+
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            left: 0px;
+            bottom: 0%;
+            display: flex;
+
+        }
+
+        .left {
+            width: 60%;
+            height: 100%;
+
+
+
+        }
+
+        .right {
+
+            width: 40%;
+            height: 100%;
+            /* background: url('capture.png'); */
+            z-index: 111;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            overflow: hidden;
+        }
+
+        .right iframe {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .heading {
+            margin: 40px;
+        }
+
+
+
+        .heading p {
+            font-size: .9rem;
+            font-weight: lighter !important;
+
+        }
+
+        .heading h2 {
+            font-size: 2.5rem;
+            color: #9A73E0;
+            margin-bottom: 10px;
+
+        }
+
+        form {
+            margin: 40px 0 0 0;
+        }
+
+        form input {
+            width: 75%;
+            height: 1.5rem;
+            margin: 30px 40px;
+            color: #ffffff;
+            display: block;
+            /* padding: 0 20px; */
+        }
+
+
+        .contacticons {
+            margin: 40px;
+
+        }
+
+        .contacticons1,
+        .contacticons2,
+        .contacticons3 {
+            display: flex;
+            align-items: center;
+            font-size: .8rem;
+            color: #cdcfdb;
+            margin-top: 10px;
+        }
+
+        .contacticons1 div,
+        .contacticons2 div,
+        .contacticons3 div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 30px;
+            min-height: 30px;
+            border-radius: 50%;
+            border: 1px solid #cdcfdb;
+            margin-right: 10px;
+            color: #cdcfdb;
+            cursor: pointer;
+            font-size: 1rem;
+
+        }
+
+        .contacticons1 div {
+            color: #ffffff;
+            border: none;
+            background: linear-gradient(to bottom right, #24B8C7, #0D479E);
+        }
+
+        .contacticons2 div {
+            color: #9D0001;
+            border: none;
+            background-color: white;
+
+        }
+
+        .contacticons3 div {
+            color: #ffffff;
+            background-color: #F27A00;
+            border: 1px solid #F27A00;
+
+        }
+
+        .text {
+            border: none;
+            border-bottom: 1px solid#cdcfdb;
+            outline: none;
+
+            background: none;
+        }
+
+        .sub {
+            color: #171717;
+            margin-top: 5px;
+            width: 75%;
+            height: 2rem;
+            font-weight: bolder;
+            border: none;
+            outline: none;
+            position: relative;
+            margin: 0 40px;
+            transition: .4s;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, .5);
+            background-color: #9A73E0;
+            overflow: hidden;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .sub span:nth-child(1) {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #ffffff);
+            animation: animate1 2s linear infinite;
+        }
+
+        @keyframes animate1 {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .sub span:nth-child(2) {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, #ffffff);
+            animation: animate2 2s linear infinite;
+            animation-delay: 1s;
+
+        }
+
+        @keyframes animate2 {
+            0% {
+                transform: translatey(-100%);
+            }
+
+            100% {
+                transform: translatey(100%);
+            }
+        }
+
+        .sub span:nth-child(3) {
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to left, transparent, #ffffff);
+            animation: animate3 2s linear infinite;
+
+        }
+
+        @keyframes animate3 {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .sub span:nth-child(4) {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to top, transparent, #ffffff);
+            animation: animate4 2s linear infinite;
+            animation-delay: 1s;
+
+        }
+
+        @keyframes animate4 {
+            0% {
+                transform: translatey(100%);
+            }
+
+            100% {
+                transform: translatey(-100%);
+            }
+        }
+
+        /* .sub:hover {
+                background-color: #9A73E0;
+                color: rgb(255, 255, 255);
+            } */
+
+
+
+        .socialgets {
+
+            display: block;
+            text-align: center;
+            font-size: 1.6rem;
+
+            background: linear-gradient(135deg, #2a015046, #2a015046);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            /* border: 2px solid #17171771; */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0%;
+            overflow: hidden;
+
+        }
+
+        .socialgets a {
+            color: #ffffff;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .socialgets a i {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .fb {
+            background: linear-gradient(to right bottom, #15A2F0, #0160D6);
+
+        }
+
+        .insta {
+            background: linear-gradient(to right bottom, #543DD4, #B42492, #DF1E4A, #EF8445, #F2B750);
+
+        }
+
+        .yt i {
+            color: #F20000;
+
+        }
+
+        .yt {
+            background-color: white;
+        }
+
+        .twt {
+            color: white;
+            background-color: #1C98E5;
+        }
+
+        ::placeholder {
+            color: rgb(168, 168, 168);
+        }
+
+        @media screen and (max-width:768px) {
+
+
+            .contacticons,
+            .contacticons1,
+            .contacticons2,
+            .contacticons3 {
+                margin-top: 10px;
+
+            }
+
+            .contactus {
+                display: block;
+            }
+
+            .right {
+                height: 100vh;
+                width: 100%;
+                border-top-right-radius: 0%;
+            }
+
+            .right iframe {
+                height: 100vh;
+                width: 100%;
+                border-top-right-radius: 0%;
+                border-bottom-left-radius: 20px
+            }
+
+            .left {
+                width: 100%;
+            }
+
+        }
+
+        @media screen and (max-width:550px) {
+
+
+            form input {
+                width: 85%;
+            }
+
+            .text {
+                margin: 20px 20px;
+            }
+
+            .sub {
+                margin: 20px;
+                width: 85%;
+
+            }
+
+            .heading {
+                margin: 20px;
+            }
+        }
+
+        @media screen and (max-width:425px) {
+            .contactus {
+                width: 100%;
+                margin: 70 0;
+            }
+
+            .heading h2 {
+                font-size: 2.2rem;
+            }
+
+            .contacticons {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="center">
+        <div class="ring"></div>
+        <span>loading...</span>
+    </div>
+    <!-- nav bar start -->
+    <nav>
+        <div class="main_left_por">
+            <div id="searchbar" class="search-bar">
+                <input placeholder="search in zap mart" type="text">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="searchboxclose" id="searchclose"><i class="fas fa-times"></i></div>
+            </div>
+            <div id="portion" class="portion_left ">
+
+                <div class="search design" id="click_search">
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <div class="location">
+                    <div><i class="fas fa-location-dot"></i></div>
+                    <div>
+                        <div class="sm">Set Your</div>
+                        <div class="lg">Location</div>
+                    </div>
+                </div>
+
+                <div class="language langcurrency design">
+                    <select>
+                        <option>ENG</option>
+                        <option>ENG</option>
+                        <option>urdu</option>
+                        <option>ENG</option>
+                    </select>
+                </div>
+
+                <div class="currency langcurrency design">
+                    <select>
+                        <option>USD</option>
+                        <option>pkr</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="portion_center">
+            <a href="./index.html">
+                <h1>zap mart</h1>
+            </a>
+
+        </div>
+        <div class="portion_right">
+            <div class="live design">
+                <p>live</p>
+                <div class="indicator"></div>
+            </div>
+            <div class="account design ">
+                <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
+
+            </div>
+            <div class="heart design">
+                <i class="fas fa-heart"></i>
+
+            </div>
+            <div class="bag design">
+                <i class="fas fa-shopping-bag"></i>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- nav bar end -->
+
+
+    <div class="sticky_cont">
+        <!-- second header start -->
+
+        <header>
+            <div class="logo">
+                <a href="./index.html">
+                    <h1>zap mart</h1>
+                </a>
+
+            </div>
+
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li class="products" id="prd">
+                    <a href="./product.html" class="before_pro">Products</a> <i class="fa-solid fa-angle-down"></i>
+                    <div class="drp-cont" id="drp-box">
+                        <ul>
+                            <li><a href="./category_mob.html" class="drp-items">Tablets & Mobiles</a></li>
+                            <li><a href="./category_com.html" class="drp-items">Computer Accessories</a></li>
+                            <li><a href="./category_watch.html" class="drp-items">Watch Collections</a></li>
+                            <li><a href="./category_speak.html" class="drp-items">Portable Speakers</a></li>
+                            <li><a href="./category_laptop.html" class="drp-items">Gaming Laptops</a></li>
+                            <li><a href="./category_camera.html" class="drp-items">Outstands Cameras</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="./contactus.html" class="active1">Contact Us</a></li>
+            </ul>
+            <div class="portion_right">
+                <div class="account design ">
+                    <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="heart design">
+                    <i class="fas fa-heart"></i>
+
+                </div>
+                <div class="bag design">
+                    <i class="fas fa-shopping-bag"></i>
+
+                </div>
+                <div class="design" id="bars">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- second navbar end -->
+        <!-- responsive navbar -->
+
+        <div class="responsive_bar" id="responsive_bar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li class="res_pro" id="res_prd">
+                    <div class="pro_flex">Products <i class="fa-solid fa-angle-down"></i></div>
+                    <div class="res-drp-cont">
+                        <ul id="res-drp-box" class="ul">
+                            <li><a href="./category_mob.html" class="res-drp-items">Talets & Mobile</a></li>
+                            <li><a href="./category_com.html" class="res-drp-items">Computer Accessories</a></li>
+                            <li><a href="./category_watch.html" class="res-drp-items">Watch Collections</a></li>
+                            <li><a href="./category_speak.html" class="res-drp-items">Portable Speakers</a></li>
+                            <li><a href="./category_laptop.html" class="res-drp-items">Gaming Laptops</a></li>
+                            <li><a href="./category_camera.html" class="res-drp-items">Outstands Cameras</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#" class="con home">Contact Us</a></li>
+            </ul>
+            <div class="search-cont">
+                <p>whats your looking for ?</p>
+                <input type="search" placeholder="search in zap mart">
+                <button type="submit">Search &nbsp; <i class="fas fa-search"></i> </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1">
+
+    </div>
+    <div class="contactus">
+        <div class="socialgets">
+            <div><a href="https://www.facebook.com/" class="fb"><i class="fab fa-facebook-f "></i></a></div>
+
+            <div><a href="https://www.instagram.com/" class="insta"><i class="fab fa-instagram "></i></a></div>
+
+            <div><a href="https://www.youtube.com/" class="yt"><i class="fab fa-youtube"></i></a></div>
+
+            <div><a href="https://www.twitter.com/" class="twt"><i class="fab fa-twitter "></i></a></div>
+        </div>
+        <div class="left">
+            <div class="heading">
+                <h2>Contact Us</h2>
+                <p>Hi sir, nice to meet you. Please tell me how can i help you sir?</p>
+            </div>
+            <form>
+                <input class="text" type="text" placeholder="Your Name" id="your">
+                <input class="text" type="text" placeholder="Your Email">
+                <input class="msg text" type="text" placeholder="Message Me">
+                <button type="button" class="sub" onclick="name()"
+                    id="btn"><span></span><span></span><span></span><span></span> Submit
+                </button>
+            </form>
+            <div class="contacticons">
+                <div class="contacticons1">
+                    <div><i class="fas fa-phone"></i></div> 92+ 3170504298
+                </div>
+                <div class="contacticons2">
+                    <div><i class="fas fa-envelope"></i></div>zapmart@gmail.com
+                </div>
+                <div class="contacticons3">
+                    <div><i class="fas fa-location-dot"></i></div>
+                    Defence Housing Society, Lahore Cantt., Punjab
+                </div>
+
+            </div>
+        </div>
+        <div class="right">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d115808.80230965852!2d67.06626560000001!3d24.897126399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1654970449820!5m2!1sen!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer class="first_footer">
+        <div class="container">
+            <div>
+                <h3>Get 50% Discount on sign up bonus</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, sed.</p>
+            </div>
+            <div class="footersearch"><input type="text" placeholder="Enter Your Email"><button>sign up</button></div>
+        </div>
+    </footer>
+
+    <div class="footer">
+        <div class="getintouch">
+            <div class="head">Get In Touch</div>
+            <div>
+                <i class="fab fa-youtube "></i>
+                <i class="fab fa-facebook "></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-google-plus"></i>
+            </div>
+        </div>
+
+        <!-- footer list 1 & 2 -->
+
+        <div class="footerlinks">
+            <div class="footerlist12">
+                <div class="footer1">
+                    <ul>
+                        <li class="action">LINKS</li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./product.html">Products</a></li>
+                        <li><a href="./contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer2">
+                    <ul>
+                        <li class="action">RECOMMANDED</li>
+                        <li><a href="./category_camera.html">Electronic Cameras</a></li>
+                        <li><a href="./category_camera.html">Electronic Cameras</a></li>
+                        <li><a href="./category_mob.html">Mobile Gadgets</a></li>
+                        <li><a href="./category_com.html">Computer Gadgets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- footer list 3 & 4 -->
+            <div class="footerlist34">
+                <div class="footer3">
+                    <ul>
+                        <li class="action">CONTACT</li>
+                        <li><a href="mailto:m.taha10045@gmail.com">Contact via Mail</a></li>
+                        <li><a href="mailto:m.taha10045@gmail.com">Contact via Mail</a></li>
+
+                        <li><a href="tel:03224116386">Helpline no2.</a></li>
+                        <li><a href="tel:03224116386">Helpline no2.</a></li>
+                    </ul>
+                </div>
+                <div class="footer4">
+                    <ul>
+                        <li class="action">SOCIAL</li>
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/feed/">Linked-In</a></li>
+                        <li><a href="https://www.youtube.com">Youtube</a></li>
+                        <li><a href="https://twitter.com/login">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2022 <a href="#">ZAP MART</a> All Rights Reserved</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btn').onclick = taha;
+        function taha() {
+            var name = document.getElementById('your').value;
+            if (name === "") {
+                alert("Plaese Fill Properly");
+            }
+            else {
+                alert(name);
+            }
+        }
+
+    </script>
+
+</body>
+<!-- js file  -->
+<script src="./logic.js"></script>
+
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Mediaquery CSS -->
+    <link rel="stylesheet" href="./mediaquery.css">
+    <!-- Font Awesome CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Jquery Js Link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./jquery-3.6.0.js "></script>
+    <style>
+        @media screen and (max-width: 1366px) {
+            .f-col-card {
+                height: 57vh !important;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .f-col-card {
+                height: 48vh !important;
+            }
+        }
+
+        @media screen and (max-width: 930px) {
+            .f-col-card {
+                height: 73vh !important;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .f-col-card {
+                height: 57vh !important;
+            }
+
+            .pagination .page1 {
+                width: 35px;
+                height: 35px;
+            }
+
+            .pagination .page_btn {
+                width: auto;
+            }
+
+            .pagination .page_btn i {
+                margin: 0px;
+            }
+
+            .pagination .page_2 {
+                font-weight: 500;
+            }
+
+            .pagination .page_tot {
+                display: none;
+            }
+
+            .pagination .page_input {
+                margin-left: 5px;
+                /* display: none; */
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            .pagination {
+                justify-content: center;
+            }
+
+            .pagination .page_input {
+                display: none;
+            }
+
+            .pagination .page_in_btn {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1060px) {
+            .quick-v .txt-cont h2 {
+                font-size: 28px;
+                margin-bottom: 0px;
+            }
+        }
+
+        @media screen and (max-width:550px) {
+            .f-col-card {
+                height: 59vh !important;
+                margin: 10px auto !important;
+            }
+
+            .f-col-card .c-title {
+                text-align: center !important;
+            }
+
+            .pro_cat_main_cont .pro_cat_cont {
+                height: auto;
+            }
+
+            .pro_cat_main_cont .pro_cat_box {
+                width: 97% !important;
+                margin: 4px 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="ring"></div>
+        <span>loading...</span>
+    </div>
+    <!-- nav bar start -->
+    <nav>
+        <div class="main_left_por">
+            <div id="searchbar" class="search-bar">
+                <input placeholder="search in zap mart" type="text">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="searchboxclose" id="searchclose"><i class="fas fa-times"></i></div>
+            </div>
+            <div id="portion" class="portion_left ">
+
+                <div class="search design" id="click_search">
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <div class="location">
+                    <div><i class="fas fa-location-dot"></i></div>
+                    <div>
+                        <div class="sm">Set Your</div>
+                        <div class="lg">Location</div>
+                    </div>
+                </div>
+
+                <div class="language langcurrency design">
+                    <select>
+                        <option>ENG</option>
+                        <option>ENG</option>
+                        <option>urdu</option>
+                        <option>ENG</option>
+                    </select>
+                </div>
+
+                <div class="currency langcurrency design">
+                    <select>
+                        <option>USD</option>
+                        <option>pkr</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="portion_center">
+            <a href="./index.html">
+                <h1>zap mart</h1>
+            </a>
+        </div>
+        <div class="portion_right">
+            <div class="live design">
+                <p>live</p>
+                <div class="indicator"></div>
+            </div>
+            <div class="account design ">
+                <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
+
+            </div>
+            <div class="heart design">
+                <i class="fas fa-heart"></i>
+
+            </div>
+            <div class="bag design">
+                <a href="./cart.html" class="design"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- nav bar end -->
+
+    <div class="sticky_cont">
+        <!-- second header start -->
+
+        <header>
+            <div class="logo">
+                <a href="./index.html">
+                    <h1>zap mart</h1>
+                </a>
+
+            </div>
+
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li class="products prd_act" id="prd">
+                    <a href="./product.html" class="before_pro">Products</a> <i class="fa-solid fa-angle-down"></i>
+                    <div class="drp-cont" id="drp-box">
+                        <ul>
+                            <li><a href="./category_mob.html" class="drp-items">Tablets & Mobiles</a></li>
+                            <li><a href="./category_com.html" class="drp-items tab">Computer Accessories</a></li>
+                            <li><a href="./category_watch.html" class="drp-items">Watch Collections</a></li>
+                            <li><a href="./category_speak.html" class="drp-items">Portable Speakers</a></li>
+                            <li><a href="./category_laptop.html" class="drp-items">Gaming Laptops</a></li>
+                            <li><a href="./category_camera.html" class="drp-items">Outstands Cameras</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="./contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="portion_right">
+                <div class="account design ">
+                    <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="heart design">
+                    <i class="fas fa-heart"></i>
+
+                </div>
+                <div class="bag design">
+                    <a href="./cart.html" class="design"><i class="fas fa-shopping-bag"></i>
+                    </a>
+                </div>
+                <div class="design" id="bars">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- second navbar end -->
+        <!-- responsive navbar -->
+
+        <div class="responsive_bar" id="responsive_bar">
+            <ul>
+                <li><a href="./index.html" class="home">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li class="res_pro" id="res_prd">
+                    <div class="pro_flex">Products <i class="fa-solid fa-angle-down"></i></div>
+                    <div class="res-drp-cont">
+                        <ul id="res-drp-box" class="ul">
+                            <li><a href="./category_mob.html" class="res-drp-items">Talets & Mobile</a></li>
+                            <li><a href="./category_com.html" class="res-drp-items tab">Computer Accessories</a></li>
+                            <li><a href="./category_watch.html" class="res-drp-items">Watch Collections</a></li>
+                            <li><a href="./category_speak.html" class="res-drp-items">Portable Speakers</a></li>
+                            <li><a href="./category_laptop.html" class="res-drp-items">Gaming Laptops</a></li>
+                            <li><a href="./category_camera.html" class="res-drp-items">Outstands Cameras</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="./contactus.html" class="con">Contact Us</a></li>
+            </ul>
+            <div class="search-cont">
+                <p>whats your looking for ?</p>
+                <input type="search" placeholder="search in zap mart">
+                <button type="submit">Search &nbsp; <i class="fas fa-search"></i> </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="pro_cat_main_cont" style="display: flex;justify-content: center; background: #23232D;">
+        <h3 id="cat_head" style="background-image: linear-gradient(to right, rgb(170, 166, 166), rgb(227, 222, 222));">
+            Computer accessories</h3>
+    </div>
+
+
+
+
+    <!-- zapmart products start -->
+
+    <div class="for_q_view" id="scroll-to-trends">
+        <div class="trending_row category ">
+            <div class="trend-h cat_txt text-center  product_cont_1">
+                <h3>Zap Mart Products</h3>
+                <p>Branded And Guaranted Products</p>
+            </div>
+            <div class="f-row f-row-2 product_row_1">
+                <div class="f-col-card f-col-card-not-sale" id="eye1">
+                    <div class="img-cont">
+                        <img src="./products_img/monitor3.png" class="img1" alt="...">
+                        <img src="./products_img/monitor4.png" class="img2" alt="...">
+                    </div>
+                    <a href="./productpage.html" class="c-title" onclick="product(1)" id="pad1">Ips 24" inch Lcd</a>
+                    <div class="flex">
+                        <div class="column">
+                            <a href="" id="pad1cp" class="c-c-price text-decoration-line-through"
+                                onclick="product(1)">$210.00</a>
+                            <a href="" id="pad1p" class="c-price" onclick="product(1)">$201.00</a>
+                        </div>
+                    </div>
+                    <div class="fastar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="rates_5">rated</i>
+                    </div>
+                    <div class="card-btn">
+                        <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
+                        <i class="fa-regular fa-heart" id="heart0"></i>
+                        <a href="#scroll-to-trends" id="pad1eye" class="anchor_eye" onclick="eye(1)"><i
+                                class="fa-regular fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="f-col-card f-col-card-not-sale" id="eye2">
+                    <div class="img-cont">
+                        <img src="./products_img/mouse2.png" class="img1" alt="...">
+                        <img src="./products_img/mouse1.png" class="img2" alt="...">
+                    </div>
+                    <a href="./productpage.html" class="c-title" onclick="product(2)" id="me">Genius Gaming Mouse</a>
+                    <div class="flex">
+                        <div class="column">
+                            <a href="" id="mecp" class="c-c-price text-decoration-line-through"
+                                onclick="product(2)">$30.00</a>
+                            <a href="" id="mep" class="c-price" onclick="product(2)">$25.00</a>
+                        </div>
+                    </div>
+                    <div class="fastar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-stroke"></i>
+                        <i class="rates_5">rated</i>
+                    </div>
+                    <div class="card-btn">
+                        <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
+                        <i class="fa-regular fa-heart" id="heart1"></i>
+                        <a href="#scroll-to-trends" id="meeye" class="anchor_eye" onclick="eye(2)"><i
+                                class="fa-regular fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="f-col-card f-col-card-not-sale" id="eye4">
+                    <div class="img-cont">
+                        <img src="./products_img/key2.png" class="img1" alt="...">
+                        <img src="./products_img/key1.png" class="img2" alt="...">
+                    </div>
+                    <a href="./productpage.html" class="c-title" onclick="product(4)" id="mi">semi mechanical
+                        keyboard</a>
+                    <div class="flex">
+                        <div class="column">
+                            <a href="" id="m-c-price" class="c-c-price text-decoration-line-through"
+                                onclick="product(4)">$90.00</a>
+                            <a href="" id="m-price" class="c-price" onclick="product(4)">$79.00</a>
+                        </div>
+                    </div>
+                    <div class="fastar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-stroke"></i>
+                        <i class="rates_5">rated</i>
+                    </div>
+                    <div class="card-btn">
+                        <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
+                        <i class="fa-regular fa-heart" id="heart3"></i>
+                        <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(4)"><i
+                                class="fa-regular fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="f-col-card f-col-card-not-sale" id="eye5">
+                    <div class="img-cont">
+                        <img src="./products_img/desktop2.png" class="img1" alt="...">
+                        <img src="./products_img/monitor1.png" class="img2" alt="...">
+                    </div>
+                    <a href="./productpage.html" class="c-title" onclick="product(5)" id="head">complete desktop</a>
+                    <div class="flex">
+                        <div class="column">
+                            <a href="" id="h-c-price" class="c-c-price text-decoration-line-through"
+                                onclick="product(5)">$280.00</a>
+                            <a href="" id="h-price" class="c-price" onclick="product(5)">274.00</a>
+                        </div>
+                    </div>
+                    <div class="fastar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-stroke"></i>
+                        <i class="rates_5">rated</i>
+                    </div>
+                    <div class="card-btn">
+                        <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
+                        <i class="fa-regular fa-heart" id="heart4"></i>
+                        <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(5)"><i
+                                class="fa-regular fa-eye"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Quick View start -->
+            <div class="main_q_view" id="mn-q">
+                <div class="category quick-v">
+                    <div class="img-cont">
+                        <div class="img-box">
+                            <div class="act-q-img"><a href="#"><img id="q-1img" src="./images/chair-1.png" alt=""></a>
+                            </div>
+                            <div class="act-q-img"><a href="#"><img id="q-2img" src="./images/chair1-2.png" alt=""></a>
+                            </div>
+                            <div class="act-q-img"><a href="#"><img id="q-3img" src="./images/chair1-3.png" alt=""></a>
+                            </div>
+                            <div class="imgs-box">
+                                <div class="q-img-sli click-active" id="clicker1"><img src="./images/chair-1.png" alt=""
+                                        onclick="qimg(0)" id="q-slid-img1"></div>
+                                <div class="q-img-sli" id="clicker2"><img src="./images/chair1-2.png" alt=""
+                                        onclick="qimg(1)" id="q-slid-img2">
+                                </div>
+                                <div class="q-img-sli" id="clicker3"><img src="./images/chair1-3.png" alt=""
+                                        onclick="qimg(2)" id="q-slid-img3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="txt-cont">
+                        <div class="headung">
+                            <h2 id="q-title">Gaming red Chair</h2>
+                        </div>
+                        <div class="q-pri-cont">
+                            <p class="q-pri-tag">Price : </p>
+                            <p id="q-c-price" class="c-c-price">$199.00</p>
+                            <p id="q-price" class="c-price">$199.00</p>
+                        </div>
+                        <div class="para">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur asperiores
+                                quod!
+                            </p>
+                        </div>
+                        <div class="btns">
+                            <button>add to cart</button>
+                            <button>view more</button>
+                        </div>
+                        <div class="rates">
+                            <h6>5.0 ratings</h6>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>
+                    <div class="for_close" id="close">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Quick View end -->
+            <div class="pagination">
+                <div class="page_btn page_disabled"> <i class="fas fa-angle-left"></i> Previous</div>
+                <div class="page_1">1</div>
+                <div class="page_1">2</div>
+                <div class="page_1">3</div>
+                <div class="page_2">. . .</div>
+                <div class="page_1">12</div>
+                <div class="page_btn"> Next<i class="fas fa-angle-right"></i></div>
+                <div class="page_tot">total 12 pages</div>
+                <div class="page_tot">go to page</div>
+                <div class="page_input"><input type="text" placeholder="Number"></div>
+                <div class="page_in_btn"><button type="submit">go</button></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- zapmart products end -->
+
+
+
+    <footer class="first_footer">
+        <div class="container">
+            <div>
+                <h3>Get 50% Discount on sign up bonus</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, sed.</p>
+            </div>
+            <div class="footersearch"><input type="text" placeholder="Enter Your Email"><button>sign up</button></div>
+        </div>
+    </footer>
+
+
+
+
+    <div class="footer">
+        <div class="getintouch">
+            <div class="head">Get In Touch</div>
+            <div>
+                <i class="fab fa-youtube "></i>
+                <i class="fab fa-facebook "></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-google-plus"></i>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- footer list 1 & 2 -->
+
+        <div class="footerlinks">
+            <div class="footerlist12">
+                <div class="footer1">
+                    <ul>
+                        <li class="action">LINKS</li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./product.html">Products</a></li>
+                        <li><a href="./contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer2">
+                    <ul>
+                        <li class="action">RECOMMANDED</li>
+                        <li><a href="./category_camera.html">Electronic Cameras</a></li>
+                        <li><a href="./category_camera.html">Electronic Cameras</a></li>
+                        <li><a href="./category_mob.html">Mobile Gadgets</a></li>
+                        <li><a href="./category_com.html">Computer Gadgets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- footer list 3 & 4 -->
+            <div class="footerlist34">
+                <div class="footer3">
+                    <ul>
+                        <li class="action">CONTACT</li>
+                        <li><a href="mailto:m.taha10045@gmail.com">Contact via Mail</a></li>
+                        <li><a href="mailto:m.taha10045@gmail.com">Contact via Mail</a></li>
+
+                        <li><a href="tel:03224116386">Helpline no2.</a></li>
+                        <li><a href="tel:03224116386">Helpline no2.</a></li>
+                    </ul>
+                </div>
+                <div class="footer4">
+                    <ul>
+                        <li class="action">SOCIAL</li>
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/feed/">Linked-In</a></li>
+                        <li><a href="https://www.youtube.com">Youtube</a></li>
+                        <li><a href="https://twitter.com/login">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2022 <a href="#">ZAP MART</a> All Rights Reserved</p>
+        </div>
+    </div>
+
+
+    <script>
+        index = 0;
+        show(index);
+
+        function qimg(n) {
+            index = n;
+            show(index);
+        }
+
+        function show(num) {
+            // console.log(index);
+            let q_slid = document.querySelectorAll(".img-box .act-q-img");
+            for (i = 0; i <= 2; i++) {
+                q_slid[i].style.display = "none";
+            }
+            q_slid[num].style.display = "flex";
+        }
+    </script>
+
+
+</body>
+<!-- script file  -->
+<script src="./logic.js"></script>
+
+</html>
