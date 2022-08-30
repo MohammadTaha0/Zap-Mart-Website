@@ -47,8 +47,8 @@ nav {
 .main_left_por {
     width: 33%;
     display: flex;
-    /* background-color: #0aa3f6; */
     overflow: hidden;
+    transition: 1s;
 }
 
 .portion_left {
@@ -196,42 +196,7 @@ nav {
     position: relative;
     transition: .5s;
     margin-left: 8px;
-    display: none;
-    /* transform: translateX(-100%); */
-    /* animation: 1s search; */
-}
-
-.onlusearch {
-    display: flex;
-    animation: 1s search;
-
-}
-
-.outsearch {
-    display: flex;
-    transform: translateX(-150%);
-    transition: 1s;
-    /* transform: translateX(0%); */
-}
-
-@keyframes search {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-.inportion {
-    transition: 1s;
-    transform: translateX(50%);
-}
-
-.outportion {
-    transition: 1s;
-    transform: translateX(-125%);
+    /* display: none; */
 }
 
 .search-bar input {
@@ -245,6 +210,7 @@ nav {
     box-shadow: 1px 1px 10px #1e1e25;
     background-color: #303134;
     font-size: 16px;
+    transition: 1s;
 }
 
 .open {
@@ -329,8 +295,6 @@ header ul {
     align-items: center;
     justify-content: center;
     height: 100%;
-    /* overflow: hidden; */
-    /* background-color: #acd4ff; */
 }
 
 header ul li {
@@ -347,8 +311,6 @@ header ul li {
 .active1,
 header ul li:hover,
 header ul li a:hover {
-    /* font-weight: bolder; */
-    /* border-bottom: 2px solid #9A73E0; */
     color: #9A73E0;
 }
 
@@ -365,7 +327,6 @@ header ul li a {
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
     margin: 0px;
-    /* border-bottom: 2px solid #9973e000 ; */
 
 }
 
@@ -376,8 +337,6 @@ header {
 header .logo {
     text-align: center;
     width: 150px;
-    /* padding: 0px 20px; */
-    /* background-color: #0aa3f6; */
 }
 
 header .logo a {
@@ -390,7 +349,6 @@ header .logo a {
 
 .logo h1 {
     font-size: 1.4rem;
-    /* margin: 0px; */
     font-weight: 500;
 }
 
@@ -422,7 +380,6 @@ header .menubtn i {
 footer {
     width: 100%;
     height: 220px;
-    /* padding: 10px; */
     background: url(https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-taobao-tmall-headphones-business-home-template-image_191542.jpg);
 }
 
@@ -430,7 +387,6 @@ footer {
     width: 60%;
     float: right;
     color: #171717;
-    /* background-color: yellowgreen; */
 }
 
 .container div p {
@@ -619,14 +575,14 @@ footer {
 }
 
 .arrow {
-    font-size: 40px;
+    font-size: 30px;
     position: absolute;
     top: 45%;
     border-radius: 50%;
     border: 1px solid #9A73E0;
     /* padding: 20px; */
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -702,8 +658,8 @@ button {
 }
 
 .slid-img img {
-    width: 600px;
-    height: 500px;
+    width: 500px;
+    height: 450px;
     transition: .5s;
     cursor: pointer;
     animation-name: slider;
@@ -886,8 +842,6 @@ button {
     margin-top: 50px;
     flex-direction: row-reverse;
 }
-
-.for-category .f-lrg-col {}
 
 .f-col-card {
     width: 24%;
@@ -1576,7 +1530,7 @@ button {
     color: #9A73E0;
 }
 
-.footer1 ul li{
+.footer1 ul li {
     z-index: 9999;
     padding: 0px 0px;
     position: relative;
@@ -1584,30 +1538,14 @@ button {
 }
 
 .footer1 ul li a {
-    /* position: relative; */
     overflow: hidden;
-    /* background-color: #1DA1F2; */
 }
 
-/* .footer1 ul li a::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    left: -100%;
-    border-bottom: 2px solid #9A73E0;
-    position: absolute;
-    top: 0%;
-    transition: .5s;
-    padding: 8px 0px;
-} */
 
 .footer1 ul li a:hover::before {
     transform: translateX(100%);
 }
 
-.footer2 ul {
-    /* overflow: hidden; */
-}
 
 header ul li a,
 .footer2 ul li,
@@ -1620,7 +1558,8 @@ header ul li a,
     height: 100%;
     z-index: 999;
 }
-.footer3 li a, .footer4 li a{
+
+.footer3 li a, .footer4 li a {
     text-decoration: none;
     color: #dedbdb;
     padding: 5px 0px;
@@ -1649,9 +1588,10 @@ header ul li a:hover::before,
 .footer4 ul li:hover::before {
     transform: translateX(100%);
 }
-.footer2 ul li a{
-        text-decoration: none;
-        color: #dedbdb;
+
+.footer2 ul li a {
+    text-decoration: none;
+    color: #dedbdb;
 }
 
 .active1:hover::before {

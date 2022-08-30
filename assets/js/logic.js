@@ -19,7 +19,6 @@ $(document).ready(function () {
 
     });
     setTimeout(function () {
-      // alert("taha");
       $(".center").css({
         "opacity": ".5",
         "min-height": "0vh",
@@ -30,7 +29,6 @@ $(document).ready(function () {
   })
 
   $(".promo h2").click(function () {
-    // $(".promo h2").css("line-height", "50px");
     $("#pro_inp").slideToggle("fast");
   })
 
@@ -39,7 +37,6 @@ $(document).ready(function () {
     $("#input").val(res);
   })
   $("#icon_search").click(function () {
-    // alert("res");
     $("#input").val("");
     $("#icon_search").css({
       'transform': 'rotate(0deg)',
@@ -71,7 +68,6 @@ $(document).ready(function () {
       $(".result").fadeOut();
       $("#input").removeClass("onchange");
 
-      // $(".result").css("display","none"); 
     }
 
   })
@@ -121,17 +117,15 @@ $(document).ready(function () {
     $("#clicker1").removeClass("click-active");
     $("#clicker3").addClass("click-active");
   });
+  $("#searchbar").fadeOut(10);
+
   $("#click_search").click(function () {
-    $("#searchbar").removeClass("outsearch");
-    $("#searchbar").addClass("onlusearch");
-    $("#portion").removeClass("outportion");
-    $("#portion").addClass("inportion");
+    $("#searchbar").slideDown(200);
+    $("#portion").slideUp(10);
   })
   $("#searchclose").click(function () {
-    $("#searchbar").addClass("outsearch");
-    $("#searchbar").removeClass("onlusearch");
-    $("#portion").removeClass("inportion");
-    $("#portion").addClass("outportion");
+    $("#searchbar").slideUp(10);
+    $("#portion").slideDown(200);
   })
 });
 
@@ -180,9 +174,7 @@ function eye(e) {
     var eye = $("#eye" + e);
     window.location.href = "#scroll-to-trends";
     var src1 = $(eye).find(".img1").attr('src');
-    // alert(src1);
     var src2 = $(eye).find(".img2").attr('src');
-    // alert($(eye).find('img').attr('src'));
     var eye_t = $(eye).find(".c-title").text();
     var eye_c = $(eye).find(".c-c-price").text();
     var eye_p = $(eye).find(".c-price").text();
