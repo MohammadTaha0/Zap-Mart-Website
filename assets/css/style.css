@@ -1963,10 +1963,13 @@ header ul .products {
 
 .for_close i {
     font-size: 50px;
-    color: red;
+    color: grey;
+    opacity: .5;
     cursor: pointer;
 }
-
+.for_close i:hover{
+    opacity: 1;
+}
 .heart_anim {
     animation: .5s h_anim;
     color: #9A73E0 !important;
