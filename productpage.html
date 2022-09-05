@@ -19,6 +19,33 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./assets/js/jquery-3.6.0.js "></script>
     <style>
+        .pro-info-1 .lorem{
+            height: 80px;
+        }
+        .pro-info-1 i{
+            transform: rotate(-180deg);
+        }
+        .slid_imgg {
+            height: 250px;
+            object-fit: contain;
+            animation: fade .3s;
+            transition: .4s;
+        }
+        @keyframes fade {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        #pro_sub_img1, #pro_sub_img0{
+            object-fit: contain;
+        }
+        #slid_img0{
+            border-radius: 5px;
+            border: 2px solid rgb(229, 228, 228);
+        }
         @media screen and (max-width:768px) {
             .page_cont {
                 justify-content: center;
@@ -36,7 +63,6 @@
                 align-items: center;
                 justify-content: center;
                 width: 90%;
-                /* background-color: aliceblue; */
             }
 
             .select-cont {
@@ -125,10 +151,10 @@
 
 <body>
 
-    <div class="center">
+    <!-- <div class="center">
         <div class="ring"></div>
         <span>loading...</span>
-    </div>
+    </div> -->
     <!-- nav bar start -->
     <nav>
         <div class="main_left_por">
@@ -276,12 +302,14 @@
     <div class="page_cont">
         <div class="page-img-cont">
             <div class="page-img-box">
-                <img class="img" id="pro_img1" src="./assets/img/products_img/dslr2.png" alt="">
-                <img class="img1" id="pro_img2" src="./assets/img/products_img/dslr1.png" alt="">
+                <img class="img slid_imgg" id="pro_img1" src="./assets/img/products_img/dslr2.png" alt="">
+                <img class="img1 slid_imgg" id="pro_img2" src="./assets/img/products_img/dslr1.png" alt="">
             </div>
             <div class="page-imgs-box">
-                <div class="img" onclick="img()"><img id="pro_sub_img1" src="./assets/img/products_img/dslr2.png" alt=""></div>
-                <div class="img" onclick="my()"><img id="pro_sub_img2" src="./assets/img/products_img/dslr1.png" alt=""></div>
+                <div class="img" id="slid_img0" onclick="img(0)"><img id="pro_sub_img0" src="./assets/img/products_img/dslr2.png"
+                        alt=""></div>
+                <div class="img" id="slid_img1" onclick="img(1)"><img id="pro_sub_img1" src="./assets/img/products_img/dslr1.png"
+                        alt=""></div>
             </div>
         </div>
         <div class="page-txt-cont">
@@ -308,10 +336,10 @@
                 <button type="button" id="page-heart"><i class="fas fa-heart"></i></button>
             </div>
             <div class="page-info-cont">
-                <div class="pro-info">
+                <div class="pro-info pro-info-1">
                     <div class="pro-tool">
                         <h6>product info</h6>
-                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
                     </div>
                     <div class="lorem">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi excepturi obcaecati iusto
@@ -442,6 +470,11 @@
 
             $(".pro-info").click(function () {
                 if ($(this).find("i").attr("class") == "fas fa-plus") {
+                    $(".pro-info").find("i").css({
+                        'transform': 'rotate(0deg)',
+                    });
+                    $(".pro-info").find("i").attr("class", "fas fa-plus");
+                    $(".pro-info").find(".lorem").css({ "height": "0px" })
                     $(this).find(".lorem").css({
                         "height": "80px"
                     })
@@ -474,11 +507,26 @@
             // console.log(favoriteMovie);
             document.getElementById('pro_img1').setAttribute("src", src1);
             document.getElementById('pro_img2').setAttribute("src", src2);
-            document.getElementById('pro_sub_img1').setAttribute("src", src1);
-            document.getElementById('pro_sub_img2').setAttribute("src", src2);
+            document.getElementById('pro_sub_img0').setAttribute("src", src1);
+            document.getElementById('pro_sub_img1').setAttribute("src", src2);
             document.getElementById('title').innerText = eye_t;
             document.getElementById('line').innerText = eye_c;
             document.getElementById('pri').innerText = eye_p;
+        }
+        function img(n) {
+            document.getElementById("slid_img"+n).style.border="2px solid rgb(229, 228, 228)"
+            var slides = document.getElementsByClassName("slid_imgg");
+            slides[n].style.display="block"
+            if(n == 0)
+            {
+            document.getElementById("slid_img"+1).style.border="2px solid transparent"
+            slides[1].style.display="none"
+            }
+            else if(n == 1)
+            {
+            document.getElementById("slid_img"+0).style.border="2px solid transparent"
+            slides[0].style.display="none"
+            }
         }
 
     </script>

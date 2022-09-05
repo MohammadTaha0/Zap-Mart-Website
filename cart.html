@@ -25,6 +25,48 @@
             color: black;
         }
 
+        .cart_info input {
+            width: 15px;
+            text-align: center;
+            padding: 5px 10px;
+            background: #373737;
+            outline: none;
+            border: none;
+            box-shadow: 1px 1px 6px 6px #00000007;
+            color: #9a73e0;
+        }
+
+        .cart_info input::placeholder {
+            text-align: center;
+        }
+
+        .cart_info p {
+            display: flex;
+        }
+
+        .cart_info p b {
+            margin-right: 10px;
+        }
+
+        .cart_info .position-relative {
+            display: flex;
+        }
+
+        .cart_info .minus,
+        .plus {
+            width: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #454545bc;
+            font-size: 8px;
+            cursor: pointer;
+        }
+
+        .minus i {
+            margin: auto;
+        }
+
         .main_cart_cont {
             margin: 50px auto;
             width: 85%;
@@ -100,16 +142,13 @@
             align-items: center;
             height: auto;
             background: linear-gradient(to right, rgb(31, 31, 31), rgb(50, 50, 50));
-            /* background: #202124; */
             padding: 15px 0px;
             margin: 0px auto 7px auto;
-            /* margin-bottom: 15px; */
         }
 
         .cart_card .img_box {
             margin: auto;
             width: 30%;
-            /* background-color: #9a73e0; */
         }
 
         .cart_card .txt_box {
@@ -121,7 +160,6 @@
         }
 
         .txt_box .title {
-            /* background-color: #9a73e0; */
             margin: auto;
             width: 95%;
             display: flex;
@@ -220,7 +258,6 @@
             background-color: transparent;
             border: 2px solid #909091;
             border-radius: 5px;
-            /* box-shadow: 1px 1px 6px 6px #9973e032; */
             padding-left: 15px;
             color: white;
         }
@@ -310,7 +347,6 @@
             margin: 0px auto;
             display: flex;
             align-items: center;
-            /* background-color: #222D65; */
             flex-direction: column;
         }
 
@@ -459,20 +495,6 @@
 
         }
 
-        /* @media screen and (max-width:920px) {
-            .main_cart_cont .cart_cont_1 .cart_get h2{
-                font-size: 13px;
-            }
-            .cart_get p{
-                font-size: 10px;
-            }
-            .cart_cont_2 .shipping h1{
-                font-size: 15px;
-            }
-            .shipping p{
-                font-size: 15px;
-            }
-        } */
         @media screen and (max-width:830px) {
             .main_cart_cont .cart_cont_1 .cart_get {
                 padding: 10px 0px;
@@ -789,10 +811,10 @@
 </head>
 
 <body>
-    <div class="center">
+    <!-- <div class="center">
         <div class="ring"></div>
         <span>loading...</span>
-    </div>
+    </div> -->
     <!-- nav bar start -->
     <nav>
         <div class="main_left_por">
@@ -955,14 +977,24 @@
                 <div class="txt_box">
                     <div class="title">
                         <h4>canon dslr camera</h4>
-                        <p>$273.00</p>
+                        <p> $<span class="p10">247</span></p>
                     </div>
                     <div class="descs">
                         <div class="cart_info">
                             <p><b>model number : </b> 00040056789 </p>
                             <p><b>tracticg number : </b> 124450589 </p>
                             <p><b>color : </b> black & red</p>
-                            <p><b>qty : </b> 1 Q</p>
+                            <p><b>qty : </b>
+                                <span class="position-relative">
+                                    <span class="minus" onclick="dencrementValue(0)">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </span>
+                                    <input type="text" id="valcart0" min="1" value="0">
+                                    <span class="plus" onclick="incrementValue(0)">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </span>
+                                </span>
+                            </p>
                         </div>
                     </div>
                     <div class="btns">
@@ -980,14 +1012,22 @@
                 <div class="txt_box">
                     <div class="title">
                         <h4>asus IPS panel LCd</h4>
-                        <p>$247.00</p>
+                        <p> $<span class="p11">273</span></p>
                     </div>
                     <div class="descs">
                         <div class="cart_info">
                             <p><b>model number : </b> 00021055841 </p>
                             <p><b>tracticg number : </b> 214257529 </p>
                             <p><b>color : </b> black & grey</p>
-                            <p><b>qty : </b> 1 Q</p>
+                            <p><b>qty : </b> <span class="position-relative">
+                                    <span class="minus" onclick="dencrementValue(1)">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </span>
+                                    <input type="text" id="valcart1" min="1" value="0">
+                                    <span class="plus" onclick="incrementValue(1)">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </span>
+                                </span></p>
                         </div>
                     </div>
                     <div class="btns">
@@ -1009,11 +1049,11 @@
             </div>
             <div class="subtotal">
                 <h2>subtotal <i class="fa-solid fa-money-check-dollar"></i></h2>
-                <p>$520.00</p>
+                <p> $<span class="subtotalpri">520</span></p>
             </div>
             <div class="shipping">
                 <h1>estimated shopping & handling</h1>
-                <p>$0.00</p>
+                <p> $<span class="est">2.00</span></p>
             </div>
             <div class="tax">
                 <h3>estimated tax</h3>
@@ -1021,7 +1061,7 @@
             </div>
             <div class="total">
                 <h1>total <i class="fa-solid fa-money-check-dollar"></i> </h1>
-                <p>$520.00</p>
+                <p> $<span class="totalpri">522</span></p>
             </div>
             <div class="btnss">
                 <button>checkout</button>
@@ -1100,6 +1140,52 @@
             <p>Copyright © 2022 <a href="#">ZAP MART</a> All Rights Reserved</p>
         </div>
     </div>
+
+    <script>
+        function incrementValue(x) {
+            var cart = parseInt(document.getElementById("valcart" + x).value);
+
+            cart = isNaN(cart) ? 0 : cart;
+            if (isNaN(cart)) {
+                cart = 0;
+            }
+            else {
+                cart = cart
+            }
+            if (cart < 12) {
+                cart++;
+                document.getElementById('valcart' + x).value = cart;
+                $(document).ready(function () {
+                    subto = parseInt($(".subtotalpri").text()) - cart;
+                    price = parseInt($(".p1"+x).text());
+                    subtotal_final = $(".subtotalpri").text(((price + cart) + subto));
+                    est = parseInt($(".est").text());
+                    estimated = parseInt($(".est").text((cart + 1) + 1 + ".00"));
+                    subto1 = parseInt($(".subtotalpri").text());
+                    est1 = parseInt($(".est").text());
+                    $(".totalpri").text(est1 + subto1);
+                });
+            }
+        }
+
+
+        function dencrementValue(x) {
+            var cart = parseInt(document.getElementById("valcart" + x).value);
+
+            cart = isNaN(cart) ? 0 : cart;
+            if (isNaN(cart)) {
+                cart = 0;
+            }
+            else {
+                cart = cart
+            }
+            if (cart > 1) {
+                cart--;
+                document.getElementById('valcart' + x).value = cart;
+            }
+        }
+
+    </script>
 
 </body>
 <!-- js script file  -->
