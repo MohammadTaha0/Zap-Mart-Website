@@ -1174,13 +1174,10 @@
          justify-content: space-around;
          text-align: center;
          padding: 0px;
-         /* background-color: aliceblue; */
-         /* background-color: #764cc9; */
      }
 
      .footerlinks .footerlist34 {
          width: 100%;
-         /* background-color: aliceblue; */
          padding: 0px;
          justify-content: space-around;
          text-align: center;
@@ -1188,7 +1185,6 @@
 
      .footer li a::before {
          display: none;
-         /* font-size: 14px; */
      }
 
      .footer li {
@@ -1197,7 +1193,6 @@
 
      .footer li a {
          font-weight: 600;
-         /* font-size: 14px; */
      }
 
      .footer .action {
@@ -1209,7 +1204,6 @@
      }
 
      .footer1 ul, .footer2 ul, .footer3 ul, .footer4 ul {
-         /* background-color: #cdcfdb; */
          padding: 0px;
      }
 
@@ -1231,7 +1225,6 @@
      }
      .deal-of-day .deal-cont{
         width: auto;
-        /* margin: auto; */
         margin: 0px auto;
      }
      .deal-cont .for-flex{
@@ -1241,7 +1234,6 @@
         width: 100% !important;
         background-color: #764cc9 !important;
         font-size: 25px;
-        /* text-align: left; */
         margin: 0px;
         padding: 0px;
      }
