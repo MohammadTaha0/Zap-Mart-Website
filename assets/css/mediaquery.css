@@ -841,7 +841,6 @@
      header .design {
          border: none;
      }
-
      .responsive_bar {
          background-color: #1a1a1d;
          margin: 0px;
@@ -864,6 +863,7 @@
      header i {
          font-size: 20px;
          margin: 0px;
+         color: #9a73e9 !important;
      }
 
      header i:active {
@@ -1626,7 +1626,6 @@
      }
 
      header .portion_right .design {
-         /* width: 209px; */
          padding: 0px 15px;
      }
 
