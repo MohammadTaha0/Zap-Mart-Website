@@ -350,9 +350,11 @@
          height: 60px;
          font-size: 22px;
      }
-     .mn-slid-cont{
-        height: 600px;
+
+     .mn-slid-cont {
+         height: 600px;
      }
+
      .mn-slid-cont .slid {
          width: 100%;
          flex-direction: column;
@@ -731,9 +733,9 @@
 
  @media screen and (max-width:830px) {
      .main_q_view {
-        top: 1%;
-        justify-content: center !important;
-        align-items: center !important;
+         top: 1%;
+         justify-content: center !important;
+         align-items: center !important;
          height: auto !important;
      }
 
@@ -762,16 +764,18 @@
      }
 
      .act-q-img a img {
-        width: 40% !important;
+         width: 40% !important;
          height: auto !important;
      }
-     .q-img-sli{
-        width: 20% !important;
-        /* background-color: #9a73e9; */
+
+     .q-img-sli {
+         width: 20% !important;
+         /* background-color: #9a73e9; */
      }
-     .q-img-sli img{
-        width: 70% !important;
-        height: auto !important;
+
+     .q-img-sli img {
+         width: 70% !important;
+         height: auto !important;
      }
 
      .quick-v .txt-cont {
@@ -841,6 +845,7 @@
      header .design {
          border: none;
      }
+
      .responsive_bar {
          background-color: #1a1a1d;
          margin: 0px;
@@ -1080,6 +1085,7 @@
          left: 20%;
 
      }
+
      .deal-of-day .abslt-box {
          width: 23.5%;
      }
@@ -1095,10 +1101,12 @@
      .f-row-2 .f-col-card .c-title {
          font-size: 18px;
      }
+
      .f-row-2 .f-col-card .c-c-price, .f-row-2 .f-col-card .c-price {
          font-size: 16px;
          line-height: 25px;
      }
+
      .f-row-2 .f-col-card::before {
          font-size: 14px;
      }
@@ -1218,37 +1226,46 @@
      .slid .slid-img img {
          width: 300px;
      }
-     .deal-of-day .deal-inner-box{
-        width: 100%;    
-        background: transparent;
-        margin: 0px;
+
+     .deal-of-day .deal-inner-box {
+         width: 100%;
+         background: transparent;
+         margin: 0px;
      }
-     .deal-of-day .deal-cont{
-        width: auto;
-        margin: 0px auto;
+
+     .deal-of-day .deal-cont {
+         width: auto;
+         margin: 0px auto;
      }
-     .deal-cont .for-flex{
-        display: flex;
+
+     .deal-cont .for-flex {
+         display: flex;
      }
-     .for-flex .deal-cont .deal-h{
-        width: 100% !important;
-        background-color: #764cc9 !important;
-        font-size: 25px;
-        margin: 0px;
-        padding: 0px;
+
+     .for-flex .deal-cont .deal-h {
+         width: 100% !important;
+         background-color: #764cc9 !important;
+         font-size: 25px;
+         margin: 0px;
+         padding: 0px;
      }
-     .deal-of-day .for-flex .img-box{
-        width: 50%;
+
+     .deal-of-day .for-flex .img-box {
+         width: 50%;
      }
-     .deal-of-day .d-para{
-        display: none;
+
+     .deal-of-day .d-para {
+         display: none;
      }
-     .deal-of-day .abslt-cont{
-        display: none;
+
+     .deal-of-day .abslt-cont {
+         display: none;
      }
-     .deal-of-day .d-price-box{
-        margin-bottom: 20px;
+
+     .deal-of-day .d-price-box {
+         margin-bottom: 20px;
      }
+
      .for-category .f-col-card .img-cont img {
          height: 60%;
          width: 75%;
@@ -1340,34 +1357,43 @@
      }
 
  }
-@media screen and (max-width: 580px){
-    .deal-h{
-        font-size: 20px !important;
-        margin-top: 30px !important;
-    }
-    .deal-inner-box{
-        margin: 0px !important;
-        margin-top: -20px !important;
-    }
-    .frame-h {
-        font-size: 18px !important;
-    }
-    .d-price-box p{
-        font-size: 15px;
-    }
-    .txt-cont .headung #q-title{
-        font-size: 17px !important;
-    }
-    .q-pri-cont p{
-        font-size: 15px !important;
-    }
-    .txt-cont .para p{
-        font-size: 14px !important;
-    }
-    .main_q_view{
-        top: 2%;
-    }
-}
+
+ @media screen and (max-width: 580px) {
+     .deal-h {
+         font-size: 20px !important;
+         margin-top: 30px !important;
+     }
+
+     .deal-inner-box {
+         margin: 0px !important;
+         margin-top: -20px !important;
+     }
+
+     .frame-h {
+         font-size: 18px !important;
+     }
+
+     .d-price-box p {
+         font-size: 15px;
+     }
+
+     .txt-cont .headung #q-title {
+         font-size: 17px !important;
+     }
+
+     .q-pri-cont p {
+         font-size: 15px !important;
+     }
+
+     .txt-cont .para p {
+         font-size: 14px !important;
+     }
+
+     .main_q_view {
+         top: 2%;
+     }
+ }
+
  @media screen and (max-width:540px) {
      .slid .slid-img img {
          width: 300px;
@@ -1430,7 +1456,6 @@
          text-align: center;
          width: 100%;
          display: flex;
-         /* flex-direction: columns; */
          justify-content: center;
          align-items: center;
          margin: 5px 0px;
@@ -1452,14 +1477,11 @@
          width: 100%;
          justify-content: space-evenly;
          text-align: center;
-         /* background-color: #9a73e9; */
      }
 
      .f-row-2 .f-col-card .card-btn a {
          font-size: 14px;
          width: 50%;
-         /* width: 670px; */
-         /* padding: 10px 20px; */
      }
 
      .f-row-2 .f-col-card .card-btn .anchor_eye {
@@ -1481,40 +1503,56 @@
      footer .container div p {
          font-size: 15px;
      }
-     .quick-v .img-cont{
-        height: 320px !important;
+
+     .quick-v .img-cont {
+         height: 320px !important;
      }
-     .img-box .act-q-img{
-        height: 200px !important;
+
+     .img-box .act-q-img {
+         height: 200px !important;
      }
+
      .act-q-img a img {
-        width: 60% !important;
+         width: 60% !important;
          height: auto !important;
      }
-     .q-img-sli{
-        width: 26% !important;
-        height: 60px !important;
+
+     .q-img-sli {
+         width: 26% !important;
+         height: 60px !important;
      }
-     .main_q_view{
-        top: 2%;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.547);
+
+     .main_q_view {
+         top: 2%;
+         width: 100%;
+         background: rgba(0, 0, 0, 0.547);
      }
-     .main_q_view .img-cont{
-        margin-bottom: 0px !important;
+
+     .main_q_view .img-cont {
+         margin-bottom: 0px !important;
      }
-     .main_q_view .txt-cont{
-        margin-top: -10px !important;
+
+     .main_q_view .txt-cont {
+         margin-top: -10px !important;
      }
-    .txt-cont .headung #q-title{
-        font-size: 22px !important;
-        margin: 0px;
+
+     .txt-cont .headung #q-title {
+         font-size: 22px !important;
+         margin: 0px;
      }
-     .main_q_view .para{
-        display: none !important;
+
+     .main_q_view .para {
+         display: none !important;
      }
-     .q-pri-cont p{
-        margin: 5px !important;
+
+     .q-pri-cont p {
+         margin: 5px !important;
+     }
+
+     header .portion_right {
+        width: auto;
+        padding: 0px 20px;
+        justify-content: center;
      }
  }
 
@@ -1524,8 +1562,6 @@
          padding: 0px;
          align-items: center;
          justify-content: center;
-         /* background-color: antiquewhite; */
-         /* background-color: #cdcfdb; */
      }
 
      .footerlinks .footerlist12 {
@@ -1537,15 +1573,11 @@
      .footerlinks .footerlist34 {
          width: 100%;
          display: flex;
-         /* align-items: center; */
-         /* justify-content: center; */
          margin: 0px;
          padding: 0px;
-         /* background-color: #1a1a1d; */
      }
 
      .footer1 ul, .footer2 ul, .footer3 ul, .footer4 ul {
-         /* background-color: #cdcfdb; */
          padding: 0px;
      }
 
@@ -1617,24 +1649,20 @@
          display: none;
      }
 
-     header .portion_right .design {
-         padding: 0px 15px;
-     }
-
      header .design {
          border: none;
      }
 
      header .logo h1 {
-         font-size: 21px;
+         font-size: 25px;
      }
 
      header .design i {
-         font-size: 18px;
+         font-size: 17px;
      }
 
-     header .portion_right .design {
-         padding: 0px 5px;
+     header .portion_right{
+         padding: 0px 10px;
      }
 
      .slid .slid-img img {
@@ -1710,7 +1738,6 @@
 
      .pagination {
          width: 100%;
-         /* background-color: #764cc9; */
          justify-content: space-between !important;
          flex-wrap: wrap;
      }
@@ -1750,32 +1777,39 @@
      .pagination .page_in_btn {
          display: none;
      }
-     .deal-h{
-        font-size: 18px !important;
-        /* margin-top: 30px !important; */
-    }
-    .deal-inner-box{
-        /* margin: 0px !important; */
-        /* margin-top: -20px !important; */
-    }
-    .frame-h {
-        font-size: 14px !important;
-    }
-    .d-price-box p{
-        font-size: 12px;
-    }
-    .shop-div{
-        width: auto !important;
-    }
-    .shop-now{
-        font-size: 10px !important;
-        width: 100px !important;
-    }
+
+     .deal-h {
+         font-size: 18px !important;
+     }
+
+     .frame-h {
+         font-size: 14px !important;
+     }
+
+     .d-price-box p {
+         font-size: 12px;
+     }
+
+     .shop-div {
+         width: auto !important;
+     }
+
+     .shop-now {
+         font-size: 10px !important;
+         width: 100px !important;
+     }
  }
 
- @media screen and (max-width: 375px) {
+ @media screen and (max-width: 385px) {
      header .logo {
          width: auto;
+     }
+     header .logo h1{
+        font-size: 19px;
+     }
+     
+     header .portion_right .design i{
+        font-size: 16px;
      }
 
      .trend-h h3 {
@@ -1791,9 +1825,7 @@
      .img-box {
          display: flex;
          flex-direction: column;
-         /* background-color: black; */
          width: 100%;
-         /* background-color: #9a73e9; */
      }
 
      .img-box .act-q-img {
@@ -1805,12 +1837,7 @@
      }
 
      .quick-v .img-box .imgs-box {
-         /* display: flex; */
-         /* justify-content: ; */
          width: 100%;
-         /* padding: 0px; */
-         /* margin: 0px; */
-         /* background-color: rgb(71, 69, 69); */
      }
 
      .quick-v .img-box .q-img-sli {
@@ -1827,7 +1854,6 @@
      }
 
      .quick-v .txt-cont p {
-         /* margin: 0px; */
          font-size: 15px;
      }
 
@@ -1847,43 +1873,58 @@
      }
 
      .trending_row {
-         /* margin: ; */
          padding: 0px;
          width: 100%;
      }
 
      .f-row-2 {
-         /* background-color: #764cc9; */
          width: 100%;
      }
 
      .f-row-2 .f-col-card {
          width: 80% !important;
      }
-     .deal-of-day .img-box{
-        width: 80% !important;
-        margin-top: 0px;
+
+     .deal-of-day .img-box {
+         width: 80% !important;
+         margin-top: 0px;
      }
-     .for-flex{
-        flex-direction: column-reverse;
+
+     .for-flex {
+         flex-direction: column-reverse;
      }
-    .deal-h, .frame-h, .d-price-box{
-        display: none !important;
-    }
-    .frame-h {
-        font-size: 18px !important;
-    }
-    .d-price-box p{
-        font-size: 15px;
-    }
-    .shop-div{
-        display: flex;
-        width: auto !important;
-    }
-    .shop-now{
-        font-size: 15px !important;
-        width: 150px !important;
-    }
+
+     .deal-h, .frame-h, .d-price-box {
+         display: none !important;
+     }
+
+     .frame-h {
+         font-size: 18px !important;
+     }
+
+     .d-price-box p {
+         font-size: 15px;
+     }
+
+     .shop-div {
+         display: flex;
+         width: auto !important;
+     }
+
+     .shop-now {
+         font-size: 15px !important;
+         width: 150px !important;
+     }
+     header .portion_right{
+        width: 44%;
+     }
+     .search-cont button{
+        font-size: 13px !important;
+     }
+     .search-cont i{
+        display: none;
+     }
+     
  }
 
  @media screen and (max-width:320px) {
@@ -1895,32 +1936,21 @@
          font-size: 18px;
      }
 
-     header .portion_right {
-         padding: 0px;
-         /* width: 30%; */
-         /* background-color: #764cc9; */
-     }
-
-     header .portion_right .design i {
-         font-size: 16px;
-     }
-
      header .portion_right .design {
-         padding: 0px 5px;
          border: none;
      }
-
      .mn-slid-cont {
          margin-bottom: -90px;
      }
 
      .cat_txt h3 {
-        text-align: center;
+         text-align: center;
          font-size: 18px;
      }
-     .cat_txt p{
-        text-align: center;
-        font-size: 12px;
+
+     .cat_txt p {
+         text-align: center;
+         font-size: 12px;
      }
 
      .f-row-2 .f-col-card {
@@ -1940,7 +1970,6 @@
      }
 
      footer .container div h3 {
-         /* font-size: 16px; */
          text-align: center;
      }
 
