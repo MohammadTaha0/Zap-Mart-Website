@@ -19,33 +19,91 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./assets/js/jquery-3.6.0.js "></script>
     <style>
-        .pro-info-1 .lorem{
+        .quantity input {
+            width: 15px;
+            text-align: center;
+            padding: 5px 10px;
+            background: #373737;
+            outline: none;
+            border: none;
+            box-shadow: 1px 1px 6px 6px #00000007;
+            color: #f8f8f8;
+        }
+
+        .quantity input::placeholder {
+            text-align: center;
+        }
+
+        .quantity p {
+            display: flex;
+        }
+
+        .quantity p b {
+            margin-right: 10px;
+        }
+
+        .quantity .position-relative {
+            display: flex;
+        }
+
+        .quantity .minus,
+        .plus {
+            width: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #454545bc;
+            font-size: 8px;
+            cursor: pointer;
+        }
+
+        .minus i {
+            margin: auto;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+        .pro-info-1 .lorem {
             height: 80px;
         }
-        .pro-info-1 i{
+
+        .pro-info-1 i {
             transform: rotate(-180deg);
         }
+
         .slid_imgg {
             height: 250px;
             object-fit: contain;
             animation: fade .3s;
             transition: .4s;
         }
+
         @keyframes fade {
-            0%{
+            0% {
                 opacity: 0;
             }
-            100%{
+
+            100% {
                 opacity: 1;
             }
         }
-        #pro_sub_img1, #pro_sub_img0{
+
+        #pro_sub_img1,
+        #pro_sub_img0 {
             object-fit: contain;
         }
-        #slid_img0{
+
+        #slid_img0 {
             border-radius: 5px;
             border: 2px solid rgb(229, 228, 228);
         }
+
         @media screen and (max-width:768px) {
             .page_cont {
                 justify-content: center;
@@ -151,10 +209,10 @@
 
 <body>
 
-    <!-- <div class="center">
+    <div class="center" id="loader">
         <div class="ring"></div>
         <span>loading...</span>
-    </div> -->
+    </div>
     <!-- nav bar start -->
     <nav>
         <div class="main_left_por">
@@ -306,10 +364,10 @@
                 <img class="img1 slid_imgg" id="pro_img2" src="./assets/img/products_img/dslr1.png" alt="">
             </div>
             <div class="page-imgs-box">
-                <div class="img" id="slid_img0" onclick="img(0)"><img id="pro_sub_img0" src="./assets/img/products_img/dslr2.png"
-                        alt=""></div>
-                <div class="img" id="slid_img1" onclick="img(1)"><img id="pro_sub_img1" src="./assets/img/products_img/dslr1.png"
-                        alt=""></div>
+                <div class="img" id="slid_img0" onclick="img(0)"><img id="pro_sub_img0"
+                        src="./assets/img/products_img/dslr2.png" alt=""></div>
+                <div class="img" id="slid_img1" onclick="img(1)"><img id="pro_sub_img1"
+                        src="./assets/img/products_img/dslr1.png" alt=""></div>
             </div>
         </div>
         <div class="page-txt-cont">
@@ -329,10 +387,20 @@
             </div>
             <div class="quantity">
                 <h5>quantity</h5>
-                <input type="number" value="1">
+                <p>
+                    <span class="position-relative">
+                        <span class="minus" onclick="dencrementValue(0)">
+                            <i class="fa-solid fa-minus"></i>
+                        </span>
+                        <input type="text" id="valcart0" min="1" value="0">
+                        <span class="plus" onclick="incrementValue(0)">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                    </span>
+                </p>
             </div>
             <div class="page-btn">
-                <button type="button">add to cart</button>
+                <button type="button" onclick="window.location.href='cart.html'">add to cart</button>
                 <button type="button" id="page-heart"><i class="fas fa-heart"></i></button>
             </div>
             <div class="page-info-cont">
@@ -449,54 +517,6 @@
     </div>
 
     <script>
-        $(document).ready(function () {
-
-            $(window).bind('load', function () {
-                $(".center").css("display", "flex");
-                $(".center").css({
-                    "opacity": "1",
-
-                });
-                setTimeout(function () {
-                    // alert("taha");
-                    $(".center").css({
-                        "opacity": ".5",
-                        "min-height": "0vh",
-                        "max-height": "0vh",
-                        "overflow": "hidden"
-                    });
-                }, 1000)
-            })
-
-            $(".pro-info").click(function () {
-                if ($(this).find("i").attr("class") == "fas fa-plus") {
-                    $(".pro-info").find("i").css({
-                        'transform': 'rotate(0deg)',
-                    });
-                    $(".pro-info").find("i").attr("class", "fas fa-plus");
-                    $(".pro-info").find(".lorem").css({ "height": "0px" })
-                    $(this).find(".lorem").css({
-                        "height": "80px"
-                    })
-                    $(this).find("i").css({
-                        'transform': 'rotate(-180deg)',
-                    });
-                    $(this).find("i").attr("class", "fas fa-minus");
-                }
-                else {
-                    $(this).find(".lorem").css({
-                        "height": "0px"
-                    })
-                    $(this).find("i").css({
-                        'transform': 'rotate(0deg)',
-                    });
-                    $(this).find("i").attr("class", "fas fa-plus");
-                }
-            })
-
-
-        })
-
 
         window.onload = function () {
             var src1 = sessionStorage.getItem('src1');
@@ -514,18 +534,16 @@
             document.getElementById('pri').innerText = eye_p;
         }
         function img(n) {
-            document.getElementById("slid_img"+n).style.border="2px solid rgb(229, 228, 228)"
+            document.getElementById("slid_img" + n).style.border = "2px solid rgb(229, 228, 228)"
             var slides = document.getElementsByClassName("slid_imgg");
-            slides[n].style.display="block"
-            if(n == 0)
-            {
-            document.getElementById("slid_img"+1).style.border="2px solid transparent"
-            slides[1].style.display="none"
+            slides[n].style.display = "block"
+            if (n == 0) {
+                document.getElementById("slid_img" + 1).style.border = "2px solid transparent"
+                slides[1].style.display = "none"
             }
-            else if(n == 1)
-            {
-            document.getElementById("slid_img"+0).style.border="2px solid transparent"
-            slides[0].style.display="none"
+            else if (n == 1) {
+                document.getElementById("slid_img" + 0).style.border = "2px solid transparent"
+                slides[0].style.display = "none"
             }
         }
 
@@ -533,6 +551,11 @@
 
 </body>
 <!-- script js file  -->
-<script src="./assets/js/logic.js"></script>
+<script src="./assets/js/productpage.js"></script>
+<script>
+    $(document).ready(function () {
+
+    });
+</script>
 
 </html>

@@ -948,7 +948,7 @@ body {
     left: 0%;
     width: 100%;
     background: linear-gradient(to right, black, #202124);
-    z-index: 9990;
+    z-index: 99999;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -968,17 +968,17 @@ body {
 @keyframes ring {
     0% {
         transform: rotate(0deg);
-        box-shadow: 1px 5px 2px #e65c00;
+        box-shadow: 1px 5px 2px #a100eb;
     }
 
     50% {
         transform: rotate(180deg);
-        box-shadow: 1px 5px 2px #18b201;
+        box-shadow: 1px 5px 2px #0173ff;
     }
 
     100% {
         transform: rotate(360deg);
-        box-shadow: 1px 5px 2px #0456c8;
+        box-shadow: 1px 5px 2px #9A73E0;
     }
 }
 
@@ -994,16 +994,17 @@ body {
 }
 
 .center span {
-    color: #737373;
-    font-size: 20px;
+    color: #4f4e4e;
+    font-size: 15px;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     line-height: 200px;
-    animation: text 2s ease-in-out infinite;
+    animation: text .5s ease-in-out infinite;
 }
 
 @keyframes text {
     50% {
-        color: #ffffff;
+        color: #fcfbfc;
     }
 }

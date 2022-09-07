@@ -17,11 +17,11 @@
     <!-- Jquery Js Link -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="./jquery-3.6.0.js "></script>
+    <script src="./assets/js/jquery-3.6.0.js "></script>
 </head>
 
 <body>
-    <div class="center">
+    <div class="center" id="loader">
         <div class="ring"></div>
         <span>loading...</span>
     </div>
@@ -105,7 +105,7 @@
             </div>
 
             <ul>
-                <li><a href="" class="active1">Home</a></li>
+                <li><a href="./index.html" class="active1">Home</a></li>
                 <li><a href="./about.html">About Us</a></li>
                 <li class="products" id="prd">
                     <a href="./product.html" class="before_pro">Products</a> <i class="fa-solid fa-angle-down"></i>
@@ -174,13 +174,13 @@
     <div class="mn-slid-cont">
         <div class="slid">
             <div class="slid-txt txt-head">
-                <a href="" class="h1 text-light">
+                <a href="./product.html" class="h1 text-light">
                     Next Gen
                 </a>
                 <br>
-                <a href="" class="small-h text-light">Bluetooth + Noise Cancellation</a>
+                <a href="./product.html" class="small-h text-light">Bluetooth + Noise Cancellation</a>
                 <br>
-                <a href="" class="slid-view">view more</a>
+                <a href="./product.html" class="slid-view">view more</a>
             </div>
             <div class="slid-img img-head">
                 <img src="./assets/img/images/slid-2.png" class="d-block w-50" alt="...">
@@ -189,13 +189,13 @@
 
         <div class="slid">
             <div class="slid-txt txt-gaming">
-                <a href="" class="h1 text-light">
+                <a href="./product.html" class="h1 text-light">
                     Hot Deals
                 </a>
                 <br>
-                <a href="" class="small-h text-light">on gaming computers and gaming products</a>
+                <a href="./product.html" class="small-h text-light">on gaming computers and gaming products</a>
                 <br>
-                <a href="" class="slid-view">view more</a>
+                <a href="./product.html" class="slid-view">view more</a>
             </div>
             <div class="slid-img img-gaming">
                 <img src="./assets/img/images/gaming.png" class="gaming" alt="...">
@@ -203,13 +203,13 @@
         </div>
         <div class="slid">
             <div class="slid-txt txt-watch">
-                <a href="" class="h1 text-light">
+                <a href="./product.html" class="h1 text-light">
                     Gentlemen
                 </a>
                 <br>
-                <a href="" class="small-h text-light">smart and water proof watches</a>
+                <a href="./product.html" class="small-h text-light">smart and water proof watches</a>
                 <br>
-                <a href="" class="slid-view">view more</a>
+                <a href="./product.html" class="slid-view">view more</a>
             </div>
             <div class="slid-img img-watch">
                 <img src="./assets/img/images/w-watch.png" class="d-block w-50" alt="...">
@@ -244,7 +244,8 @@
                 <div class="card-btn">
                     <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                     <i class="fa-regular fa-heart" id="heart0" onclick="change0()"></i>
-                    <a href="#scroll-to-trends"  class="anchor_eye" onclick="eye(0)" ><i class="fa-regular fa-eye"></i></a>
+                    <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(0)"><i
+                            class="fa-regular fa-eye"></i></a>
                 </div>
             </div>
 
@@ -258,14 +259,16 @@
                 <a href="" onclick="product(1)" class="c-title" id="eye_t1">gaming Blue chair</a>
                 <div class="flex">
                     <div class="column">
-                        <a href="" onclick="product(1)" id="eye_c1" class="c-c-price text-decoration-line-through">$230.00</a>
+                        <a href="" onclick="product(1)" id="eye_c1"
+                            class="c-c-price text-decoration-line-through">$230.00</a>
                         <a href="" onclick="product(1)" id="eye_p1" class="c-price">$179.00</a>
                     </div>
                 </div>
                 <div class="card-btn">
                     <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                     <i class="fa-regular fa-heart" id="heart1" onclick="change1()"></i>
-                    <a href="#scroll-to-trends"  class="anchor_eye" onclick="eye(1)" ><i class="fa-regular fa-eye"></i></a>
+                    <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(1)"><i
+                            class="fa-regular fa-eye"></i></a>
                 </div>
             </div>
             <div class="f-lrg-col">
@@ -287,17 +290,18 @@
                         <img class="img2" src="./assets/img/images/i93.png" alt="">
                     </a>
                 </div>
-                <a href="./productpage.html"onclick="product(2)" class="c-title">intel i9-1100k processor</a>
+                <a href="./productpage.html" onclick="product(2)" class="c-title">intel i9-1100k processor</a>
                 <div class="flex">
                     <div class="column">
-                        <a href=""onclick="product(2)" class="c-c-price text-decoration-line-through">$350.00</a>
+                        <a href="" onclick="product(2)" class="c-c-price text-decoration-line-through">$350.00</a>
                         <a href="" onclick="product(2)" class="c-price">$299.00</a>
                     </div>
                 </div>
                 <div class="card-btn">
                     <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                     <i class="fa-regular fa-heart" id="heart2" onclick="change2()"></i>
-                    <a href="#scroll-to-trends" id="eye2"  class="anchor_eye" onclick="eye(2)" ><i class="fa-regular fa-eye"></i></a>
+                    <a href="#scroll-to-trends" id="eye2" class="anchor_eye" onclick="eye(2)"><i
+                            class="fa-regular fa-eye"></i></a>
                 </div>
             </div>
             <div class="f-col-card f-col-card-not-sale hidden" id="eye3">
@@ -307,17 +311,18 @@
                         <img class="img2" src="./assets/img/images/keyboard2.png" alt="">
                     </a>
                 </div>
-                <a href="./productpage.html"onclick="product(3)" class="c-title">mechanical keyboard</a>
+                <a href="./productpage.html" onclick="product(3)" class="c-title">mechanical keyboard</a>
                 <div class="flex">
                     <div class="column">
-                        <a href=""onclick="product(3)" class="c-c-price text-decoration-line-through">$99.00</a>
-                        <a href=""onclick="product(3)" class="c-price">$79.00</a>
+                        <a href="" onclick="product(3)" class="c-c-price text-decoration-line-through">$99.00</a>
+                        <a href="" onclick="product(3)" class="c-price">$79.00</a>
                     </div>
                 </div>
                 <div class="card-btn">
                     <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                     <i class="fa-regular fa-heart" id="heart3" onclick="change3()"></i>
-                    <a href="#scroll-to-trends" id="eye3"  class="anchor_eye" onclick="eye(3)" ><i class="fa-regular fa-eye"></i></a>
+                    <a href="#scroll-to-trends" id="eye3" class="anchor_eye" onclick="eye(3)"><i
+                            class="fa-regular fa-eye"></i></a>
                 </div>
             </div>
             <div class="f-lrg-col f-lrg-col-2">
@@ -450,14 +455,16 @@
                     <a href="" onclick="product(4)" class="c-title" id="game">gaming red chair</a>
                     <div class="flex">
                         <div class="column">
-                            <a href="" onclick="product(4)" id="r-c-price" class="c-c-price text-decoration-line-through">$250.00</a>
+                            <a href="" onclick="product(4)" id="r-c-price"
+                                class="c-c-price text-decoration-line-through">$250.00</a>
                             <a href="" onclick="product(4)" id="r-price" class="c-price">$199.00</a>
                         </div>
                     </div>
                     <div class="card-btn">
-                        <a href="./cart.html" > <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
+                        <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                         <i class="fa-regular fa-heart" id="heart4" onclick="change4()"></i>
-                        <a href="#scroll-to-trends"  class="anchor_eye" onclick="eye(4)" ><i class="fa-regular fa-eye"></i></a>
+                        <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(4)"><i
+                                class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
                 <div class="f-col-card f-col-card-not-sale" id="eye5">
@@ -465,17 +472,20 @@
                         <img src="./assets/img/images/i9.png" class="img1" alt="...">
                         <img src="./assets/img/images/i93.png" class="img2" alt="...">
                     </div>
-                    <a href="./productpage.html"onclick="product(5)" class="c-title" id="i9">intel i9-1100k processor</a>
+                    <a href="./productpage.html" onclick="product(5)" class="c-title" id="i9">intel i9-1100k
+                        processor</a>
                     <div class="flex">
                         <div class="column">
-                            <a href=""onclick="product(5)" id="in-c-price" class="c-c-price text-decoration-line-through">$350.00</a>
-                            <a href=""onclick="product(5)" id="in-price" class="c-price">$299.00</a>
+                            <a href="" onclick="product(5)" id="in-c-price"
+                                class="c-c-price text-decoration-line-through">$350.00</a>
+                            <a href="" onclick="product(5)" id="in-price" class="c-price">$299.00</a>
                         </div>
                     </div>
                     <div class="card-btn">
                         <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                         <i class="fa-regular fa-heart" id="heart5" onclick="change5()"></i>
-                        <a href="#scroll-to-trends"  class="anchor_eye" onclick="eye(5)" ><i class="fa-regular fa-eye"></i></a>
+                        <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(5)"><i
+                                class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
                 <div class="f-col-card" id="eye6">
@@ -483,17 +493,19 @@
                         <img src="./assets/img/images/keyboard.png" class="img1" alt="...">
                         <img src="./assets/img/images/keyboard3.png" class="img2" alt="...">
                     </div>
-                    <a href="./productpage.html"onclick="product(6)" class="c-title" id="key">mechanical keyboard</a>
+                    <a href="./productpage.html" onclick="product(6)" class="c-title" id="key">mechanical keyboard</a>
                     <div class="flex">
                         <div class="column">
-                            <a href="" id="k-c-price"onclick="product(6)" class="c-c-price text-decoration-line-through">$99.00</a>
-                            <a href=""onclick="product(6)" id="k-price" class="c-price">$79.00</a>
+                            <a href="" id="k-c-price" onclick="product(6)"
+                                class="c-c-price text-decoration-line-through">$99.00</a>
+                            <a href="" onclick="product(6)" id="k-price" class="c-price">$79.00</a>
                         </div>
                     </div>
                     <div class="card-btn">
                         <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                         <i class="fa-regular fa-heart" id="heart6" onclick="change6()"></i>
-                        <a href="#scroll-to-trends"  class="anchor_eye" onclick="eye(6)" ><i class="fa-regular fa-eye"></i></a>
+                        <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(6)"><i
+                                class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
                 <div class="f-col-card f-col-card-not-sale" id="eye7">
@@ -501,17 +513,20 @@
                         <img src="./assets/img/images/chair-2.png" class="img1" alt="...">
                         <img src="./assets/img/images/chair2-3.png" class="img2" alt="...">
                     </div>
-                    <a href="./productpage.html"onclick="product(7)" class="c-title" id="game-blue">gaming Blue chair</a>
+                    <a href="./productpage.html" onclick="product(7)" class="c-title" id="game-blue">gaming Blue
+                        chair</a>
                     <div class="flex">
                         <div class="column">
-                            <a href=""onclick="product(7)" id="b-c-price" class="c-c-price text-decoration-line-through">$230.00</a>
-                            <a href=""onclick="product(7)" id="b-price" class="c-price">$179.00</a>
+                            <a href="" onclick="product(7)" id="b-c-price"
+                                class="c-c-price text-decoration-line-through">$230.00</a>
+                            <a href="" onclick="product(7)" id="b-price" class="c-price">$179.00</a>
                         </div>
                     </div>
                     <div class="card-btn">
                         <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                         <i class="fa-regular fa-heart" id="heart7" onclick="change7()"></i>
-                        <a href="#scroll-to-trends"  class="anchor_eye" onclick="eye(7)" ><i class="fa-regular fa-eye"></i></a>
+                        <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(7)"><i
+                                class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
                 <div class="f-col-card f-col-card-not-sale" id="eye8">
@@ -519,17 +534,19 @@
                         <img src="./assets/img/images/ip-1-removebg-preview.png" class="img1" alt="...">
                         <img src="./assets/img/images/ip-2-removebg-preview.png" class="img2" alt="...">
                     </div>
-                    <a href="./productpage.html"onclick="product(8)" class="c-title" id="i-phone">I-Phone 13</a>
+                    <a href="./productpage.html" onclick="product(8)" class="c-title" id="i-phone">I-Phone 13</a>
                     <div class="flex">
                         <div class="column">
-                            <a href=""onclick="product(8)" id="i-c-price" class="c-c-price text-decoration-line-through">$370.00</a>
-                            <a href=""onclick="product(8)" id="i-price" class="c-price">$339.00</a>
+                            <a href="" onclick="product(8)" id="i-c-price"
+                                class="c-c-price text-decoration-line-through">$370.00</a>
+                            <a href="" onclick="product(8)" id="i-price" class="c-price">$339.00</a>
                         </div>
                     </div>
                     <div class="card-btn">
                         <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                         <i class="fa-regular fa-heart" id="heart8" onclick="change8()"></i>
-                        <a href="#scroll-to-trends"  class="anchor_eye" onclick="eye(8)" ><i class="fa-regular fa-eye"></i></a>
+                        <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(8)"><i
+                                class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
                 <div class="f-col-card f-col-card-not-sale" id="eye9">
@@ -537,17 +554,19 @@
                         <img src="./assets/img/images/ear-1-removebg-preview.png" class="img1">
                         <img src="./assets/img/images/ear-2-removebg-preview.png" class="img2">
                     </div>
-                    <a href="./productpage.html"onclick="product(9)" class="c-title" id="mi">mi earbuds</a>
+                    <a href="./productpage.html" onclick="product(9)" class="c-title" id="mi">mi earbuds</a>
                     <div class="flex">
                         <div class="column">
-                            <a href=""onclick="product(9)" id="m-c-price" class="c-c-price text-decoration-line-through">$199.00</a>
-                            <a href=""onclick="product(9)" id="m-price" class="c-price">$139.00</a>
+                            <a href="" onclick="product(9)" id="m-c-price"
+                                class="c-c-price text-decoration-line-through">$199.00</a>
+                            <a href="" onclick="product(9)" id="m-price" class="c-price">$139.00</a>
                         </div>
                     </div>
                     <div class="card-btn">
                         <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                         <i class="fa-regular fa-heart" id="heart9" onclick="change9()"></i>
-                        <a href="#scroll-to-trends"  class="anchor_eye" onclick="eye(9)" ><i class="fa-regular fa-eye"></i></a>
+                        <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(9)"><i
+                                class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
                 <div class="f-col-card f-col-card-not-sale" id="eye10">
@@ -555,17 +574,20 @@
                         <img src="./assets/img/images/gpu-1-removebg-preview.png" class="img1" alt="...">
                         <img src="./assets/img/images/gpu-2-removebg-preview.png" class="img2" alt="...">
                     </div>
-                    <a href="./productpage.html"onclick="product(10)" class="c-title" id="gtx">geforce gtx 1660 super</a>
+                    <a href="./productpage.html" onclick="product(10)" class="c-title" id="gtx">geforce gtx 1660
+                        super</a>
                     <div class="flex">
                         <div class="column">
-                            <a href=""onclick="product(10)" id="g-c-price" class="c-c-price text-decoration-line-through">$350.00</a>
-                            <a href=""onclick="product(10)" class="c-price" id="g-price">$299.00</a>
+                            <a href="" onclick="product(10)" id="g-c-price"
+                                class="c-c-price text-decoration-line-through">$350.00</a>
+                            <a href="" onclick="product(10)" class="c-price" id="g-price">$299.00</a>
                         </div>
                     </div>
                     <div class="card-btn">
                         <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                         <i class="fa-regular fa-heart" id="heart10" onclick="change10()"></i>
-                        <a href="#scroll-to-trends"  class="anchor_eye" onclick="eye(10)" ><i class="fa-regular fa-eye"></i></a>
+                        <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(10)"><i
+                                class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
                 <div class="f-col-card" id="eye11">
@@ -573,17 +595,19 @@
                         <img src="./assets/img/images/head-2-removebg-preview.png" class="img1" alt="...">
                         <img src="./assets/img/images/head-3-removebg-preview.png" class="img2" alt="...">
                     </div>
-                    <a href="./productpage.html"onclick="product(11)" class="c-title" id="head">Bluetooth Headphone</a>
+                    <a href="./productpage.html" onclick="product(11)" class="c-title" id="head">Bluetooth Headphone</a>
                     <div class="flex">
                         <div class="column">
-                            <a href=""onclick="product(11)" class="c-c-price text-decoration-line-through" id="h-c-price">$99.00</a>
-                            <a href=""onclick="product(11)" class="c-price" id="h-price">$79.00</a>
+                            <a href="" onclick="product(11)" class="c-c-price text-decoration-line-through"
+                                id="h-c-price">$99.00</a>
+                            <a href="" onclick="product(11)" class="c-price" id="h-price">$79.00</a>
                         </div>
                     </div>
                     <div class="card-btn">
                         <a href="./cart.html"> <i class="fa-solid fa-bag-shopping"></i> add to cart</a>
                         <i class="fa-regular fa-heart" id="heart11" onclick="change11()"></i>
-                        <a href="#scroll-to-trends"  class="anchor_eye" onclick="eye(11)" ><i class="fa-regular fa-eye"></i></a>
+                        <a href="#scroll-to-trends" class="anchor_eye" onclick="eye(11)"><i
+                                class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
             </div>
@@ -592,15 +616,19 @@
                 <div class="category quick-v">
                     <div class="img-cont">
                         <div class="img-box">
-                            <div class="act-q-img"><a href="#"><img id="q-1img" src="./assets/img/images/chair-1.png" alt=""></a>
+                            <div class="act-q-img"><a href="#"><img id="q-1img" src="./assets/img/images/chair-1.png"
+                                        alt=""></a>
                             </div>
-                            <div class="act-q-img"><a href="#"><img id="q-2img" src="./assets/img/images/chair1-2.png" alt=""></a>
+                            <div class="act-q-img"><a href="#"><img id="q-2img" src="./assets/img/images/chair1-2.png"
+                                        alt=""></a>
                             </div>
-                            <div class="act-q-img"><a href="#"><img id="q-3img" src="./assets/img/images/chair1-3.png" alt=""></a>
+                            <div class="act-q-img"><a href="#"><img id="q-3img" src="./assets/img/images/chair1-3.png"
+                                        alt=""></a>
                             </div>
                             <div class="imgs-box">
-                                <div class="q-img-sli click-active" id="clicker1"><img src="./assets/img/images/chair-1.png" alt=""
-                                        onclick="qimg(0)" id="q-slid-img1"></div>
+                                <div class="q-img-sli click-active" id="clicker1"><img
+                                        src="./assets/img/images/chair-1.png" alt="" onclick="qimg(0)" id="q-slid-img1">
+                                </div>
                                 <div class="q-img-sli" id="clicker2"><img src="./assets/img/images/chair1-2.png" alt=""
                                         onclick="qimg(1)" id="q-slid-img2">
                                 </div>

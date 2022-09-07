@@ -2,6 +2,9 @@
 
 $(document).ready(function () {
 
+  setTimeout(() => {
+    $("#loader").fadeOut("slow")
+  }, 500);
   $(window).scroll(function () {
     if ($(this).scrollTop() > 1) {
       $('.sticky_cont').addClass("sticky");
@@ -10,23 +13,6 @@ $(document).ready(function () {
       $('.sticky_cont').removeClass("sticky");
     }
   });
-
-
-  $(window).bind('load', function () {
-    $(".center").css("display", "flex");
-    $(".center").css({
-      "opacity": "1",
-
-    });
-    setTimeout(function () {
-      $(".center").css({
-        "opacity": ".5",
-        "min-height": "0vh",
-        "max-height": "0vh",
-        "overflow": "hidden"
-      });
-    }, 500)
-  })
 
   $(".promo h2").click(function () {
     $("#pro_inp").slideToggle("fast");

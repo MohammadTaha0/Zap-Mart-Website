@@ -811,10 +811,10 @@
 </head>
 
 <body>
-    <!-- <div class="center">
+   <div class="center" id="loader">
         <div class="ring"></div>
         <span>loading...</span>
-    </div> -->
+    </div>
     <!-- nav bar start -->
     <nav>
         <div class="main_left_por">
@@ -1155,16 +1155,6 @@
             if (cart < 12) {
                 cart++;
                 document.getElementById('valcart' + x).value = cart;
-                $(document).ready(function () {
-                    subto = parseInt($(".subtotalpri").text()) - cart;
-                    price = parseInt($(".p1"+x).text());
-                    subtotal_final = $(".subtotalpri").text(((price + cart) + subto));
-                    est = parseInt($(".est").text());
-                    estimated = parseInt($(".est").text((cart + 1) + 1 + ".00"));
-                    subto1 = parseInt($(".subtotalpri").text());
-                    est1 = parseInt($(".est").text());
-                    $(".totalpri").text(est1 + subto1);
-                });
             }
         }
 
