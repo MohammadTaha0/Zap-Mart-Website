@@ -10,6 +10,10 @@ body {
     width: 100%;
 }
 
+.overflow{
+    overflow: hidden !important;
+}
+
 .sticky {
     width: 100%;
     z-index: 9999;
@@ -2069,7 +2073,7 @@ header ul .products {
     margin-bottom: 10px;
     height: auto;
     padding: 0px 0px 10px 0px;
-    /* height: 57vh; */
+    /* height: auto; */
 }
 
 .product_cont_1 h3, .product_cont_1 p {

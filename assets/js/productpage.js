@@ -3,24 +3,6 @@
 $(document).ready(function () {
 
     $(document).ready(function () {
-
-        $(window).bind('load', function () {
-            $(".center").css("display", "flex");
-            $(".center").css({
-                "opacity": "1",
-
-            });
-            setTimeout(function () {
-                // alert("taha");
-                $(".center").css({
-                    "opacity": ".5",
-                    "min-height": "0vh",
-                    "max-height": "0vh",
-                    "overflow": "hidden"
-                });
-            }, 1000)
-        })
-
         $(".pro-info").click(function () {
             if ($(this).find("i").attr("class") == "fas fa-plus") {
                 $(".pro-info").find("i").css({
@@ -154,14 +136,30 @@ $(document).ready(function () {
     $("#searchbar").fadeOut(10);
 
     $("#click_search").click(function () {
-        $("#searchbar").slideDown(200);
-        $("#portion").slideUp(10);
+        if (!$("#portion").fadeOut(200)) {
+            $("#portion").fadeOut(200)
+        }
+        else {
+            $("#searchbar").delay(200)
+            $("#searchbar").fadeIn(200);
+        }
     })
     $("#searchclose").click(function () {
-        $("#searchbar").slideUp(10);
-        $("#portion").slideDown(200);
+        if (!$("#searchbar").fadeOut(200)) {
+            $("#searchbar").fadeOut(200)
+        }
+        else {
+            $("#portion").delay(200)
+            $("#portion").fadeIn(200);
+        }
     })
 });
+
+var loader = document.getElementById("loader");
+window.addEventListener("load", function () {
+    loader.style.display = "none";
+})
+
 
 function eye(e) {
     $(document).ready(function () {

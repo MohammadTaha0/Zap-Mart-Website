@@ -2,9 +2,6 @@
 
 $(document).ready(function () {
 
-  setTimeout(() => {
-    $("#loader").fadeOut("slow")
-  }, 500);
   $(window).scroll(function () {
     if ($(this).scrollTop() > 1) {
       $('.sticky_cont').addClass("sticky");
@@ -106,14 +103,30 @@ $(document).ready(function () {
   $("#searchbar").fadeOut(10);
 
   $("#click_search").click(function () {
-    $("#searchbar").slideDown(200);
-    $("#portion").slideUp(10);
+    if (!$("#portion").fadeOut(200)) {
+      $("#portion").fadeOut(200)
+    }
+    else {
+      $("#searchbar").delay(200)
+      $("#searchbar").fadeIn(200);
+    }
   })
   $("#searchclose").click(function () {
-    $("#searchbar").slideUp(10);
-    $("#portion").slideDown(200);
+    if (!$("#searchbar").fadeOut(200)) {
+      $("#searchbar").fadeOut(200)
+    }
+    else {
+      $("#portion").delay(200)
+      $("#portion").fadeIn(200);
+    }
   })
 });
+
+var loader = document.getElementById("loader");
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+})
+
 
 SliderIndex = 2;
 slider(SliderIndex);

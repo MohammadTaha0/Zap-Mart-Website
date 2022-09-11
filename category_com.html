@@ -19,27 +19,33 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./assets/js/jquery-3.6.0.js "></script>
     <style>
+        @media screen and (max-width: 1390px) {
+            .c-title{
+                font-size: 15px;
+            }
+        }
+
         @media screen and (max-width: 1366px) {
             .f-col-card {
-                height: 57vh !important;
+                height: auto !important;
             }
         }
 
         @media screen and (max-width: 1024px) {
             .f-col-card {
-                height: 48vh !important;
+                height: auto !important;
             }
         }
 
         @media screen and (max-width: 930px) {
             .f-col-card {
-                height: 73vh !important;
+                height: auto !important;
             }
         }
 
         @media screen and (max-width: 768px) {
             .f-col-card {
-                height: 57vh !important;
+                height: auto !important;
             }
 
             .pagination .page1 {
@@ -92,7 +98,7 @@
 
         @media screen and (max-width:550px) {
             .f-col-card {
-                height: 59vh !important;
+                height: auto !important;
                 margin: 10px auto !important;
             }
 
@@ -398,15 +404,19 @@
                 <div class="category quick-v">
                     <div class="img-cont">
                         <div class="img-box">
-                            <div class="act-q-img"><a href="#"><img id="q-1img" src="./assets/img/images/chair-1.png" alt=""></a>
+                            <div class="act-q-img"><a href="#"><img id="q-1img" src="./assets/img/images/chair-1.png"
+                                        alt=""></a>
                             </div>
-                            <div class="act-q-img"><a href="#"><img id="q-2img" src="./assets/img/images/chair1-2.png" alt=""></a>
+                            <div class="act-q-img"><a href="#"><img id="q-2img" src="./assets/img/images/chair1-2.png"
+                                        alt=""></a>
                             </div>
-                            <div class="act-q-img"><a href="#"><img id="q-3img" src="./assets/img/images/chair1-3.png" alt=""></a>
+                            <div class="act-q-img"><a href="#"><img id="q-3img" src="./assets/img/images/chair1-3.png"
+                                        alt=""></a>
                             </div>
                             <div class="imgs-box">
-                                <div class="q-img-sli click-active" id="clicker1"><img src="./assets/img/images/chair-1.png" alt=""
-                                        onclick="qimg(0)" id="q-slid-img1"></div>
+                                <div class="q-img-sli click-active" id="clicker1"><img
+                                        src="./assets/img/images/chair-1.png" alt="" onclick="qimg(0)" id="q-slid-img1">
+                                </div>
                                 <div class="q-img-sli" id="clicker2"><img src="./assets/img/images/chair1-2.png" alt=""
                                         onclick="qimg(1)" id="q-slid-img2">
                                 </div>
@@ -554,6 +564,7 @@
 
 
     <script>
+
         index = 0;
         show(index);
 
@@ -563,10 +574,9 @@
         }
 
         function show(num) {
-            // console.log(index);
             let q_slid = document.querySelectorAll(".img-box .act-q-img");
             for (i = 0; i <= 2; i++) {
-                q_slid[i].style.display = "none";
+                q_slid[i].style.display = "none";   
             }
             q_slid[num].style.display = "flex";
         }

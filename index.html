@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Mediaquery CSS -->
     <link rel="stylesheet" href="./assets/css/mediaquery.css">
+    <!-- scroll library -->
+    <link rel="stylesheet" href="./assets/scroll/aos-master/dist/aos.css">
     <!-- Font Awesome CSS  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -20,7 +22,7 @@
     <script src="./assets/js/jquery-3.6.0.js "></script>
 </head>
 
-<body>
+<body style="overflow-x:hidden;">
     <div class="center" id="loader">
         <div class="ring"></div>
         <span>loading...</span>
@@ -223,13 +225,15 @@
 
     <!-- category Start -->
 
-    <div class="category">
-        <div class="cat_txt">
+    <div class="category overflow" data-aos="fade-in" data-aos-delay="0"
+    data-aos-duration="5000">
+        <div class="cat_txt overflow" data-aos="fade-in" data-aos-delay="200"
+        data-aos-duration="1000">
             <h3>gaming Products</h3>
             <p>top trensing chairs and tables....</p>
         </div>
         <div class="f-row for-category">
-            <div class="f-col-card f-col-card-not-sale hidden" id="eye0">
+            <div class="f-col-card f-col-card-not-sale hidden" id="eye0" data-aos="fade-up" data-aos-delay="400">
                 <div class="img-cont">
                     <img class="img1" id="eye_img0" src="./assets/img/images/chair-1.png" alt="">
                     <img class="img2" id="eye_img0" src="./assets/img/images/chair1-2.png" alt="">
@@ -249,7 +253,7 @@
                 </div>
             </div>
 
-            <div class="f-col-card" id="eye1">
+            <div class="f-col-card" id="eye1" data-aos="fade-up" data-aos-delay="500">
                 <div class="img-cont">
                     <a href="" class="img-cont">
                         <img class="img1" id="eye_img1" src="./assets/img/images/chair-2.png" alt="">
@@ -271,7 +275,7 @@
                             class="fa-regular fa-eye"></i></a>
                 </div>
             </div>
-            <div class="f-lrg-col">
+            <div class="f-lrg-col" data-aos="fade-up" data-aos-delay="700">
                 <a href="">
                     <img src="./assets/img/images/table-1.png" alt="">
                     <div class="f-lrg-col-txt">
@@ -283,7 +287,7 @@
             </div>
         </div>
         <div class="f-row f-row-reverse for-category">
-            <div class="f-col-card" id="eye2">
+            <div class="f-col-card" id="eye2" data-aos="fade-up" data-aos-delay="200">
                 <div class="img-cont">
                     <a href="" class="img-cont">
                         <img class="img1" src="./assets/img/images/i9.png" alt="">
@@ -304,7 +308,7 @@
                             class="fa-regular fa-eye"></i></a>
                 </div>
             </div>
-            <div class="f-col-card f-col-card-not-sale hidden" id="eye3">
+            <div class="f-col-card f-col-card-not-sale hidden" id="eye3" data-aos="fade-up" data-aos-delay="500">
                 <div class="img-cont">
                     <a href="" class="img-cont">
                         <img class="img1" src="./assets/img/images/keyboard.png" alt="">
@@ -325,7 +329,7 @@
                             class="fa-regular fa-eye"></i></a>
                 </div>
             </div>
-            <div class="f-lrg-col f-lrg-col-2">
+            <div class="f-lrg-col f-lrg-col-2" data-aos="fade-up" data-aos-delay="700">
                 <a href="">
                     <img src="./assets/img/images/gpu.png" alt="">
                     <div class="f-lrg-col-txt">
@@ -340,8 +344,8 @@
 
     <!-- category end -->
 
-    <div class="promo_row category">
-        <div class="promo_card d-flex">
+    <div class="promo_row category overflow">
+        <div class="promo_card d-flex" data-aos="zoom-in" data-aos-delay="100">
             <div class="p-ico">
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
@@ -353,7 +357,7 @@
             </div>
         </div>
 
-        <div class="promo_card d-flex">
+        <div class="promo_card d-flex" data-aos="zoom-in" data-aos-delay="300">
             <div class="p-ico">
                 <i class="fa-solid fa-credit-card"></i>
             </div>
@@ -365,7 +369,7 @@
             </div>
         </div>
 
-        <div class="promo_card d-flex">
+        <div class="promo_card d-flex" data-aos="zoom-in" data-aos-delay="500">
             <div class="p-ico">
                 <i class="fa-solid fa-handshake"></i>
             </div>
@@ -377,7 +381,7 @@
             </div>
         </div>
 
-        <div class="promo_card d-flex">
+        <div class="promo_card d-flex" data-aos="zoom-in" data-aos-delay="700">
             <div class="p-ico">
                 <i class="fa-solid fa-life-ring"></i>
             </div>
@@ -391,11 +395,11 @@
     </div>
 
 
-    <div class="deal-of-day">
-        <div class="category for-flex">
+    <div class="deal-of-day" data-aos="fade-in" data-aos-delay="100">
+        <div class="category for-flex overflow">
             <div class="deal-cont">
-                <h4 class="deal-h">deal of the day</h4>
-                <div class="deal-inner-box">
+                <h4 class="deal-h" data-aos="zoom-in" data-aos-delay="250">deal of the day</h4>
+                <div class="deal-inner-box" data-aos="fade-right" data-aos-delay="500">
                     <div>
                         <h4 class="frame-h">frameless monitor</h4>
                     </div>
@@ -411,26 +415,26 @@
                         <li class="shop-now"><a href="">shop now</a></li>
                     </div>
                     <div class="abslt-cont">
-                        <div class="abslt-box">
+                        <div class="abslt-box" data-aos="zoom-in" data-aos-delay="100">
                             <h1>000</h1>
                             <p>lorem</p>
                         </div>
-                        <div class="abslt-box">
+                        <div class="abslt-box" data-aos="zoom-in" data-aos-delay="300">
                             <h1>00</h1>
                             <p>lorem</p>
                         </div>
-                        <div class="abslt-box">
+                        <div class="abslt-box" data-aos="zoom-in" data-aos-delay="500">
                             <h1>00</h1>
                             <p>lorem</p>
                         </div>
-                        <div class="abslt-box">
+                        <div class="abslt-box" data-aos="zoom-in" data-aos-delay="700">
                             <h1>00</h1>
                             <p>lorem</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="img-box">
+            <div class="img-box" data-aos="fade-left" data-aos-delay="600">
                 <h4 class="deal-h none">deal of the day</h4>
                 <img src="./assets/img/images/main-lcd.png" alt="">
             </div>
@@ -442,12 +446,12 @@
 
     <div class="for_q_view" id="scroll-to-trends">
         <div class="trending_row category ">
-            <div class="trend-h cat_txt text-center">
+            <div class="trend-h cat_txt text-center" data-aos="fade-in" data-aos-delay="100">
                 <h3>Trending Products</h3>
                 <p>Trends or for you products</p>
             </div>
             <div class="f-row f-row-2">
-                <div class="f-col-card" id="eye4">
+                <div class="f-col-card" id="eye4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="img-cont">
                         <img src="./assets/img/images/chair-1.png" class="img1" alt="...">
                         <img src="./assets/img/images/chair1-3.png" class="img2" alt="...">
@@ -467,7 +471,7 @@
                                 class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
-                <div class="f-col-card f-col-card-not-sale" id="eye5">
+                <div class="f-col-card f-col-card-not-sale" id="eye5" data-aos="zoom-in" data-aos-delay="300">
                     <div class="img-cont">
                         <img src="./assets/img/images/i9.png" class="img1" alt="...">
                         <img src="./assets/img/images/i93.png" class="img2" alt="...">
@@ -488,12 +492,13 @@
                                 class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
-                <div class="f-col-card" id="eye6">
+                <div class="f-col-card" id="eye6" data-aos="zoom-in" data-aos-delay="500">
                     <div class="img-cont">
                         <img src="./assets/img/images/keyboard.png" class="img1" alt="...">
                         <img src="./assets/img/images/keyboard3.png" class="img2" alt="...">
                     </div>
-                    <a href="./productpage.html" onclick="product(6)" class="c-title" id="key">mechanical keyboard</a>
+                    <a href="./productpage.html" onclick="product(6)" class="c-title" id="key">mechanical
+                        keyboard</a>
                     <div class="flex">
                         <div class="column">
                             <a href="" id="k-c-price" onclick="product(6)"
@@ -508,7 +513,7 @@
                                 class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
-                <div class="f-col-card f-col-card-not-sale" id="eye7">
+                <div class="f-col-card f-col-card-not-sale" id="eye7" data-aos="zoom-in" data-aos-delay="700">
                     <div class="img-cont">
                         <img src="./assets/img/images/chair-2.png" class="img1" alt="...">
                         <img src="./assets/img/images/chair2-3.png" class="img2" alt="...">
@@ -529,7 +534,7 @@
                                 class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
-                <div class="f-col-card f-col-card-not-sale" id="eye8">
+                <div class="f-col-card f-col-card-not-sale" id="eye8" data-aos="zoom-in" data-aos-delay="100">
                     <div class="img-cont">
                         <img src="./assets/img/images/ip-1-removebg-preview.png" class="img1" alt="...">
                         <img src="./assets/img/images/ip-2-removebg-preview.png" class="img2" alt="...">
@@ -549,7 +554,7 @@
                                 class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
-                <div class="f-col-card f-col-card-not-sale" id="eye9">
+                <div class="f-col-card f-col-card-not-sale" id="eye9" data-aos="zoom-in" data-aos-delay="300">
                     <div class="img-cont">
                         <img src="./assets/img/images/ear-1-removebg-preview.png" class="img1">
                         <img src="./assets/img/images/ear-2-removebg-preview.png" class="img2">
@@ -569,7 +574,7 @@
                                 class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
-                <div class="f-col-card f-col-card-not-sale" id="eye10">
+                <div class="f-col-card f-col-card-not-sale" id="eye10" data-aos="zoom-in" data-aos-delay="500">
                     <div class="img-cont">
                         <img src="./assets/img/images/gpu-1-removebg-preview.png" class="img1" alt="...">
                         <img src="./assets/img/images/gpu-2-removebg-preview.png" class="img2" alt="...">
@@ -590,12 +595,13 @@
                                 class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
-                <div class="f-col-card" id="eye11">
+                <div class="f-col-card" id="eye11"  data-aos="zoom-in" data-aos-delay="700">
                     <div class="img-cont">
                         <img src="./assets/img/images/head-2-removebg-preview.png" class="img1" alt="...">
                         <img src="./assets/img/images/head-3-removebg-preview.png" class="img2" alt="...">
                     </div>
-                    <a href="./productpage.html" onclick="product(11)" class="c-title" id="head">Bluetooth Headphone</a>
+                    <a href="./productpage.html" onclick="product(11)" class="c-title" id="head">Bluetooth
+                        Headphone</a>
                     <div class="flex">
                         <div class="column">
                             <a href="" onclick="product(11)" class="c-c-price text-decoration-line-through"
@@ -648,7 +654,8 @@
                             <p id="q-price" class="c-price">$199.00</p>
                         </div>
                         <div class="para">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur asperiores
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur
+                                asperiores
                                 quod!
                             </p>
                         </div>
@@ -677,25 +684,25 @@
     </div>
     <!-- Trending products end -->
 
-    <footer class="first_footer">
-        <div class="container">
+    <footer class="first_footer" data-aos="fade-in" data-aos-delay="200">
+        <div class="container" data-aos="fade-left" data-aos-delay="600">
             <div>
                 <h3>Get 50% Discount on sign up bonus</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, sed.</p>
             </div>
-            <div class="footersearch"><input type="text" placeholder="Enter Your Email"><button>sign up</button></div>
+            <div class="footersearch" data-aos="fade-left" data-aos-delay="500"><input type="text" placeholder="Enter Your Email"><button>sign up</button></div>
         </div>
     </footer>
 
     <div class="footer">
-        <div class="getintouch">
+        <div class="getintouch" data-aos="zoom-in" data-aos-delay="100">
             <div class="head">Get In Touch</div>
             <div>
-                <i class="fab fa-youtube "></i>
-                <i class="fab fa-facebook "></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-google-plus"></i>
+                <i class="fab fa-youtube " data-aos="zoom-in" data-aos-delay="200"></i>
+                <i class="fab fa-facebook " data-aos="zoom-in" data-aos-delay="300"></i>
+                <i class="fab fa-instagram" data-aos="zoom-in" data-aos-delay="400"></i>
+                <i class="fab fa-twitter" data-aos="zoom-in" data-aos-delay="500"></i>
+                <i class="fab fa-google-plus" data-aos="zoom-in" data-aos-delay="600"></i>
             </div>
         </div>
 
@@ -704,7 +711,7 @@
 
         <div class="footerlinks">
             <div class="footerlist12">
-                <div class="footer1">
+                <div class="footer1" data-aos="zoom-in" data-aos-delay="100">
                     <ul>
                         <li class="action">LINKS</li>
                         <li><a href="./index.html">Home</a></li>
@@ -713,7 +720,7 @@
                         <li><a href="./contactus.html">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="footer2">
+                <div class="footer2" data-aos="zoom-in" data-aos-delay="300">
                     <ul>
                         <li class="action">RECOMMANDED</li>
                         <li><a href="./category_watch.html">Watch Collections</a></li>
@@ -725,7 +732,7 @@
             </div>
             <!-- footer list 3 & 4 -->
             <div class="footerlist34">
-                <div class="footer3">
+                <div class="footer3" data-aos="zoom-in" data-aos-delay="500">
                     <ul>
                         <li class="action">CONTACT</li>
                         <li><a href="mailto:m.taha10045@gmail.com">Contact via Mail</a></li>
@@ -735,7 +742,7 @@
                         <li><a href="tel:03224116386">Helpline no2</a></li>
                     </ul>
                 </div>
-                <div class="footer4">
+                <div class="footer4" data-aos="zoom-in" data-aos-delay="700">
                     <ul>
                         <li class="action">SOCIAL</li>
                         <li><a href="https://www.facebook.com/">Facebook</a></li>
@@ -755,5 +762,31 @@
 </body>
 <!-- Js File  -->
 <script src="./assets/js/logic.js"></script>
+<!-- scroll library file -->
+<script src="./assets/scroll/aos-master/dist/aos.js"></script>
+<script>
+    AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 170, // offset (in px) from the original trigger point
+        delay: 100, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+    });
+</script>
 
 </html>

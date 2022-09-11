@@ -24,7 +24,6 @@
         @media screen and (max-width:425px) {
             header .logo h1 {
                 width: auto;
-                /* font-size: 18px; */
             }
 
             header .logo {
@@ -115,18 +114,22 @@
             </div>
             <div class="account design ">
                 <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
+
             </div>
             <div class="heart design">
                 <i class="fas fa-heart"></i>
+
             </div>
             <div class="bag design">
-                <a href="./cart.html" class="design"><i class="fas fa-shopping-bag"></i></a>
+                <i class="fas fa-shopping-bag"></i>
+
             </div>
         </div>
 
     </nav>
 
     <!-- nav bar end -->
+
 
     <div class="sticky_cont">
         <!-- second header start -->
@@ -136,9 +139,7 @@
                 <a href="./index.html">
                     <h1>zap mart</h1>
                 </a>
-
             </div>
-
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About Us</a></li>
@@ -158,14 +159,16 @@
                 <li><a href="./contactus.html">Contact Us</a></li>
             </ul>
             <div class="portion_right">
-                <div class="account design">
+                <div class="account design ">
                     <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
                 </div>
                 <div class="heart design">
                     <i class="fas fa-heart"></i>
+
                 </div>
                 <div class="bag design">
-                    <a href="./cart.html" class="design"><i class="fas fa-shopping-bag"></i></a>
+                    <i class="fas fa-shopping-bag"></i>
+
                 </div>
                 <div class="design" id="bars">
                     <i class="fas fa-bars"></i>
@@ -179,7 +182,7 @@
         <div class="responsive_bar" id="responsive_bar">
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About Us</a></li>
+                <li><a href="#">About Us</a></li>
                 <li class="res_pro" id="res_prd">
                     <div class="pro_flex">Products <i class="fa-solid fa-angle-down"></i></div>
                     <div class="res-drp-cont">
@@ -193,7 +196,7 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="./contactus.html" class="con">Contact Us</a></li>
+                <li><a href="#" class="con">Contact Us</a></li>
             </ul>
             <div class="search-cont">
                 <p>whats your looking for ?</p>
@@ -201,6 +204,7 @@
                 <button type="submit">Search &nbsp; <i class="fas fa-search"></i> </button>
             </div>
         </div>
+
     </div>
 
     <div class="body">
@@ -436,17 +440,24 @@
     </div>
     <script>
         $(window).bind('load', function () {
+            $("#searchbar").fadeOut(10)
             $("#click_search").click(function () {
-                $("#searchbar").removeClass("outsearch");
-                $("#searchbar").addClass("onlusearch");
-                $("#portion").removeClass("outportion");
-                $("#portion").addClass("inportion");
+                if (!$("#portion").fadeOut(200)) {
+                    $("#portion").fadeOut(200)
+                }
+                else {
+                    $("#searchbar").delay(200)
+                    $("#searchbar").fadeIn(200);
+                }
             })
             $("#searchclose").click(function () {
-                $("#searchbar").addClass("outsearch");
-                $("#searchbar").removeClass("onlusearch");
-                $("#portion").removeClass("inportion");
-                $("#portion").addClass("outportion");
+                if (!$("#searchbar").fadeOut(200)) {
+                    $("#searchbar").fadeOut(200)
+                }
+                else {
+                    $("#portion").delay(200)
+                    $("#portion").fadeIn(200);
+                }
             })
             $(window).scroll(function () {
                 if ($(this).scrollTop() > 1) {
@@ -456,22 +467,13 @@
                     $('.sticky_cont').removeClass("sticky");
                 }
             });
-
-            $(".center").css("display", "flex");
-            $(".center").css({
-                "opacity": "1",
-
-            });
-            setTimeout(function () {
-                // alert("taha");
-                $(".center").css({
-                    "opacity": ".5",
-                    "min-height": "0vh",
-                    "max-height": "0vh",
-                    "overflow": "hidden"
-                });
-            }, 2000)
         })
+
+        var loader = document.getElementById("loader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+
 
     </script>
 
