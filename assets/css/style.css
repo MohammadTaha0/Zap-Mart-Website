@@ -633,8 +633,20 @@ footer {
     border: 5px dashed #23232D;
     transform: rotate(45deg);
     box-shadow: 1px 1px 6px 6px rgba(226, 169, 0, 0.289);
+    animation: slider1 1s linear infinite;
 }
-
+/* @keyframes slider1 {
+    0%{
+        background-color: rgb(10, 210, 255);
+    }
+    50%{
+        background-color: rgb(8, 147, 179);
+    }
+    100%{
+        background-color: rgb(10, 210, 255);
+    }
+    
+} */
 span,
 button {
     z-index: 999;
