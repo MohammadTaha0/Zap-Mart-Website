@@ -323,7 +323,7 @@ header {
 
 header .logo {
     text-align: center;
-    width: 150px;
+    width: auto;
 }
 
 header .logo a {

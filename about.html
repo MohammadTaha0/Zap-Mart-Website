@@ -1,404 +1,623 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
     <!-- main css file -->
-    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/about.css" />
     <!-- secondary css file  -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- Mediaquery(responsive) css file  -->
-    <link rel="stylesheet" href="./assets/css/mediaquery.css">
+    <link rel="stylesheet" href="./assets/css/mediaquery.css" />
+    <!-- scroll library css file -->
+    <link rel="stylesheet" href="./assets/scroll/aos-master/dist/aos.css" />
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Jquery Js Link -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/jquery-3.6.0.js "></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="center" id="loader">
-        <div class="ring"></div>
-        <span>loading...</span>
+      <div class="ring"></div>
+      <span>loading...</span>
     </div>
     <!-- nav bar start -->
     <nav>
-        <div class="main_left_por">
-            <div id="searchbar" class="search-bar">
-                <input placeholder="search in zap mart" type="text">
-                <button>
-                    <i class="fas fa-search"></i>
-                </button>
-                <div class="searchboxclose" id="searchclose"><i class="fas fa-times"></i></div>
-            </div>
-            <div id="portion" class="portion_left ">
-
-                <div class="search design" id="click_search">
-                    <i class="fas fa-search"></i>
-                </div>
-
-                <div class="location">
-                    <div><i class="fas fa-location-dot"></i></div>
-                    <div>
-                        <div class="sm">Set Your</div>
-                        <div class="lg">Location</div>
-                    </div>
-                </div>
-
-                <div class="language langcurrency design">
-                    <select>
-                        <option>ENG</option>
-                        <option>ENG</option>
-                        <option>urdu</option>
-                        <option>ENG</option>
-                    </select>
-                </div>
-
-                <div class="currency langcurrency design">
-                    <select>
-                        <option>USD</option>
-                        <option>pkr</option>
-                    </select>
-                </div>
-            </div>
+      <div class="main_left_por">
+        <div id="searchbar" class="search-bar">
+          <input placeholder="search in zap mart" type="text" />
+          <button>
+            <i class="fas fa-search"></i>
+          </button>
+          <div class="searchboxclose" id="searchclose">
+            <i class="fas fa-times"></i>
+          </div>
         </div>
-        <div class="portion_center">
-            <a href="./index.html">
-                <h1>zap mart</h1>
-            </a>
+        <div id="portion" class="portion_left">
+          <div class="search design" id="click_search">
+            <i class="fas fa-search"></i>
+          </div>
 
-        </div>
-        <div class="portion_right">
-            <div class="live design">
-                <p>live</p>
-                <div class="indicator"></div>
+          <div class="location">
+            <div><i class="fas fa-location-dot"></i></div>
+            <div>
+              <div class="sm">Set Your</div>
+              <div class="lg">Location</div>
             </div>
-            <div class="account design">
-                <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
-            </div>
-            <div class="heart design">
-                <i class="fas fa-heart"></i>
-            </div>
-            <div class="bag design">
-                <a href="./cart.html" class="design"><i class="fas fa-shopping-bag"></i></a>
-            </div>
-        </div>
+          </div>
 
+          <div class="language langcurrency design">
+            <select>
+              <option>ENG</option>
+              <option>ENG</option>
+              <option>urdu</option>
+              <option>ENG</option>
+            </select>
+          </div>
+
+          <div class="currency langcurrency design">
+            <select>
+              <option>USD</option>
+              <option>pkr</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="portion_center">
+        <a href="./index.html">
+          <h1>zap mart</h1>
+        </a>
+      </div>
+      <div class="portion_right">
+        <div class="live design">
+          <p>live</p>
+          <div class="indicator"></div>
+        </div>
+        <div class="account design">
+          <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="heart design">
+          <i class="fas fa-heart"></i>
+        </div>
+        <div class="bag design">
+          <a href="./cart.html" class="design"
+            ><i class="fas fa-shopping-bag"></i
+          ></a>
+        </div>
+      </div>
     </nav>
-
     <!-- nav bar end -->
-
-
     <!-- second header start -->
-
     <div class="sticky_cont">
-        <header>
-            <div class="logo">
-                <a href="./index.html">
-                    <h1>zap mart</h1>
-                </a>
-
-            </div>
-
-            <ul>
-                <li><a href="" class="active1">Home</a></li>
-                <li><a href="./about.html">About Us</a></li>
-                <li class="products" id="prd">
-                    <a href="./product.html" class="before_pro">Products</a> <i class="fa-solid fa-angle-down"></i>
-                    <div class="drp-cont" id="drp-box">
-                        <ul>
-                            <li><a href="./category_mob.html" class="drp-items">Tablets & Mobiles</a></li>
-                            <li><a href="./category_com.html" class="drp-items">Computer Accessories</a></li>
-                            <li><a href="./category_watch.html" class="drp-items">Watch Collections</a></li>
-                            <li><a href="./category_speak.html" class="drp-items">Portable Speakers</a></li>
-                            <li><a href="./category_laptop.html" class="drp-items">Gaming Laptops</a></li>
-                            <li><a href="./category_camera.html" class="drp-items">Outstands Cameras</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="./contactus.html">Contact Us</a></li>
-            </ul>
-            <div class="portion_right">
-                <div class="account design ">
-                    <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
-                </div>
-                <div class="heart design">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <div class="bag design">
-                    <a href="./cart.html" class="design"><i class="fas fa-shopping-bag"></i></a>
-                </div>
-                <div class="design" id="bars">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </header>
-        <!-- responsive navbar -->
-
-        <div class="responsive_bar" id="responsive_bar">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html" class="home">About Us</a></li>
-                <li class="res_pro" id="res_prd">
-                    <div class="pro_flex">Products <i class="fa-solid fa-angle-down"></i></div>
-                    <div class="res-drp-cont">
-                        <ul id="res-drp-box" class="ul">
-                            <li><a href="./category_mob.html" class="res-drp-items">Talets & Mobile</a></li>
-                            <li><a href="./category_com.html" class="res-drp-items">Computer Accessories</a></li>
-                            <li><a href="./category_watch.html" class="res-drp-items">Watch Collections</a></li>
-                            <li><a href="./category_speak.html" class="res-drp-items">Portable Speakers</a></li>
-                            <li><a href="./category_laptop.html" class="res-drp-items">Gaming Laptops</a></li>
-                            <li><a href="./category_camera.html" class="res-drp-items">Outstands Cameras</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="./contactus.html" class="con">Contact Us</a></li>
-            </ul>
-            <div class="search-cont">
-                <p>whats your looking for ?</p>
-                <input type="search" placeholder="search in zap mart">
-                <button type="submit">Search &nbsp; <i class="fas fa-search"></i> </button>
-            </div>
+      <header>
+        <div class="logo">
+          <a href="./index.html">
+            <h1>zap mart</h1>
+          </a>
         </div>
-    </div>
 
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./about.html" class="active1">About Us</a></li>
+          <li class="products" id="prd">
+            <a href="./product.html" class="before_pro">Products</a>
+            <i class="fa-solid fa-angle-down"></i>
+            <div class="drp-cont" id="drp-box">
+              <ul>
+                <li>
+                  <a href="./category_mob.html" class="drp-items"
+                    >Tablets & Mobiles</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_com.html" class="drp-items"
+                    >Computer Accessories</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_watch.html" class="drp-items"
+                    >Watch Collections</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_speak.html" class="drp-items"
+                    >Portable Speakers</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_laptop.html" class="drp-items"
+                    >Gaming Laptops</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_camera.html" class="drp-items"
+                    >Outstands Cameras</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="./contactus.html">Contact Us</a></li>
+        </ul>
+        <div class="portion_right">
+          <div class="account design">
+            <a href="./login.html" class="design"
+              ><i class="fas fa-user"></i
+            ></a>
+          </div>
+          <div class="heart design">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="bag design">
+            <a href="./cart.html" class="design"
+              ><i class="fas fa-shopping-bag"></i
+            ></a>
+          </div>
+          <div class="design" id="bars">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </header>
+      <!-- responsive navbar -->
+
+      <div class="responsive_bar" id="responsive_bar">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html" class="home">About Us</a></li>
+          <li class="res_pro" id="res_prd">
+            <div class="pro_flex">
+              Products <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="res-drp-cont">
+              <ul id="res-drp-box" class="ul">
+                <li>
+                  <a href="./category_mob.html" class="res-drp-items"
+                    >Talets & Mobile</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_com.html" class="res-drp-items"
+                    >Computer Accessories</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_watch.html" class="res-drp-items"
+                    >Watch Collections</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_speak.html" class="res-drp-items"
+                    >Portable Speakers</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_laptop.html" class="res-drp-items"
+                    >Gaming Laptops</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_camera.html" class="res-drp-items"
+                    >Outstands Cameras</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="./contactus.html" class="con">Contact Us</a></li>
+        </ul>
+        <div class="search-cont">
+          <p>whats your looking for ?</p>
+          <input type="search" placeholder="search in zap mart" />
+          <button type="submit">
+            Search &nbsp; <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
     <!-- second navbar end -->
 
-    <div class="about-banner">
-        <img width="100%" height="100%" src="./assets/img/resource-of-about/img/zap.jpg" alt="">
+    <div class="about-banner" data-aos="fade-in" data-aos-delay="150">
+      <img
+        width="100%"
+        height="100%"
+        src="./assets/img/resource-of-about/img/zap.jpg"
+        alt=""
+      />
     </div>
 
-    <div class="section">
-        <div class="about-content-left latest">
-            <img width="100%" src="./assets/img/resource-of-about/img/istockphoto-1294781161-170667a.jpg" alt="">
+    <div class="section" data-aos="fade-up" data-aos-delay="220">
+      <div
+        class="about-content-left latest"
+        data-aos="fade-left"
+        data-aos-delay="120"
+      >
+        <img
+          width="100%"
+          src="./assets/img/resource-of-about/img/istockphoto-1294781161-170667a.jpg"
+          alt=""
+        />
 
-            <div class="content">
-                <h3><a href="#">zap mart is prepared for drone deliveries </a></h3>
-            </div>
-            <div class="content-para"><a href="">how beneficial for people. received items quickly,cost effectively,
-                    and—most importantly—safely, in less than an hour.It very ....</a></div>
-            <div class="content-read-more">
-                <a href="">Read more</a>
-            </div>
-
+        <div class="content" data-aos="zoom-in" data-aos-delay="200">
+          <h3><a href="#">zap mart is prepared for drone deliveries </a></h3>
         </div>
-        <div class="about-content-right topstories">
-            <div class="topstories-head ">
-                <p>TOP NEWS</p>
-            </div>
-
-            <div class="first-story stories">
-                <div class="stories-img"><img src="./assets/img/resource-of-about/img/plant.jpg" alt=""></div>
-                <div class="stories-para"><a href="">zap mart team starts plantations all over countries ...</a></div>
-            </div>
-            <div class="second-story stories">
-                <div class="stories-img"><img src="./assets/img/resource-of-about/img/mobile sale.jpg" alt=""></div>
-                <div class="stories-para"><a href="">ZAP Flash Sale 2021: Best Flash Deals & Discounts in .</a></div>
-            </div>
-            <div class="third-story stories">
-                <div class="stories-img"><img src="./assets/img/resource-of-about/img/ELETRONIC ITEMS.jpg" alt=""></div>
-                <div class="stories-para"><a href="">Tips For Buying a Electonic Items in Flash Sales ...</a></div>
-            </div>
-            <div class="forth-story stories">
-                <div class="stories-img"><img src="./assets/img/resource-of-about/img/black-friday.jpg" alt=""></div>
-                <div class="stories-para"><a href="">Black Friday Is Near Add Your Favorite Items Quickly...</a></div>
-            </div>
-            <div class="forth-story stories">
-                <div class="stories-img"><img src="./assets/img/resource-of-about/img/black-friday.jpg" alt=""></div>
-                <div class="stories-para"><a href="">Black Friday Is Near Add Your Favorite Items Quickly...</a></div>
-            </div>
-            <div class="forth-story stories">
-                <div class="stories-img"><img src="./assets/img/resource-of-about/img/black-friday.jpg" alt=""></div>
-                <div class="stories-para"><a href="">Black Friday Is Near Add Your Favorite Items Quickly...</a></div>
-            </div>
-            <div class="forth-story stories">
-                <div class="stories-img"><img src="./assets/img/resource-of-about/img/black-friday.jpg" alt=""></div>
-                <div class="stories-para"><a href="">Black Friday Is Near Add Your Favorite Items Quickly...</a></div>
-            </div>
-            <div class="resent-stories"><a href="">See all news</a><span><i class="fas fa-arrow-left"></i></span></div>
-
+        <div class="content-para" data-aos="zoom-in" data-aos-delay="320">
+          <a href=""
+            >how beneficial for people. received items quickly,cost effectively,
+            and—most importantly—safely, in less than an hour.It very ....</a
+          >
         </div>
+        <div class="content-read-more" data-aos="zoom-in" data-aos-delay="420">
+          <a href="">Read more</a>
+        </div>
+      </div>
+      <div
+        class="about-content-right topstories"
+        data-aos="fade-right"
+        data-aos-delay="320"
+      >
+        <div class="topstories-head" data-aos="zoom-in" data-aos-delay="420">
+          <p>TOP NEWS</p>
+        </div>
+
+        <div
+          class="first-story stories"
+          data-aos="zoom-in"
+          data-aos-delay="390"
+        >
+          <div class="stories-img">
+            <img src="./assets/img/resource-of-about/img/plant.jpg" alt="" />
+          </div>
+          <div class="stories-para">
+            <a href=""
+              >zap mart team starts plantations all over countries ...</a
+            >
+          </div>
+        </div>
+        <div
+          class="second-story stories"
+          data-aos="zoom-in"
+          data-aos-delay="470"
+        >
+          <div class="stories-img">
+            <img
+              src="./assets/img/resource-of-about/img/mobile sale.jpg"
+              alt=""
+            />
+          </div>
+          <div class="stories-para">
+            <a href=""
+              >ZAP Flash Sale 2021: Best Flash Deals & Discounts in .</a
+            >
+          </div>
+        </div>
+        <div
+          class="third-story stories"
+          data-aos="zoom-in"
+          data-aos-delay="520"
+        >
+          <div class="stories-img">
+            <img
+              src="./assets/img/resource-of-about/img/ELETRONIC ITEMS.jpg"
+              alt=""
+            />
+          </div>
+          <div class="stories-para">
+            <a href="">Tips For Buying a Electonic Items in Flash Sales ...</a>
+          </div>
+        </div>
+        <div
+          class="forth-story stories"
+        >
+          <div class="stories-img">
+            <img
+              src="./assets/img/resource-of-about/img/black-friday.jpg"
+              alt=""
+            />
+          </div>
+          <div class="stories-para">
+            <a href=""
+              >Black Friday Is Near Add Your Favorite Items Quickly...</a
+            >
+          </div>
+        </div>
+        <div
+          class="forth-story stories"
+        >
+          <div class="stories-img">
+            <img
+              src="./assets/img/resource-of-about/img/black-friday.jpg"
+              alt=""
+            />
+          </div>
+          <div class="stories-para">
+            <a href=""
+              >Black Friday Is Near Add Your Favorite Items Quickly...</a
+            >
+          </div>
+        </div>
+        <div
+          class="forth-story stories"
+        >
+          <div class="stories-img">
+            <img
+              src="./assets/img/resource-of-about/img/black-friday.jpg"
+              alt=""
+            />
+          </div>
+          <div class="stories-para">
+            <a href=""
+              >Black Friday Is Near Add Your Favorite Items Quickly...</a
+            >
+          </div>
+        </div>
+        <div
+          class="forth-story stories"
+        >
+          <div class="stories-img">
+            <img
+              src="./assets/img/resource-of-about/img/black-friday.jpg"
+              alt=""
+            />
+          </div>
+          <div class="stories-para">
+            <a href=""
+              >Black Friday Is Near Add Your Favorite Items Quickly...</a
+            >
+          </div>
+        </div>
+        <div class="resent-stories">
+          <a href="">See all news</a
+          ><span><i class="fas fa-arrow-left"></i></span>
+        </div>
+      </div>
     </div>
 
-    <div class="newsfeed">
-        <div class="newsfeed-left">
-            <div class="newsfeed-left-head">ZAP MART NEWS</div>
-            <div class="newsfeed-left-para">Enter Your E-mail Address For The Latest News, Stories & Fact.</div>
-
+    <div class="newsfeed" data-aos="fade-up" data-aos-delay="120">
+      <div class="newsfeed-left" data-aos="zoom-in" data-aos-delay="220">
+        <div class="newsfeed-left-head">ZAP MART NEWS</div>
+        <div class="newsfeed-left-para">
+          Enter Your E-mail Address For The Latest News, Stories & Fact.
         </div>
+      </div>
 
-        <div class="newsfeed-right">
-            <div class="newsfeed-input">
-                <input type="text" class="countertext">
-                <span class="email">Email Address</span>
-                <button class="newsfeedbtn"><i class="fas fa-arrow-right"></i></button>
-            </div>
+      <div class="newsfeed-right" data-aos="zoom-in" data-aos-delay="320">
+        <div class="newsfeed-input">
+          <input type="text" class="countertext" />
+          <span class="email">Email Address</span>
+          <button class="newsfeedbtn">
+            <i class="fas fa-arrow-right"></i>
+          </button>
         </div>
+      </div>
     </div>
 
-    <div class="benefit-detail">
-        <div class="head" style="display: block;text-align: center;color: aliceblue;font-size: 2.3rem;margin: 20px 0;">
-            BENEFITS</div>
-        <div class="benefit">
-            <div class="benefit0">
-                <div class="name">Easy To Use</div>
-                <img width="100px" src="./assets/img/resource-of-about/img/mark.png" alt="">
-            </div>
-            <div class="benefit0">
-                <div class="name">Biggest Variety</div>
-                <img width="100px" src="./assets/img/resource-of-about/img/easy.png" alt="">
-
-            </div>
-            <div class="benefit0">
-                <div class="name">Easy service</div>
-                <img width="100px" src="./assets/img/resource-of-about/img/person.png" alt="">
-
-            </div>
-            <div class="benefit0">
-                <div class="name">Fast Delivery</div>
-                <img width="100px" src="./assets/img/resource-of-about/img/deliver.png" alt="">
-            </div>
-            <div class="benefit0">
-                <div class="name">Safe & Secure</div>
-                <img width="100px" src="./assets/img/resource-of-about/img/safe.png" alt="">
-
-            </div>
+    <div class="benefit-detail" data-aos="zoom-in" data-aos-delay="120">
+      <div
+        class="head"
+        style="
+          display: block;
+          text-align: center;
+          color: aliceblue;
+          font-size: 2.3rem;
+          margin: 20px 0;
+        "
+      >
+        BENEFITS
+      </div>
+      <div class="benefit">
+        <div class="benefit0" data-aos="fade-up" data-aos-delay="220">
+          <div class="name">Easy To Use</div>
+          <img
+            width="100px"
+            src="./assets/img/resource-of-about/img/mark.png"
+            alt=""
+          />
         </div>
+        <div class="benefit0" data-aos="fade-up" data-aos-delay="420">
+          <div class="name">Biggest Variety</div>
+          <img
+            width="100px"
+            src="./assets/img/resource-of-about/img/easy.png"
+            alt=""
+          />
+        </div>
+        <div class="benefit0" data-aos="fade-up" data-aos-delay="620">
+          <div class="name">Easy service</div>
+          <img
+            width="100px"
+            src="./assets/img/resource-of-about/img/person.png"
+            alt=""
+          />
+        </div>
+        <div class="benefit0" data-aos="fade-up" data-aos-delay="820">
+          <div class="name">Fast Delivery</div>
+          <img
+            width="100px"
+            src="./assets/img/resource-of-about/img/deliver.png"
+            alt=""
+          />
+        </div>
+        <div class="benefit0" data-aos="fade-up" data-aos-delay="920">
+          <div class="name">Safe & Secure</div>
+          <img
+            width="100px"
+            src="./assets/img/resource-of-about/img/safe.png"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
 
-    <div class="about-counter">
-        <div class="head" style="display: block;text-align: center;color: aliceblue;font-size: 2.1rem;margin-top:20px;">
-            ABOUT US</div>
-        <div class="counters">
-            <hr style="border:none;background: #ffffff;width: 1px;">
-            <div class="sep">
-                <div class="counter">
-                    <div class="num">5000<span>+</span></div>
-                    <div class="count">Our Team Members</div>
-                </div>
-
-                <div class="counter">
-                    <div class="num">1M<span>+</span></div>
-                    <div class="count">Total Products</div>
-
-                </div>
-            </div>
-
-            <div class="sep">
-
-
-                <div class="counter">
-                    <div class="num">8000<span>+</span></div>
-                    <div class="count">Award Winning</div>
-
-                </div>
-
-
-                <div class="counter">
-                    <div class="num">5M<span>+</span></div>
-                    <div class="count">Happy Clients</div>
-
-                </div>
-            </div>
+    <div class="about-counter" data-aos="zoom-in" data-aos-delay="220">
+      <div
+        class="head"
+        style="
+          display: block;
+          text-align: center;
+          color: aliceblue;
+          font-size: 2.1rem;
+          margin-top: 20px;
+        "
+      >
+        ABOUT US
+      </div>
+      <div class="counters">
+        <hr style="border: none; background: #ffffff; width: 1px" />
+        <div class="sep">
+          <div class="counter" data-aos="fade-up" data-aos-delay="620">
+            <div class="num">5000<span>+</span></div>
+            <div class="count">Our Team Members</div>
+          </div>
+          <div class="counter" data-aos="fade-up" data-aos-delay="320">
+            <div class="num">1M<span>+</span></div>
+            <div class="count">Total Products</div>
+          </div>
         </div>
+        <div class="sep">
+          <div class="counter" data-aos="fade-up" data-aos-delay="420">
+            <div class="num">8000<span>+</span></div>
+            <div class="count">Award Winning</div>
+          </div>
+          <div class="counter" data-aos="fade-up" data-aos-delay="520">
+            <div class="num">5M<span>+</span></div>
+            <div class="count">Happy Clients</div>
+          </div>
+        </div>
+      </div>
     </div>
-
 
     <div class="footer">
-        <div class="getintouch">
-            <div class="head">Get In Touch</div>
-            <div>
-                <i class="fab fa-youtube "></i>
-                <i class="fab fa-facebook "></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-google-plus"></i>
-            </div>
+      <div class="getintouch" data-aos="zoom-in" data-aos-delay="100">
+        <div class="head">Get In Touch</div>
+        <div>
+          <i class="fab fa-youtube" data-aos="zoom-in" data-aos-delay="200"></i>
+          <i
+            class="fab fa-facebook"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          ></i>
+          <i
+            class="fab fa-instagram"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          ></i>
+          <i class="fab fa-twitter" data-aos="zoom-in" data-aos-delay="500"></i>
+          <i
+            class="fab fa-google-plus"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+          ></i>
         </div>
+      </div>
 
+      <!-- footer list 1 & 2 -->
 
-
-
-
-
-
-        <!-- footer list 1 & 2 -->
-
-        <div class="footerlinks">
-            <div class="footerlist12">
-                <div class="footer1">
-                    <ul>
-                        <li class="action">LINKS</li>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./about.html">About Us</a></li>
-                        <li><a href="./product.html">Products</a></li>
-                        <li><a href="./contactus.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer2">
-                    <ul>
-                        <li class="action">RECOMMANDED</li>
-                        <li><a href="./category_camera.html">Electronic Cameras</a></li>
-                        <li><a href="./category_camera.html">Electronic Cameras</a></li>
-                        <li><a href="./category_mob.html">Mobile Gadgets</a></li>
-                        <li><a href="./category_com.html">Computer Gadgets</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- footer list 3 & 4 -->
-            <div class="footerlist34">
-                <div class="footer3">
-                    <ul>
-                        <li class="action">CONTACT</li>
-                        <li><a href="mailto:m.taha10045@gmail.com">Contact via Mail</a></li>
-                        <li><a href="mailto:m.taha10045@gmail.com">Contact via Mail</a></li>
-
-                        <li><a href="tel:03224116386">Helpline no2.</a></li>
-                        <li><a href="tel:03224116386">Helpline no2.</a></li>
-                    </ul>
-                </div>
-                <div class="footer4">
-                    <ul>
-                        <li class="action">SOCIAL</li>
-                        <li><a href="https://www.facebook.com/">Facebook</a></li>
-                        <li><a href="https://www.linkedin.com/feed/">Linked-In</a></li>
-                        <li><a href="https://www.youtube.com">Youtube</a></li>
-                        <li><a href="https://twitter.com/login">Twitter</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="footerlinks">
+        <div class="footerlist12">
+          <div class="footer1" data-aos="zoom-in" data-aos-delay="100">
+            <ul>
+              <li class="action">LINKS</li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./product.html">Products</a></li>
+              <li><a href="./contactus.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer2" data-aos="zoom-in" data-aos-delay="300">
+            <ul>
+              <li class="action">RECOMMANDED</li>
+              <li><a href="./category_watch.html">Watch Collections</a></li>
+              <li><a href="./category_camera.html">Electronic Cameras</a></li>
+              <li><a href="./category_mob.html">Mobile Gadgets</a></li>
+              <li><a href="./category_com.html">Computer Gadgets</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="copyright">
-            <p>Copyright © 2022 <a href="#">ZAP MART</a> All Rights Reserved</p>
+        <!-- footer list 3 & 4 -->
+        <div class="footerlist34">
+          <div class="footer3" data-aos="zoom-in" data-aos-delay="500">
+            <ul>
+              <li class="action">CONTACT</li>
+              <li>
+                <a href="mailto:m.taha10045@gmail.com">Contact via Mail</a>
+              </li>
+              <li><a href="mailto:">Contact via Mail</a></li>
+
+              <li><a href="tel:03432959411">Helpline no1.</a></li>
+              <li><a href="tel:03224116386">Helpline no2</a></li>
+            </ul>
+          </div>
+          <div class="footer4" data-aos="zoom-in" data-aos-delay="700">
+            <ul>
+              <li class="action">SOCIAL</li>
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+              <li><a href="https://www.linkedin.com/feed/">Linked-In</a></li>
+              <li><a href="https://www.youtube.com">Youtube</a></li>
+              <li><a href="https://twitter.com/login">Twitter</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2022 <a href="#">ZAP MART</a> All Rights Reserved</p>
+      </div>
     </div>
     <script>
-        $(window).bind('load', function () {
-            $(".center").css("display", "flex");
-            $(".center").css({
-                "opacity": "1",
-
-            });
-            setTimeout(function () {
-                // alert("taha");
-                $(".center").css({
-                    "opacity": ".5",
-                    "min-height": "0vh",
-                    "max-height": "0vh",
-                    "overflow": "hidden"
-                });
-            }, 2000)
-        })
+      $(window).bind("load", function () {
+        $(".center").css("display", "flex");
+        $(".center").css({
+          opacity: "1",
+        });
+        setTimeout(function () {
+          // alert("taha");
+          $(".center").css({
+            opacity: ".5",
+            "min-height": "0vh",
+            "max-height": "0vh",
+            overflow: "hidden",
+          });
+        }, 2000);
+      });
     </script>
+  </body>
+  <!-- js script file  -->
+  <script src="./assets/js/logic.js"></script>
+  <!-- scroll library file -->
+  <script src="./assets/scroll/aos-master/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate", // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-</body>
-<!-- js script file  -->
-<script src="./assets/js/logic.js"></script>
-
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 100, // offset (in px) from the original trigger point
+      delay: 100, // values from 0 to 3000, with step 50ms
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: "ease", // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+    });
+  </script>
 </html>
