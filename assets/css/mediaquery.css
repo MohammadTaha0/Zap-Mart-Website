@@ -192,7 +192,6 @@
 
      .slid-txt {
          width: 50%;
-         /* background-color: aqua; */
      }
 
      .slid-txt .h1 {
@@ -292,19 +291,16 @@
 
      .portion_right {
          width: 33%;
-         /* background-color: aqua;   */
          justify-content: flex-end;
      }
 
      .portion_center {
          width: 34%;
          overflow: hidden;
-         /* background-color: rgb(231, 141, 141); */
      }
 
      .portion_right .design {
          width: 45px;
-         /* background-color: aqua; */
      }
 
      .main_left_por {
@@ -770,7 +766,6 @@
 
      .q-img-sli {
          width: 20% !important;
-         /* background-color: #9a73e9; */
      }
 
      .q-img-sli img {
@@ -1110,15 +1105,20 @@
      .f-row-2 .f-col-card::before {
          font-size: 14px;
      }
+     body{
+        width: 100% !important;
+        overflow-x: hidden !important;
+     }
+     .center{
+        width: 100% !important;
+        overflow-x: hidden !important;
+     }
  }
 
  @media screen and (max-width:700px) {
      .main_q_view {
-         /* display: flex; */
          height: 97vh;
-         /* background-color: #9a73e9; */
      }
-
      .quick-v {
          height: 97vh;
          flex-wrap: wrap;
@@ -1282,7 +1282,6 @@
 
      .for-category .f-lrg-col .products {
          font-size: 23px;
-         /* margin-top: -5px; */
      }
 
      .for-category .f-lrg-col .view {
@@ -1618,7 +1617,6 @@
          display: flex;
          justify-content: center;
          align-items: center;
-         /* flex-direction: column-reverse; */
      }
 
      .slid .slid-img::before {
