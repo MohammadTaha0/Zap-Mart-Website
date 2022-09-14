@@ -541,7 +541,7 @@ header {
 
 header .logo {
     text-align: center;
-    width: 150px;
+    width: auto !important;
 }
 
 .logo h1 {
