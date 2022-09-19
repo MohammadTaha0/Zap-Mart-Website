@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- CSS -->
+     <link rel="stylesheet" href="./assets/css/style.css" />
+     <!-- Mediaquery CSS -->
+     <link rel="stylesheet" href="./assets/css/mediaquery.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css"
+    />
+    <!-- scroll library -->
+    <link rel="stylesheet" href="./assets/scroll/aos-master/dist/aos.css" />
+    <!-- Jquery Js Link -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/jquery-3.6.0.js "></script>
+    <title>My Favourites</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: linear-gradient(130deg, #272f33, #000);
+      font-family: "Roboto", sans-serif !important;
+      min-height: 100vh;
+    }
+    .container11{
+        width: 100%;
+    }
+    .card {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #272f33;
+      margin: 30px;
+      padding: 15px;
+    }
+    .card-img {
+      min-width: 180px;
+      height: 180px;
+    }
+    .card-body {
+      margin: 0 40px;
+    }
+    .card-body h3 {
+      color: aliceblue;
+      font-weight: 400;
+      margin-bottom: 7px;
+    }
+    .card-body .desc {
+      color: aliceblue;
+      font-weight: 300;
+      margin-bottom: 7px;
+    }
+    .card-body .category11 {
+      color: aliceblue;
+      font-weight: 300;
+      margin-bottom: 15px;
+    }
+    .status {
+      display: inline;
+      padding: 7px 17px;
+      border: 1px solid #5cb85c;
+      color: #5cb85c;
+      background: #4e6e4e35;
+    }
+    .status-not {
+      display: inline;
+      padding: 7px 17px;
+      border: 1px solid #5cb85c;
+      color: #5cb85c;
+      background: #4e6e4e35;
+    }
+    .card {
+      box-shadow: 2px 6px 15px -3px rgba(0, 0, 0, 0.71);
+    }
+    .card-details {
+      color: aliceblue;
+    }
+    .card-details .price {
+      font-size: 1.7rem;
+      color: aliceblue;
+    }
+    .card-details .cut-price {
+      font-size: 1em;
+      margin-top: 5px;
+      color: rgb(8, 196, 124);
+    }
+    .card-details .shipping,
+    .para {
+      font-size: 0.8em;
+      margin-top: 5px;
+      color: rgb(197, 197, 197);
+      font-weight: 300;
+    }
+    .btn1 {
+      background: #9a73e0;
+      color: white;
+      width: 250px !important;
+      cursor: pointer;
+      border: 1px solid #9a73e0;
+    }
+    .btn2 {
+      border: 1px solid #9a73e0;
+      color: #9a73e0;
+      background: none;
+      width: 250px !important;
+      cursor: pointer;
+    }
+    .fs-1 {
+      font-size: 2rem;
+    }
+    .fs-2 {
+      font-size: 1.6rem;
+    }
+    .fs-3 {
+      font-size: 1.2rem;
+    }
+    .fs-3 {
+      font-size: 1.2rem;
+    }
+    .d-flex {
+      display: flex;
+    }
+    .d-block {
+      display: block;
+    }
+    .jcc {
+      justify-content: center;
+    }
+    .aic {
+      align-items: center;
+    }
+    .w-100 {
+      width: 100%;
+    }
+    .my-2 {
+      margin: 10px 0;
+    }
+    .my-1 {
+      margin: 5px 0;
+    }
+    .py-1 {
+      padding: 5px 0;
+    }
+
+    .rounded-0 {
+      border-radius: 0;
+    }
+    .heading {
+      color: #9a73e0;
+      margin: 20px 30px;
+      padding: 10px 0;
+      box-shadow: 2px 6px 15px -3px rgba(0, 0, 0, 0.21);
+      font-size: 2rem;
+      border: 1px solid #272f33;
+      font-weight: bold;
+    }
+    .text-red {
+      color: #9a73e0;
+      margin-left: 10px;
+      font-size: 1.3rem;
+      transition: 0.5s;
+    }
+    .text-red:hover {
+      color: #272f33;
+      margin-left: 10px;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    @media (max-width: 866px) {
+      .btn1,
+      .btn2 {
+        width: 200px !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .card {
+        display: block;
+      }
+      .card-details {
+        margin-top: 20px;
+      }
+      .card-body {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 500px) {
+      .card {
+        display: block;
+        text-align: center;
+      }
+      .card-top {
+        display: block;
+        margin-left: 0;
+      }
+      .card-body {
+        margin: 20px 0;
+      }
+      .btn1,
+      .btn2 {
+        margin: auto;
+        margin-top: 10px;
+      }
+      .heading {
+        font-size: 1.6rem;
+      }
+    }
+    @media (max-width: 320px) {
+      .card,
+      .heading {
+        margin: 0;
+      }
+    }
+  </style>
+  <body>
+    <div class="center" id="loader">
+      <div class="ring"></div>
+      <span>loading...</span>
+    </div>
+    <!-- nav bar start -->
+    <nav>
+      <div class="main_left_por">
+        <div id="searchbar" class="search-bar">
+          <input placeholder="search in zap mart" type="text" />
+          <button>
+            <i class="fas fa-search"></i>
+          </button>
+          <div class="searchboxclose" id="searchclose">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <div id="portion" class="portion_left">
+          <div class="search design" id="click_search">
+            <i class="fas fa-search"></i>
+          </div>
+
+          <div class="location">
+            <div><i class="fas fa-location-dot"></i></div>
+            <div>
+              <div class="sm">Set Your</div>
+              <div class="lg">Location</div>
+            </div>
+          </div>
+
+          <div class="language langcurrency design">
+            <select>
+              <option>ENG</option>
+              <option>ENG</option>
+              <option>urdu</option>
+              <option>ENG</option>
+            </select>
+          </div>
+
+          <div class="currency langcurrency design">
+            <select>
+              <option>USD</option>
+              <option>pkr</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="portion_center">
+        <a href="./index.html">
+          <h1>zap mart</h1>
+        </a>
+      </div>
+      <div class="portion_right">
+        <div class="live design">
+          <p>live</p>
+          <div class="indicator"></div>
+        </div>
+        <div class="account design">
+          <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="heart design">
+          <i class="fas fa-heart"></i>
+        </div>
+        <div class="bag design">
+          <a href="./cart.html" class="design"
+            ><i class="fas fa-shopping-bag"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- nav bar end -->
+
+    <!-- second header start -->
+
+    <div class="sticky_cont">
+      <header>
+        <div class="logo">
+          <a href="./index.html">
+            <h1>zap mart</h1>
+          </a>
+        </div>
+
+        <ul>
+          <li><a href="./index.html" class="active1">Home</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li class="products" id="prd">
+            <a href="./product.html" class="before_pro">Products</a>
+            <i class="fa-solid fa-angle-down"></i>
+            <div class="drp-cont" id="drp-box">
+              <ul>
+                <li>
+                  <a href="./category_mob.html" class="drp-items"
+                    >Tablets & Mobiles</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_com.html" class="drp-items"
+                    >Computer Accessories</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_watch.html" class="drp-items"
+                    >Watch Collections</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_speak.html" class="drp-items"
+                    >Portable Speakers</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_laptop.html" class="drp-items"
+                    >Gaming Laptops</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_camera.html" class="drp-items"
+                    >Outstands Cameras</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="./contactus.html">Contact Us</a></li>
+        </ul>
+        <div class="portion_right">
+          <div class="account design">
+            <a href="./login.html" class="design"
+              ><i class="fas fa-user"></i
+            ></a>
+          </div>
+          <div class="heart design">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="bag design">
+            <a href="./cart.html" class="design"
+              ><i class="fas fa-shopping-bag"></i
+            ></a>
+          </div>
+          <div class="design" id="bars">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </header>
+      <!-- responsive navbar -->
+
+      <div class="responsive_bar" id="responsive_bar">
+        <ul>
+          <li><a href="./index.html" class="home">Home</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li class="res_pro" id="res_prd">
+            <div class="pro_flex">
+              Products <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="res-drp-cont">
+              <ul id="res-drp-box" class="ul">
+                <li>
+                  <a href="./category_mob.html" class="res-drp-items"
+                    >Talets & Mobile</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_com.html" class="res-drp-items"
+                    >Computer Accessories</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_watch.html" class="res-drp-items"
+                    >Watch Collections</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_speak.html" class="res-drp-items"
+                    >Portable Speakers</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_laptop.html" class="res-drp-items"
+                    >Gaming Laptops</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_camera.html" class="res-drp-items"
+                    >Outstands Cameras</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="./contactus.html" class="con">Contact Us</a></li>
+        </ul>
+        <div class="search-cont">
+          <p>whats your looking for ?</p>
+          <input type="search" placeholder="search in zap mart" />
+          <button type="submit">
+            Search &nbsp; <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- second navbar end -->
+
+    <div class="heading">
+      Your Favourites <span style="" class="fs-2">(3)</span>
+    </div>
+    <div class="container11 overflow">
+      <div class="card overflow" data-aos="fade-up" data-aos-delay="100">
+        <div class="d-flex card-top">
+          <div class="card-img"  data-aos="fade-right" data-aos-delay="300">
+            <img
+              height="100%"
+              width="180px"
+              src="./assets/img/favourite/fav2.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-body" data-aos="fade-up" data-aos-delay="400">
+            <h3>DJI PHANTOM 4 PRO (5)</h3>
+            <div class="desc">
+              Description:
+              <span style="color: #848e92 !important">Drone Camera.</span>
+            </div>
+            <div class="desc">
+              category:
+              <span style="color: #848e92 !important">Electronics</span>
+            </div>
+            <div class="category11">
+              Color:
+              <span style="color: #848e92 !important">white & black</span>
+            </div>
+            <div class="status">In stock</div>
+            <span class="text-red"><i class="fa-solid fa-heart"></i></span>
+          </div>
+        </div>
+        <div class="card-details" data-aos="fade-left" data-aos-delay="500">
+          <div class="price">
+            $247<sup style="font-size: 1rem; color: #848e92 !important"
+              ><del>$30</del></sup
+            >
+          </div>
+          <div class="cut-price">-12.3% less</div>
+          <div class="shipping">
+            <i class="fa-light fa-truck" style="color: #5cb85c"></i> Free
+            Shopping
+          </div>
+          <div class="para">delivery only available in karachi</div>
+          <div class="buttons">
+            <button class="btn1 d-block w-100 my-1 rounded-0 py-1">
+              Add To Cart
+            </button>
+            <button class="btn2 d-block w-100 rounded-0 py-1">
+              Add To Wishlist
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex">
+          <div class="card-img" data-aos="fade-right" data-aos-delay="300">
+            <img
+              height="100%"
+              width="180px"
+              src="./assets/img/favourite/fav1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-body" data-aos="fade-up" data-aos-delay="400">
+            <h3>2Oneodio Pro 50 and Pro 30 (8)</h3>
+            <div class="desc">
+              Description:
+              <span style="color: #848e92 !important"
+                >2Oneodio Pro 50 and Pro 30 .</span
+              >
+            </div>
+            <div class="desc">
+              category:
+              <span style="color: #848e92 !important">Electronics</span>
+            </div>
+            <div class="category11">
+              Color: <span style="color: #848e92 !important">black & grey</span>
+            </div>
+            <div class="status-not">In stock</div>
+            <span class="text-red"><i class="fa-solid fa-heart"></i></span>
+          </div>
+        </div>
+        <div class="card-details" data-aos="fade-left" data-aos-delay="400">
+          <div class="price">
+            $120<sup style="font-size: 1rem; color: #848e92 !important"
+              ><del>$150</del></sup
+            >
+          </div>
+          <div class="cut-price">-20% less</div>
+          <div class="shipping">
+            <i class="fa-light fa-truck" style="color: #5cb85c"></i> Free
+            Shopping
+          </div>
+          <div class="para">delivery only available in karachi</div>
+          <div class="buttons">
+            <button class="btn1 d-block w-100 my-1 rounded-0 py-1">
+              Add To Cart
+            </button>
+            <button class="btn2 d-block w-100 rounded-0 py-1">
+              Add To Wishlist
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <div class="d-flex">
+          <div class="card-img" data-aos="fade-right" data-aos-delay="200">
+            <img
+              height="100%"
+              width="180px"
+              src="./assets/img/favourite/fav3.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-body" data-aos="fade-up" data-aos-delay="300">
+            <h3>Gaming Chair (14)</h3>
+            <div class="desc">
+              Description:
+              <span style="color: #848e92 !important"
+                >Razer Iskur X gaming chair.</span
+              >
+            </div>
+            <div class="desc">
+              category:
+              <span style="color: #848e92 !important">Gaming Items</span>
+            </div>
+            <div class="category11">
+              Color:
+              <span style="color: #848e92 !important">Black & Green</span>
+            </div>
+            <div class="status">In stock</div>
+            <span class="text-red"><i class="fa-solid fa-heart"></i></span>
+          </div>
+        </div>
+        <div class="card-details" data-aos="fade-left" data-aos-delay="400">
+          <div class="price">
+            $75<sup style="font-size: 1rem; color: #848e92 !important"
+              ><del>$100</del></sup
+            >
+          </div>
+          <div class="cut-price">-25% less</div>
+          <div class="shipping">
+            <i class="fa-light fa-truck" style="color: #5cb85c"></i>Free
+            Shopping
+          </div>
+          <div class="para">delivery only available in Pakistan</div>
+          <div class="buttons">
+            <button class="btn1 d-block w-100 my-1 rounded-0 py-1">
+              Add To Cart
+            </button>
+            <button class="btn2 d-block w-100 rounded-0 py-1">
+              Add To Wishlist
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="first_footer" data-aos="fade-in" data-aos-delay="200">
+      <div class="container" data-aos="zoom-in" data-aos-delay="600">
+        <div>
+          <h3>Get 50% Discount on sign up bonus</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, sed.
+          </p>
+        </div>
+        <div class="footersearch" data-aos="fade-left" data-aos-delay="500">
+          <input type="text" placeholder="Enter Your Email" /><button>
+            sign up
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <div class="footer">
+      <div class="getintouch" data-aos="zoom-in" data-aos-delay="100">
+        <div class="head">Get In Touch</div>
+        <div>
+          <i class="fab fa-youtube" data-aos="zoom-in" data-aos-delay="200"></i>
+          <i
+            class="fab fa-facebook"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          ></i>
+          <i
+            class="fab fa-instagram"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          ></i>
+          <i class="fab fa-twitter" data-aos="zoom-in" data-aos-delay="500"></i>
+          <i
+            class="fab fa-google-plus"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+          ></i>
+        </div>
+      </div>
+
+      <!-- footer list 1 & 2 -->
+
+      <div class="footerlinks">
+        <div class="footerlist12">
+          <div class="footer1" data-aos="zoom-in" data-aos-delay="100">
+            <ul>
+              <li class="action">LINKS</li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./product.html">Products</a></li>
+              <li><a href="./contactus.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer2" data-aos="zoom-in" data-aos-delay="300">
+            <ul>
+              <li class="action">RECOMMANDED</li>
+              <li><a href="./category_watch.html">Watch Collections</a></li>
+              <li><a href="./category_camera.html">Electronic Cameras</a></li>
+              <li><a href="./category_mob.html">Mobile Gadgets</a></li>
+              <li><a href="./category_com.html">Computer Gadgets</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- footer list 3 & 4 -->
+        <div class="footerlist34">
+          <div class="footer3" data-aos="zoom-in" data-aos-delay="500">
+            <ul>
+              <li class="action">CONTACT</li>
+              <li>
+                <a href="mailto:m.taha10045@gmail.com"
+                  ><i class="fa-light fa-envelope"></i> zapmart@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="mailto:rayyanali4422"
+                  ><i class="fa-light fa-envelope"></i>
+                  rayyanali4422@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:03432959411"
+                  ><i class="fa-light fa-phone"></i> 03432959411</a
+                >
+              </li>
+              <li>
+                <a href="tel:03425328174"
+                  ><i class="fa-light fa-phone"></i> 03425328174</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer4" data-aos="zoom-in" data-aos-delay="700">
+            <ul>
+              <li class="action">SOCIAL</li>
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+              <li><a href="https://www.linkedin.com/feed/">Linked-In</a></li>
+              <li><a href="https://www.youtube.com">Youtube</a></li>
+              <li><a href="https://twitter.com/login">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2022 <a href="#">ZAP MART</a> All Rights Reserved</p>
+      </div>
+    </div>
+  </body>
+  <!-- Js File  -->
+  <script src="./assets/js/logic.js"></script>
+  <!-- scroll library file -->
+  <script src="./assets/scroll/aos-master/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate", // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 100, // offset (in px) from the original trigger point
+      delay: 100, // values from 0 to 3000, with step 50ms
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: "ease", // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+    });
+  </script>
+</html>
