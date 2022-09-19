@@ -93,6 +93,8 @@ nav {
     align-items: center;
     border-right: 0.1px solid #54378b;
     cursor: pointer;
+    text-decoration: none;
+
 }
 
 .portion_center {

@@ -1,387 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- Mediaquery CSS -->
-    <link rel="stylesheet" href="./assets/css/mediaquery.css">
+    <link rel="stylesheet" href="./assets/css/mediaquery.css" />
     <!-- Font Awesome CSS  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        rel="stylesheet"
+
+        href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css"
+      >
     <!-- Jquery Js Link -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/jquery-3.6.0.js "></script>
     <style>
-        .cart_card .btns button:hover {
-            border: 1px solid #282828;
-            background-color: #9a73e0;
-            color: black;
-        }
+      .cart_card .btns button:hover {
+        border: 1px solid #282828;
+        background-color: #9a73e0;
+        color: black;
+      }
 
-        .cart_info input {
-            width: 15px;
-            text-align: center;
-            padding: 5px 10px;
-            background: #373737;
-            outline: none;
-            border: none;
-            box-shadow: 1px 1px 6px 6px #00000007;
-            color: #9a73e0;
-        }
+      .cart_info input {
+        width: 15px;
+        text-align: center;
+        padding: 5px 10px;
+        background: #373737;
+        outline: none;
+        border: none;
+        box-shadow: 1px 1px 6px 6px #00000007;
+        color: #9a73e0;
+      }
 
-        .cart_info input::placeholder {
-            text-align: center;
-        }
+      .cart_info input::placeholder {
+        text-align: center;
+      }
 
-        .cart_info p {
-            display: flex;
-        }
+      .cart_info p {
+        display: flex;
+      }
 
-        .cart_info p b {
-            margin-right: 10px;
-        }
+      .cart_info p b {
+        margin-right: 10px;
+      }
 
-        .cart_info .position-relative {
-            display: flex;
-        }
+      .cart_info .position-relative {
+        display: flex;
+      }
 
-        .cart_info .minus,
-        .plus {
-            width: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #454545bc;
-            font-size: 8px;
-            cursor: pointer;
-        }
+      .cart_info .minus,
+      .plus {
+        width: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #454545bc;
+        font-size: 8px;
+        cursor: pointer;
+      }
 
-        .minus i {
-            margin: auto;
-        }
+      .minus i {
+        margin: auto;
+      }
 
+      .main_cart_cont {
+        margin: 50px auto;
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+      }
+
+      .main_cart_cont .cart_cont_1 {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px;
+        margin: 0px auto;
+        height: auto;
+      }
+
+      .main_cart_cont .cart_cont_1 .cart_get {
+        background: linear-gradient(to right, rgb(31, 31, 31), rgb(50, 50, 50));
+        /* background: #202124; */
+        color: #9a73e0;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px 0px 20px 15px;
+        margin: 0px;
+      }
+
+      .cart_get h2 {
+        font-size: 18px;
+        margin: 0px;
+      }
+
+      .cart_get p {
+        font-size: 11px;
+        margin: 2px;
+        font-weight: 500;
+      }
+
+      .cart_get p a {
+        /* text-decoration: none; */
+        color: #9a73e0;
+        font-weight: 400;
+        text-transform: capitalize;
+      }
+
+      .cart_cont_1 .cart_your {
+        background: linear-gradient(to right, rgb(31, 31, 31), rgb(50, 50, 50));
+        /* background: #202124; */
+        color: #9a73e0;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0px 0px 0px 15px;
+        margin: 7px 0px;
+      }
+
+      .cart_your h2 {
+        font-weight: 600;
+      }
+
+      .main_cart_cont .cart_card {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        height: auto;
+        background: linear-gradient(to right, rgb(31, 31, 31), rgb(50, 50, 50));
+        padding: 15px 0px;
+        margin: 0px auto 7px auto;
+      }
+
+      .cart_card .img_box {
+        margin: auto;
+        width: 30%;
+      }
+
+      .cart_card .txt_box {
+        margin: auto;
+        width: 65%;
+        display: flex;
+        color: rgb(217, 214, 214);
+        flex-direction: column;
+      }
+
+      .txt_box .title {
+        margin: auto;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+      }
+
+      .txt_box .descs {
+        width: 95%;
+        margin: auto;
+        text-transform: capitalize;
+      }
+
+      .descs p {
+        font-size: 13px;
+        margin: 10px 0px;
+      }
+
+      .txt_box .btns {
+        width: 95%;
+        padding: 20px 0px;
+        margin: auto;
+      }
+
+      .btns button {
+        text-transform: uppercase;
+        outline: none;
+        border: 1.5px solid #9a73e0;
+        background-color: transparent;
+        color: #9a73e0;
+        font-weight: 500;
+        font-size: 13px;
+        border-radius: 3px;
+        width: 25%;
+        height: 30px;
+        margin-right: 5px;
+        transition: 0.5s;
+      }
+
+      .cart_card .img_box img {
+        width: 100%;
+      }
+
+      .main_cart_cont .cart_cont_2 {
+        width: 35%;
+        background-color: #343434;
+        color: rgb(224, 218, 218);
+        display: flex;
+        padding: 0px;
+        flex-direction: column;
+        font-family: "Bebas Neue", cursive;
+        height: auto;
+        /* padding-bottom: -50px; */
+        margin: 0px;
+      }
+
+      .cart_cont_2 .title {
+        text-transform: uppercase;
+        width: 90%;
+        margin: 0px auto;
+      }
+
+      .title h1 {
+        font-size: 40px;
+        font-weight: 500;
+        font-family: "Bebas Neue", cursive;
+        margin: 20px 0px;
+        margin-bottom: 0px;
+        letter-spacing: 1px;
+      }
+
+      .cart_cont_2 .promo {
+        margin: 0px auto;
+        width: 90%;
+        overflow: hidden;
+        text-transform: uppercase;
+      }
+
+      .promo h2 {
+        font-size: 25px;
+        font-family: "Bebas Neue", cursive;
+        letter-spacing: 1px;
+        font-weight: 500;
+        margin: 5px 0px 15px 0px;
+      }
+
+      .promo i {
+        display: none;
+      }
+
+      .promo input {
+        width: 90%;
+        height: 30px;
+        outline: none;
+        background-color: transparent;
+        border: 2px solid #909091;
+        border-radius: 5px;
+        padding-left: 15px;
+        color: white;
+      }
+
+      .cart_cont_2 .subtotal {
+        width: 90%;
+        margin: 30px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+      }
+
+      .subtotal h2 {
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-size: 22px;
+        margin: 0px;
+      }
+
+      .subtotal p {
+        font-size: 22px;
+      }
+
+      .cart_cont_2 .shipping {
+        width: 90%;
+        margin: 0px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .shipping h1 {
+        width: 80%;
+        margin: 0px;
+        font-weight: 100;
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+
+      .shipping p {
+        font-size: 22px;
+      }
+
+      .tax {
+        width: 90%;
+        margin: 0px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .tax h3 {
+        font-size: 22px;
+        opacity: 0.5;
+        font-weight: 100;
+        margin: 0px;
+      }
+
+      .tax p {
+        font-size: 20px;
+      }
+
+      .total {
+        width: 90%;
+        margin: 0px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .total h1 {
+        font-weight: 100;
+        letter-spacing: 1px;
+        margin: 0px;
+        font-size: 35px;
+        /* font-size: ; */
+      }
+
+      .total p {
+        font-size: 27px;
+        text-decoration: underline;
+      }
+
+      .cart_cont_2 .btnss {
+        width: 90%;
+        margin: 0px auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .btnss button {
+        width: 100%;
+        height: 35px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        background-color: orangered;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        margin-bottom: 0px;
+      }
+
+      .btnss .paybtn {
+        text-transform: capitalize;
+        background-color: #6e6e6e;
+      }
+
+      .btnss .dark,
+      .light {
+        font-size: 22px;
+        font-weight: 800;
+        margin-left: 5px;
+        letter-spacing: -2px;
+      }
+
+      .dark {
+        color: #222d65;
+      }
+
+      .light {
+        color: #169bd7;
+      }
+
+      .cart_cont_2 .promo,
+      .subtotal,
+      .shipping,
+      .tax,
+      .total {
+        margin: 10px auto !important;
+      }
+
+      .btns span {
+        display: none;
+      }
+
+      @media screen and (max-width: 1366px) {
         .main_cart_cont {
-            margin: 50px auto;
-            width: 85%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0px;
+          padding: 0px;
+          width: 85%;
         }
 
-        .main_cart_cont .cart_cont_1 {
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            padding: 0px 0px;
-            margin: 0px auto;
-            height: auto;
+        .main_cart_cont .cart_cont_1 .cart_get h2 {
+          font-size: 15px;
         }
 
         .main_cart_cont .cart_cont_1 .cart_get {
-            background: linear-gradient(to right, rgb(31, 31, 31), rgb(50, 50, 50));
-            /* background: #202124; */
-            color: #9a73e0;
-            text-transform: uppercase;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 20px 0px 20px 15px;
-            margin: 0px;
+          margin: 0px;
         }
 
-        .cart_get h2 {
-            font-size: 18px;
-            margin: 0px;
-        }
-
-        .cart_get p {
-            font-size: 11px;
-            margin: 2px;
-            font-weight: 500;
-
-        }
-
-        .cart_get p a {
-            /* text-decoration: none; */
-            color: #9a73e0;
-            font-weight: 400;
-            text-transform: capitalize;
-
+        .cart_cont_1 .cart_get p {
+          font-size: 10px;
         }
 
         .cart_cont_1 .cart_your {
-            background: linear-gradient(to right, rgb(31, 31, 31), rgb(50, 50, 50));
-            /* background: #202124; */
-            color: #9a73e0;
-            text-transform: uppercase;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 0px 0px 0px 15px;
-            margin: 7px 0px;
+          margin: 7px 0px;
         }
 
-        .cart_your h2 {
-            font-weight: 600;
+        .cart_cont_1 .cart_your h2 {
+          font-size: 17px;
         }
 
-        .main_cart_cont .cart_card {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-items: center;
-            height: auto;
-            background: linear-gradient(to right, rgb(31, 31, 31), rgb(50, 50, 50));
-            padding: 15px 0px;
-            margin: 0px auto 7px auto;
-        }
-
-        .cart_card .img_box {
-            margin: auto;
-            width: 30%;
-        }
-
-        .cart_card .txt_box {
-            margin: auto;
-            width: 65%;
-            display: flex;
-            color: rgb(217, 214, 214);
-            flex-direction: column;
-        }
-
-        .txt_box .title {
-            margin: auto;
-            width: 95%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-transform: uppercase;
-        }
-
-        .txt_box .descs {
-            width: 95%;
-            margin: auto;
-            text-transform: capitalize;
-        }
-
-        .descs p {
-            font-size: 13px;
-            margin: 10px 0px;
-        }
-
-        .txt_box .btns {
-            width: 95%;
-            padding: 20px 0px;
-            margin: auto;
-        }
-
-        .btns button {
-            text-transform: uppercase;
-            outline: none;
-            border: 1.5px solid #9a73e0;
-            background-color: transparent;
-            color: #9a73e0;
-            font-weight: 500;
-            font-size: 13px;
-            border-radius: 3px;
-            width: 25%;
-            height: 30px;
-            margin-right: 5px;
-            transition: .5s;
-        }
-
-        .cart_card .img_box img {
-            width: 100%;
+        .cart_cont_1 .cart_card {
+          padding: 10px 0px;
+          margin: 0px 0px 5px 0px;
         }
 
         .main_cart_cont .cart_cont_2 {
-            width: 35%;
-            background-color: #343434;
-            color: rgb(224, 218, 218);
-            display: flex;
-            padding: 0px;
-            flex-direction: column;
-            font-family: 'Bebas Neue', cursive;
-            height: auto;
-            /* padding-bottom: -50px; */
-            margin: 0px;
+          padding: 0px 0px;
+          margin: 0px;
+          height: auto;
         }
 
-        .cart_cont_2 .title {
-            text-transform: uppercase;
-            width: 90%;
-            margin: 0px auto;
-        }
-
-        .title h1 {
-            font-size: 40px;
-            font-weight: 500;
-            font-family: 'Bebas Neue', cursive;
-            margin: 20px 0px;
-            margin-bottom: 0px;
-            letter-spacing: 1px;
-        }
-
-        .cart_cont_2 .promo {
-            margin: 0px auto;
-            width: 90%;
-            overflow: hidden;
-            text-transform: uppercase;
-        }
-
-        .promo h2 {
-            font-size: 25px;
-            font-family: 'Bebas Neue', cursive;
-            letter-spacing: 1px;
-            font-weight: 500;
-            margin: 5px 0px 15px 0px;
-        }
-
-        .promo i {
-            display: none;
-        }
-
-        .promo input {
-            width: 90%;
-            height: 30px;
-            outline: none;
-            background-color: transparent;
-            border: 2px solid #909091;
-            border-radius: 5px;
-            padding-left: 15px;
-            color: white;
-        }
-
-        .cart_cont_2 .subtotal {
-            width: 90%;
-            margin: 30px auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-transform: uppercase;
-        }
-
-        .subtotal h2 {
-            font-weight: 400;
-            letter-spacing: 1px;
-            font-size: 22px;
-            margin: 0px;
-        }
-
-        .subtotal p {
-            font-size: 22px;
-        }
-
-        .cart_cont_2 .shipping {
-            width: 90%;
-            margin: 0px auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .shipping h1 {
-            width: 80%;
-            margin: 0px;
-            font-weight: 100;
-            font-size: 20px;
-            letter-spacing: 1px;
-        }
-
-        .shipping p {
-            font-size: 22px;
-        }
-
-        .tax {
-            width: 90%;
-            margin: 0px auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .tax h3 {
-            font-size: 22px;
-            opacity: .5;
-            font-weight: 100;
-            margin: 0px;
-        }
-
-        .tax p {
-            font-size: 20px;
-        }
-
-        .total {
-            width: 90%;
-            margin: 0px auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .total h1 {
-            font-weight: 100;
-            letter-spacing: 1px;
-            margin: 0px;
-            font-size: 35px;
-            /* font-size: ; */
-        }
-
-        .total p {
-            font-size: 27px;
-            text-decoration: underline;
-        }
-
-        .cart_cont_2 .btnss {
-            width: 90%;
-            margin: 0px auto;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .btnss button {
-            width: 100%;
-            height: 35px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 900;
-            text-transform: uppercase;
-            background-color: orangered;
-            border: none;
-            color: white;
-            border-radius: 5px;
-            margin-bottom: 0px;
-        }
-
-        .btnss .paybtn {
-            text-transform: capitalize;
-            background-color: #6e6e6e;
-        }
-
-        .btnss .dark,
-        .light {
-            font-size: 22px;
-            font-weight: 800;
-            margin-left: 5px;
-            letter-spacing: -2px;
-        }
-
-        .dark {
-            color: #222D65;
-        }
-
-        .light {
-            color: #169BD7;
+        .cart_cont_2 .title h1 {
+          margin-bottom: 0px;
+          font-size: 35px;
         }
 
         .cart_cont_2 .promo,
@@ -389,796 +445,790 @@
         .shipping,
         .tax,
         .total {
-            margin: 10px auto !important;
+          margin: 0px auto;
+        }
+
+        .shipping h1 {
+          font-size: 18px;
+        }
+
+        .total h1 {
+          font-size: 27px;
+        }
+
+        .tax h3 {
+          font-size: 19px;
+        }
+
+        .tax p {
+          font-size: 17px;
+        }
+
+        .cart_cont_2 h2 {
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
+
+        .cart_cont_2 .btnss {
+          margin-bottom: 0px;
+          padding-bottom: 20px;
+        }
+
+        .btnss button {
+          height: 33px;
+        }
+      }
+
+      @media screen and (max-width: 1135px) {
+        .main_cart_cont {
+          width: 95%;
+        }
+      }
+
+      @media screen and (max-width: 1015px) {
+        .main_cart_cont {
+          width: 98%;
+        }
+
+        .main_cart_cont .cart_cont_2 {
+          width: 38%;
+        }
+      }
+
+      @media screen and (max-width: 830px) {
+        .main_cart_cont .cart_cont_1 .cart_get {
+          padding: 10px 0px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+        }
+
+        .cart_get h2 {
+          text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 954px) {
+        .main_cart_cont {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .main_cart_cont .cart_cont_1 {
+          width: 95%;
+          margin: auto;
+        }
+
+        .main_cart_cont .cart_cont_2 {
+          width: 100%;
+          background-color: transparent;
+          padding: 0px;
+          margin: 20px auto;
+          justify-content: flex-start;
+        }
+
+        .cart_cont_2 .promo input {
+          display: none;
+        }
+
+        .cart_cont_2 .btnss {
+          display: none;
+        }
+
+        .cart_cont_2 .title h1 {
+          font-size: 20px;
+          margin-bottom: 10px;
+          font-weight: 600;
+          font-family: "Montserrat", sans-serif;
+        }
+
+        .cart_cont_2 .subtotal h2,
+        .promo h2,
+        .cart_cont_2 .shipping h1,
+        .tax h3 {
+          font-size: 13px;
+          margin: 0px;
+          text-transform: capitalize;
+          font-weight: 400;
+          opacity: 1;
+          padding: 0px;
+          font-family: "Montserrat", sans-serif;
+        }
+
+        .cart_cont_2 .subtotal p,
+        .promo p,
+        .shipping p,
+        .tax p {
+          font-size: 13px;
+          padding: 0px;
+          margin: 0px;
+          font-family: "Montserrat", sans-serif;
+        }
+
+        .main_cart_cont .cart_cont_2 .shipping h1 {
+          padding: 0px;
+          font-family: "Montserrat", sans-serif;
+          width: 45%;
+        }
+
+        .cart_cont_2 .total h1 {
+          font-size: 18px;
+          font-family: "Montserrat", sans-serif;
+          padding: 0px;
+          margin: 0px;
+          text-transform: capitalize;
+          font-weight: 500;
+        }
+
+        .cart_cont_2 .promo {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          height: auto;
+          transition: 0.5s;
+        }
+
+        .promo input {
+          width: 96%;
+          margin: auto;
+          margin-top: 20px;
+        }
+
+        .cart_cont_2 .total p {
+          font-size: 15px;
+          font-family: "Montserrat", sans-serif;
+          margin: 0px;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_get {
+          padding: 20px 0px;
+          align-items: flex-start;
+          overflow: hidden;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_get h2 {
+          font-size: 17px;
+          margin-left: 15px;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_get p {
+          font-size: 11px;
+          margin-left: 15px;
+        }
+
+        .btns button {
+          font-size: 10px;
+        }
+
+        .cart_cont_1 .title {
+          font-size: 18px;
+          padding: 0px;
+          margin: 0px auto;
+        }
+
+        .title h1 {
+          padding: 0px;
+          margin: 0px;
+        }
+
+        .title p {
+          margin: 0px;
+          padding: 0px;
+          font-size: 15px;
+        }
+
+        .cart_cont_1 .cart_card .txt_box .descs .cart_info p {
+          font-size: 12px;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .main_cart_cont .cart_cont_1 .cart_get h2 {
+          font-size: 15px;
+        }
+
+        .cart_get p {
+          margin-top: 5px;
+          font-size: 8px;
+        }
+
+        .cart_card .title h4 {
+          font-size: 15px;
+          margin: 10px 0px;
+          /* margin-bottom: 10px; */
+        }
+
+        .cart_card .img_box {
+          width: 25%;
+        }
+
+        .cart_card .txt_box {
+          width: 70%;
+        }
+
+        .btns button {
+          font-size: 11px;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_card .txt_box .cart_info p {
+          font-size: 11px;
+        }
+      }
+
+      @media screen and (max-width: 654px) {
+        .main_cart_cont .cart_cont_1 .cart_get h2 {
+          font-size: 12px;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_get p {
+          font-size: 8px;
+        }
+      }
+
+      @media screen and (max-width: 560px) {
+        .title p {
+          font-size: 12px;
+        }
+
+        .cart_card .title h4 {
+          font-size: 12px;
+        }
+
+        .cart_card .img_box {
+          width: 30%;
+        }
+
+        .cart_card .txt_box {
+          width: 60%;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_card .txt_box .cart_info p {
+          font-size: 10px;
+        }
+
+        .btns button {
+          width: 47%;
+        }
+      }
+
+      @media screen and (max-width: 585px) {
+        .promo input {
+          width: 70%;
+        }
+      }
+
+      @media screen and (max-width: 481px) {
+        .main_cart_cont {
+          margin: 10px 0px;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_get {
+          display: none;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_your {
+          margin-top: 0px;
+          align-items: center;
+        }
+
+        .main_cart_cont .cart_cont_1 {
+          justify-content: center;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_card {
+          margin: auto;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_card .txt_box {
+          width: 65%;
+        }
+
+        .txt_box .title h4 {
+          font-size: 14px;
+        }
+
+        .txt_box .title p {
+          font-size: 14px;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_card .img_box {
+          width: 30%;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_card .txt_box .descs .cart_info {
+          text-align: center;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_card .txt_box .descs .cart_info p {
+          font-size: 12px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .cart_card .title {
+          flex-direction: column;
+        }
+
+        .btns button {
+          display: none;
+        }
+
+        .main_cart_cont .cart_cont_1 .cart_card {
+          margin-bottom: 10px;
+        }
+
+        .cart_card .btns {
+          display: flex;
+          justify-content: center;
+          text-align: center;
         }
 
         .btns span {
-            display: none;
+          margin: 0px 5px;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #373737;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
-
-        @media screen and (max-width : 1366px) {
-            .main_cart_cont {
-                padding: 0px;
-                width: 85%;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_get h2 {
-                font-size: 15px;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_get {
-                margin: 0px;
-            }
-
-            .cart_cont_1 .cart_get p {
-                font-size: 10px;
-            }
-
-            .cart_cont_1 .cart_your {
-                margin: 7px 0px;
-            }
-
-            .cart_cont_1 .cart_your h2 {
-                font-size: 17px;
-            }
-
-            .cart_cont_1 .cart_card {
-                padding: 10px 0px;
-                margin: 0px 0px 5px 0px;
-            }
-
-            .main_cart_cont .cart_cont_2 {
-                padding: 0px 0px;
-                margin: 0px;
-                height: auto;
-            }
-
-            .cart_cont_2 .title h1 {
-                margin-bottom: 0px;
-                font-size: 35px;
-            }
-
-            .cart_cont_2 .promo,
-            .subtotal,
-            .shipping,
-            .tax,
-            .total {
-                margin: 0px auto;
-            }
-
-            .shipping h1 {
-                font-size: 18px;
-            }
-
-            .total h1 {
-                font-size: 27px;
-            }
-
-            .tax h3 {
-                font-size: 19px;
-            }
-
-            .tax p {
-                font-size: 17px;
-            }
-
-            .cart_cont_2 h2 {
-                font-size: 22px;
-                margin-bottom: 5px;
-            }
-
-            .cart_cont_2 .btnss {
-                margin-bottom: 0px;
-                padding-bottom: 20px;
-            }
-
-            .btnss button {
-                height: 33px;
-            }
+        .btns span .fa-trash {
+          color: rgb(205, 7, 7);
         }
 
-        @media screen and (max-width: 1135px) {
-            .main_cart_cont {
-                width: 95%;
-            }
+        .btns span .fa-edit {
+          color: green;
         }
-
-        @media screen and (max-width: 1015px) {
-            .main_cart_cont {
-                width: 98%;
-            }
-
-            .main_cart_cont .cart_cont_2 {
-                width: 38%;
-            }
-
-        }
-
-        @media screen and (max-width:830px) {
-            .main_cart_cont .cart_cont_1 .cart_get {
-                padding: 10px 0px;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-            }
-
-            .cart_get h2 {
-                text-align: center;
-            }
-        }
-
-        @media screen and (max-width: 954px) {
-            .main_cart_cont {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .main_cart_cont .cart_cont_1 {
-                width: 95%;
-                margin: auto;
-            }
-
-            .main_cart_cont .cart_cont_2 {
-                width: 100%;
-                background-color: transparent;
-                padding: 0px;
-                margin: 20px auto;
-                justify-content: flex-start;
-            }
-
-            .cart_cont_2 .promo input {
-                display: none;
-            }
-
-            .cart_cont_2 .btnss {
-                display: none;
-            }
-
-            .cart_cont_2 .title h1 {
-                font-size: 20px;
-                margin-bottom: 10px;
-                font-weight: 600;
-                font-family: 'Montserrat', sans-serif;
-
-            }
-
-            .cart_cont_2 .subtotal h2,
-            .promo h2,
-            .cart_cont_2 .shipping h1,
-            .tax h3 {
-                font-size: 13px;
-                margin: 0px;
-                text-transform: capitalize;
-                font-weight: 400;
-                opacity: 1;
-                padding: 0px;
-                font-family: 'Montserrat', sans-serif;
-            }
-
-            .cart_cont_2 .subtotal p,
-            .promo p,
-            .shipping p,
-            .tax p {
-                font-size: 13px;
-                padding: 0px;
-                margin: 0px;
-                font-family: 'Montserrat', sans-serif;
-            }
-
-            .main_cart_cont .cart_cont_2 .shipping h1 {
-                padding: 0px;
-                font-family: 'Montserrat', sans-serif;
-                width: 45%;
-            }
-
-            .cart_cont_2 .total h1 {
-                font-size: 18px;
-                font-family: 'Montserrat', sans-serif;
-                padding: 0px;
-                margin: 0px;
-                text-transform: capitalize;
-                font-weight: 500;
-
-            }
-
-            .cart_cont_2 .promo {
-                display: flex;
-                flex-direction: column;
-                text-align: left;
-                height: auto;
-                transition: .5s;
-            }
-
-            .promo input {
-                width: 96%;
-                margin: auto;
-                margin-top: 20px;
-            }
-
-            .cart_cont_2 .total p {
-                font-size: 15px;
-                font-family: 'Montserrat', sans-serif;
-                margin: 0px;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_get {
-                padding: 20px 0px;
-                align-items: flex-start;
-                overflow: hidden;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_get h2 {
-                font-size: 17px;
-                margin-left: 15px;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_get p {
-                font-size: 11px;
-                margin-left: 15px;
-            }
-
-            .btns button {
-                font-size: 10px;
-            }
-
-            .cart_cont_1 .title {
-                font-size: 18px;
-                padding: 0px;
-                margin: 0px auto;
-            }
-
-            .title h1 {
-                padding: 0px;
-                margin: 0px;
-            }
-
-            .title p {
-                margin: 0px;
-                padding: 0px;
-                font-size: 15px;
-            }
-
-            .cart_cont_1 .cart_card .txt_box .descs .cart_info p {
-                font-size: 12px;
-            }
-        }
-
-        @media screen and (max-width: 700px) {
-            .main_cart_cont .cart_cont_1 .cart_get h2 {
-                font-size: 15px;
-            }
-
-            .cart_get p {
-                margin-top: 5px;
-                font-size: 8px;
-            }
-
-            .cart_card .title h4 {
-                font-size: 15px;
-                margin: 10px 0px;
-                /* margin-bottom: 10px; */
-            }
-
-            .cart_card .img_box {
-                width: 25%;
-            }
-
-            .cart_card .txt_box {
-                width: 70%;
-            }
-
-            .btns button {
-                font-size: 11px;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_card .txt_box .cart_info p {
-                font-size: 11px;
-            }
-        }
-
-        @media screen and (max-width: 654px) {
-            .main_cart_cont .cart_cont_1 .cart_get h2 {
-                font-size: 12px;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_get p {
-                font-size: 8px;
-            }
-        }
-
-        @media screen and (max-width:560px) {
-            .title p {
-                font-size: 12px;
-            }
-
-            .cart_card .title h4 {
-                font-size: 12px;
-            }
-
-            .cart_card .img_box {
-                width: 30%;
-            }
-
-            .cart_card .txt_box {
-                width: 60%;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_card .txt_box .cart_info p {
-                font-size: 10px;
-            }
-
-            .btns button {
-                width: 47%;
-            }
-        }
-
-        @media screen and (max-width:585px) {
-            .promo input {
-                width: 70%;
-            }
-        }
-
-        @media screen and (max-width:481px) {
-            .main_cart_cont {
-                margin: 10px 0px;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_get {
-                display: none;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_your {
-                margin-top: 0px;
-                align-items: center;
-            }
-
-            .main_cart_cont .cart_cont_1 {
-                justify-content: center;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_card {
-                margin: auto;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_card .txt_box {
-                width: 65%;
-            }
-
-            .txt_box .title h4 {
-                font-size: 14px;
-            }
-
-            .txt_box .title p {
-                font-size: 14px;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_card .img_box {
-                width: 30%;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_card .txt_box .descs .cart_info {
-                text-align: center;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_card .txt_box .descs .cart_info p {
-                font-size: 12px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .cart_card .title {
-                flex-direction: column;
-            }
-
-            .btns button {
-                display: none;
-            }
-
-            .main_cart_cont .cart_cont_1 .cart_card {
-                margin-bottom: 10px;
-            }
-
-            .cart_card .btns {
-                display: flex;
-                justify-content: center;
-                text-align: center;
-            }
-
-            .btns span {
-                margin: 0px 5px;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                background-color: #373737;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .btns span .fa-trash {
-                color: rgb(205, 7, 7);
-            }
-
-            .btns span .fa-edit {
-                color: green;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body style="overflow-x: hidden !important;">
-   <div class="center" id="loader">
-        <div class="ring"></div>
-        <span>loading...</span>
+  <body style="overflow-x: hidden !important">
+    <div class="center" id="loader">
+      <div class="ring"></div>
+      <span>loading...</span>
     </div>
     <!-- nav bar start -->
     <nav>
-        <div class="main_left_por">
-            <div id="searchbar" class="search-bar">
-                <input placeholder="search in zap mart" type="text">
-                <button>
-                    <i class="fas fa-search"></i>
-                </button>
-                <div class="searchboxclose" id="searchclose"><i class="fas fa-times"></i></div>
-            </div>
-            <div id="portion" class="portion_left ">
-
-                <div class="search design" id="click_search">
-                    <i class="fas fa-search"></i>
-                </div>
-
-                <div class="location">
-                    <div><i class="fas fa-location-dot"></i></div>
-                    <div>
-                        <div class="sm">Set Your</div>
-                        <div class="lg">Location</div>
-                    </div>
-                </div>
-
-                <div class="language langcurrency design">
-                    <select>
-                        <option>ENG</option>
-                        <option>ENG</option>
-                        <option>urdu</option>
-                        <option>ENG</option>
-                    </select>
-                </div>
-
-                <div class="currency langcurrency design">
-                    <select>
-                        <option>USD</option>
-                        <option>pkr</option>
-                    </select>
-                </div>
-            </div>
+      <div class="main_left_por">
+        <div id="searchbar" class="search-bar">
+          <input placeholder="search in zap mart" type="text" />
+          <button>
+            <i class="fas fa-search"></i>
+          </button>
+          <div class="searchboxclose" id="searchclose">
+            <i class="fas fa-times"></i>
+          </div>
         </div>
-        <div class="portion_center">
-            <a href="./index.html">
-                <h1>zap mart</h1>
-            </a>
+        <div id="portion" class="portion_left">
+          <div class="search design" id="click_search">
+            <i class="fas fa-search"></i>
+          </div>
 
+          <div class="location">
+            <div><i class="fas fa-location-dot"></i></div>
+            <div>
+              <div class="sm">Set Your</div>
+              <div class="lg">Location</div>
+            </div>
+          </div>
+
+          <div class="language langcurrency design">
+            <select>
+              <option>ENG</option>
+              <option>ENG</option>
+              <option>urdu</option>
+              <option>ENG</option>
+            </select>
+          </div>
+
+          <div class="currency langcurrency design">
+            <select>
+              <option>USD</option>
+              <option>pkr</option>
+            </select>
+          </div>
         </div>
-        <div class="portion_right">
-            <div class="live design">
-                <p>live</p>
-                <div class="indicator"></div>
-            </div>
-            <div class="account design ">
-                <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
-
-            </div>
-            <div class="heart design">
-                <i class="fas fa-heart"></i>
-
-            </div>
-            <div class="bag design">
-                <i class="fas fa-shopping-bag"></i>
-
-            </div>
+      </div>
+      <div class="portion_center">
+        <a href="./index.html">
+          <h1>zap mart</h1>
+        </a>
+      </div>
+      <div class="portion_right">
+        <div class="live design">
+          <p>live</p>
+          <div class="indicator"></div>
         </div>
-
+        <div class="account design">
+          <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="heart design">
+          <a href="./favourite.html" class="heart design"><i class="fas fa-heart"></i></a>
+        </div>
+        
+          <div class="bag design">
+            <a href="./cart.html" class="design"
+              ><i class="fas fa-shopping-bag"></i
+            ></a>
+          </div>
+         
+      </div>
     </nav>
 
     <!-- nav bar end -->
 
-
     <div class="sticky_cont">
-        <!-- second header start -->
+      <!-- second header start -->
 
-        <header>
-            <div class="logo">
-                <a href="./index.html">
-                    <h1>zap mart</h1>
-                </a>
-            </div>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About Us</a></li>
-                <li class="products" id="prd">
-                    <a href="./product.html" class="before_pro">Products</a> <i class="fa-solid fa-angle-down"></i>
-                    <div class="drp-cont" id="drp-box">
-                        <ul>
-                            <li><a href="./category_mob.html" class="drp-items">Tablets & Mobiles</a></li>
-                            <li><a href="./category_com.html" class="drp-items">Computer Accessories</a></li>
-                            <li><a href="./category_watch.html" class="drp-items">Watch Collections</a></li>
-                            <li><a href="./category_speak.html" class="drp-items">Portable Speakers</a></li>
-                            <li><a href="./category_laptop.html" class="drp-items">Gaming Laptops</a></li>
-                            <li><a href="./category_camera.html" class="drp-items">Outstands Cameras</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="./contactus.html">Contact Us</a></li>
-            </ul>
-            <div class="portion_right">
-                <div class="account design ">
-                    <a href="./login.html" class="design"><i class="fas fa-user"></i></a>
-                </div>
-                <div class="heart design">
-                    <i class="fas fa-heart"></i>
-
-                </div>
-                <div class="bag design">
-                    <i class="fas fa-shopping-bag"></i>
-
-                </div>
-                <div class="design" id="bars">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </header>
-
-        <!-- second navbar end -->
-        <!-- responsive navbar -->
-
-        <div class="responsive_bar" id="responsive_bar">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li class="res_pro" id="res_prd">
-                    <div class="pro_flex">Products <i class="fa-solid fa-angle-down"></i></div>
-                    <div class="res-drp-cont">
-                        <ul id="res-drp-box" class="ul">
-                            <li><a href="./category_mob.html" class="res-drp-items">Talets & Mobile</a></li>
-                            <li><a href="./category_com.html" class="res-drp-items">Computer Accessories</a></li>
-                            <li><a href="./category_watch.html" class="res-drp-items">Watch Collections</a></li>
-                            <li><a href="./category_speak.html" class="res-drp-items">Portable Speakers</a></li>
-                            <li><a href="./category_laptop.html" class="res-drp-items">Gaming Laptops</a></li>
-                            <li><a href="./category_camera.html" class="res-drp-items">Outstands Cameras</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="#" class="con">Contact Us</a></li>
-            </ul>
-            <div class="search-cont">
-                <p>whats your looking for ?</p>
-                <input type="search" placeholder="search in zap mart">
-                <button type="submit">Search &nbsp; <i class="fas fa-search"></i> </button>
-            </div>
+      <header>
+        <div class="logo">
+          <a href="./index.html">
+            <h1>zap mart</h1>
+          </a>
         </div>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li class="products" id="prd">
+            <a href="./product.html" class="before_pro">Products</a>
+            <i class="fa-solid fa-angle-down"></i>
+            <div class="drp-cont" id="drp-box">
+              <ul>
+                <li>
+                  <a href="./category_mob.html" class="drp-items"
+                    >Tablets & Mobiles</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_com.html" class="drp-items"
+                    >Computer Accessories</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_watch.html" class="drp-items"
+                    >Watch Collections</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_speak.html" class="drp-items"
+                    >Portable Speakers</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_laptop.html" class="drp-items"
+                    >Gaming Laptops</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_camera.html" class="drp-items"
+                    >Outstands Cameras</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="./contactus.html">Contact Us</a></li>
+        </ul>
+        <div class="portion_right">
+          <div class="account design">
+            <a href="./login.html" class="design"
+              ><i class="fas fa-user"></i
+            ></a>
+          </div>
+          <div class="heart design">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="bag design">
+            <a href="./cart.html" class="design"
+              ><i class="fas fa-shopping-bag"></i
+            ></a>
+          </div>
+          <div class="design" id="bars">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </header>
 
+      <!-- second navbar end -->
+      <!-- responsive navbar -->
+
+      <div class="responsive_bar" id="responsive_bar">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li class="res_pro" id="res_prd">
+            <div class="pro_flex">
+              Products <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="res-drp-cont">
+              <ul id="res-drp-box" class="ul">
+                <li>
+                  <a href="./category_mob.html" class="res-drp-items"
+                    >Talets & Mobile</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_com.html" class="res-drp-items"
+                    >Computer Accessories</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_watch.html" class="res-drp-items"
+                    >Watch Collections</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_speak.html" class="res-drp-items"
+                    >Portable Speakers</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_laptop.html" class="res-drp-items"
+                    >Gaming Laptops</a
+                  >
+                </li>
+                <li>
+                  <a href="./category_camera.html" class="res-drp-items"
+                    >Outstands Cameras</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#" class="con">Contact Us</a></li>
+        </ul>
+        <div class="search-cont">
+          <p>whats your looking for ?</p>
+          <input type="search" placeholder="search in zap mart" />
+          <button type="submit">
+            Search &nbsp; <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
     </div>
     <div class="main_cart_cont">
-        <div class="cart_cont_1">
-            <div class="cart_get">
-                <h2>get free shipping with zapmart on first order. every time.</h2>
-                <p>non-members recieve free shipping for purchasess $20 or more. <a href="#"> see details</a></p>
-            </div>
-            <div class="cart_your">
-                <h2>your cart (2)</h2>
-            </div>
-            <div class="cart_card">
-                <div class="img_box">
-                    <img src="./assets/img/products_img/dslr2.png" alt="">
-                </div>
-                <div class="txt_box">
-                    <div class="title">
-                        <h4>canon dslr camera</h4>
-                        <p> $<span class="p10">247</span></p>
-                    </div>
-                    <div class="descs">
-                        <div class="cart_info">
-                            <p><b>model number : </b> 00040056789 </p>
-                            <p><b>tracticg number : </b> 124450589 </p>
-                            <p><b>color : </b> black & red</p>
-                            <p><b>qty : </b>
-                                <span class="position-relative">
-                                    <span class="minus" onclick="dencrementValue(0)">
-                                        <i class="fa-solid fa-minus"></i>
-                                    </span>
-                                    <input type="text" id="valcart0" min="1" value="0">
-                                    <span class="plus" onclick="incrementValue(0)">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </span>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="btns">
-                        <span><i class="fas fa-edit"></i></span>
-                        <span><i class="fas fa-trash"></i></span>
-                        <button>remove</button>
-                        <button>edit</button>
-                    </div>
-                </div>
-            </div>
-            <div class="cart_card">
-                <div class="img_box">
-                    <img src="./assets/img/products_img/monitor3.png" alt="">
-                </div>
-                <div class="txt_box">
-                    <div class="title">
-                        <h4>asus IPS panel LCd</h4>
-                        <p> $<span class="p11">273</span></p>
-                    </div>
-                    <div class="descs">
-                        <div class="cart_info">
-                            <p><b>model number : </b> 00021055841 </p>
-                            <p><b>tracticg number : </b> 214257529 </p>
-                            <p><b>color : </b> black & grey</p>
-                            <p><b>qty : </b> <span class="position-relative">
-                                    <span class="minus" onclick="dencrementValue(1)">
-                                        <i class="fa-solid fa-minus"></i>
-                                    </span>
-                                    <input type="text" id="valcart1" min="1" value="0">
-                                    <span class="plus" onclick="incrementValue(1)">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </span>
-                                </span></p>
-                        </div>
-                    </div>
-                    <div class="btns">
-                        <span><i class="fas fa-edit"></i></span>
-                        <span><i class="fas fa-trash"></i></span>
-                        <button>remove</button>
-                        <button>edit</button>
-                    </div>
-                </div>
-            </div>
+      <div class="cart_cont_1">
+        <div class="cart_get">
+          <h2>get free shipping with zapmart on first order. every time.</h2>
+          <p>
+            non-members recieve free shipping for purchasess $20 or more.
+            <a href="#"> see details</a>
+          </p>
         </div>
-        <div class="cart_cont_2">
+        <div class="cart_your">
+          <h2>your cart (2)</h2>
+        </div>
+        <div class="cart_card">
+          <div class="img_box">
+            <img src="./assets/img/products_img/dslr2.png" alt="" />
+          </div>
+          <div class="txt_box">
             <div class="title">
-                <h1>summary</h1>
+              <h4>canon dslr camera</h4>
+              <p>$<span class="p10">247</span></p>
             </div>
-            <div class="promo">
-                <h2>do you have a promo code? <i class="fas fa-angle-down"></i> </h2>
-                <input type="text" id="pro_inp" placeholder="type your promo code">
+            <div class="descs">
+              <div class="cart_info">
+                <p><b>model number : </b> 00040056789</p>
+                <p><b>tracticg number : </b> 124450589</p>
+                <p><b>color : </b> black & red</p>
+                <p>
+                  <b>qty : </b>
+                  <span class="position-relative">
+                    <span class="minus" onclick="dencrementValue(0)">
+                      <i class="fa-solid fa-minus"></i>
+                    </span>
+                    <input type="text" id="valcart0" min="1" value="0" />
+                    <span class="plus" onclick="incrementValue(0)">
+                      <i class="fa-solid fa-plus"></i>
+                    </span>
+                  </span>
+                </p>
+              </div>
             </div>
-            <div class="subtotal">
-                <h2>subtotal <i class="fa-solid fa-money-check-dollar"></i></h2>
-                <p> $<span class="subtotalpri">520</span></p>
+            <div class="btns">
+              <span><i class="fas fa-edit"></i></span>
+              <span><i class="fas fa-trash"></i></span>
+              <button>remove</button>
+              <button>edit</button>
             </div>
-            <div class="shipping">
-                <h1>estimated shopping & handling</h1>
-                <p> $<span class="est">2.00</span></p>
-            </div>
-            <div class="tax">
-                <h3>estimated tax</h3>
-                <p>$_-_</p>
-            </div>
-            <div class="total">
-                <h1>total <i class="fa-solid fa-money-check-dollar"></i> </h1>
-                <p> $<span class="totalpri">522</span></p>
-            </div>
-            <div class="btnss">
-                <button>checkout</button>
-                <h3><i>or</i></h3>
-                <button class="paybtn">check out with <i class="dark">pay</i><i class="light">Pal</i> </button>
-            </div>
+          </div>
         </div>
+        <div class="cart_card">
+          <div class="img_box">
+            <img src="./assets/img/products_img/monitor3.png" alt="" />
+          </div>
+          <div class="txt_box">
+            <div class="title">
+              <h4>asus IPS panel LCd</h4>
+              <p>$<span class="p11">273</span></p>
+            </div>
+            <div class="descs">
+              <div class="cart_info">
+                <p><b>model number : </b> 00021055841</p>
+                <p><b>tracticg number : </b> 214257529</p>
+                <p><b>color : </b> black & grey</p>
+                <p>
+                  <b>qty : </b>
+                  <span class="position-relative">
+                    <span class="minus" onclick="dencrementValue(1)">
+                      <i class="fa-solid fa-minus"></i>
+                    </span>
+                    <input type="text" id="valcart1" min="1" value="0" />
+                    <span class="plus" onclick="incrementValue(1)">
+                      <i class="fa-solid fa-plus"></i>
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="btns">
+              <span><i class="fas fa-edit"></i></span>
+              <span><i class="fas fa-trash"></i></span>
+              <button>remove</button>
+              <button>edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart_cont_2">
+        <div class="title">
+          <h1>summary</h1>
+        </div>
+        <div class="promo">
+          <h2>do you have a promo code? <i class="fas fa-angle-down"></i></h2>
+          <input type="text" id="pro_inp" placeholder="type your promo code" />
+        </div>
+        <div class="subtotal">
+          <h2>subtotal <i class="fa-solid fa-money-check-dollar"></i></h2>
+          <p>$<span class="subtotalpri">520</span></p>
+        </div>
+        <div class="shipping">
+          <h1>estimated shopping & handling</h1>
+          <p>$<span class="est">2.00</span></p>
+        </div>
+        <div class="tax">
+          <h3>estimated tax</h3>
+          <p>$_-_</p>
+        </div>
+        <div class="total">
+          <h1>total <i class="fa-solid fa-money-check-dollar"></i></h1>
+          <p>$<span class="totalpri">522</span></p>
+        </div>
+        <div class="btnss">
+          <button>checkout</button>
+          <h3><i>or</i></h3>
+          <button class="paybtn">
+            check out with <i class="dark">pay</i><i class="light">Pal</i>
+          </button>
+        </div>
+      </div>
     </div>
 
-
     <div class="footer">
-        <div class="getintouch">
-            <div class="head">Get In Touch</div>
-            <div>
-                <i class="fab fa-youtube "></i>
-                <i class="fab fa-facebook "></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-google-plus"></i>
-            </div>
+      <div class="getintouch">
+        <div class="head">Get In Touch</div>
+        <div>
+          <i class="fab fa-youtube"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-google-plus"></i>
         </div>
+      </div>
 
+      <!-- footer list 1 & 2 -->
 
-
-
-
-
-
-        <!-- footer list 1 & 2 -->
-
-        <div class="footerlinks">
-            <div class="footerlist12">
-                <div class="footer1">
-                    <ul>
-                        <li class="action">LINKS</li>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./about.html">About Us</a></li>
-                        <li><a href="./product.html">Products</a></li>
-                        <li><a href="./contactus.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer2">
-                    <ul>
-                        <li class="action">RECOMMANDED</li>
-                        <li><a href="./category_camera.html">Electronic Cameras</a></li>
-                        <li><a href="./category_camera.html">Electronic Cameras</a></li>
-                        <li><a href="./category_mob.html">Mobile Gadgets</a></li>
-                        <li><a href="./category_com.html">Computer Gadgets</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- footer list 3 & 4 -->
-            <div class="footerlist34">
-                <div class="footer3">
-                    <ul>
-                        <li class="action">CONTACT</li>
-                        <li><a href="mailto:m.taha10045@gmail.com">Contact via Mail</a></li>
-                        <li><a href="mailto:m.taha10045@gmail.com">Contact via Mail</a></li>
-
-                        <li><a href="tel:03224116386">Helpline no2.</a></li>
-                        <li><a href="tel:03224116386">Helpline no2.</a></li>
-                    </ul>
-                </div>
-                <div class="footer4">
-                    <ul>
-                        <li class="action">SOCIAL</li>
-                        <li><a href="https://www.facebook.com/">Facebook</a></li>
-                        <li><a href="https://www.linkedin.com/feed/">Linked-In</a></li>
-                        <li><a href="https://www.youtube.com">Youtube</a></li>
-                        <li><a href="https://twitter.com/login">Twitter</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="footerlinks">
+        <div class="footerlist12">
+          <div class="footer1">
+            <ul>
+              <li class="action">LINKS</li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./product.html">Products</a></li>
+              <li><a href="./contactus.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer2">
+            <ul>
+              <li class="action">RECOMMANDED</li>
+              <li><a href="./category_camera.html">Electronic Cameras</a></li>
+              <li><a href="./category_camera.html">Electronic Cameras</a></li>
+              <li><a href="./category_mob.html">Mobile Gadgets</a></li>
+              <li><a href="./category_com.html">Computer Gadgets</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="copyright">
-            <p>Copyright © 2022 <a href="#">ZAP MART</a> All Rights Reserved</p>
+        <!-- footer list 3 & 4 -->
+        <div class="footerlist34">
+          <div class="footer3">
+            <ul>
+              <li class="action">CONTACT</li>
+              <li>
+                <a href="mailto:m.taha10045@gmail.com"><i class="fa-light fa-envelope"></i> zapmart@gmail.com</a>
+              </li>
+              <li>
+                <a href="mailto:rayyanali4422"><i class="fa-light fa-envelope"></i> rayyanali4422@gmail.com</a>
+              </li>
+              <li><a href="tel:03432959411"><i class="fa-light fa-phone"></i> 03432959411</a></li>
+              <li><a href="tel:03425328174"><i class="fa-light fa-phone"></i> 03425328174</a></li>
+            </ul>
+          </div>
+          <div class="footer4">
+            <ul>
+              <li class="action">SOCIAL</li>
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+              <li><a href="https://www.linkedin.com/feed/">Linked-In</a></li>
+              <li><a href="https://www.youtube.com">Youtube</a></li>
+              <li><a href="https://twitter.com/login">Twitter</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2022 <a href="#">ZAP MART</a> All Rights Reserved</p>
+      </div>
     </div>
 
     <script>
-        function incrementValue(x) {
-            var cart = parseInt(document.getElementById("valcart" + x).value);
+      function incrementValue(x) {
+        var cart = parseInt(document.getElementById("valcart" + x).value);
 
-            cart = isNaN(cart) ? 0 : cart;
-            if (isNaN(cart)) {
-                cart = 0;
-            }
-            else {
-                cart = cart
-            }
-            if (cart < 12) {
-                cart++;
-                document.getElementById('valcart' + x).value = cart;
-            }
+        cart = isNaN(cart) ? 0 : cart;
+        if (isNaN(cart)) {
+          cart = 0;
+        } else {
+          cart = cart;
         }
-
-
-        function dencrementValue(x) {
-            var cart = parseInt(document.getElementById("valcart" + x).value);
-
-            cart = isNaN(cart) ? 0 : cart;
-            if (isNaN(cart)) {
-                cart = 0;
-            }
-            else {
-                cart = cart
-            }
-            if (cart > 1) {
-                cart--;
-                document.getElementById('valcart' + x).value = cart;
-            }
+        if (cart < 12) {
+          cart++;
+          document.getElementById("valcart" + x).value = cart;
         }
+      }
 
+      function dencrementValue(x) {
+        var cart = parseInt(document.getElementById("valcart" + x).value);
+
+        cart = isNaN(cart) ? 0 : cart;
+        if (isNaN(cart)) {
+          cart = 0;
+        } else {
+          cart = cart;
+        }
+        if (cart > 1) {
+          cart--;
+          document.getElementById("valcart" + x).value = cart;
+        }
+      }
     </script>
-
-</body>
-<!-- js script file  -->
-<script src="./assets/js/logic.js"></script>
-
+  </body>
+  <!-- js script file  -->
+  <script src="./assets/js/logic.js"></script>
 </html>
