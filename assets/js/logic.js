@@ -55,6 +55,7 @@ $(document).ready(function () {
       $(this).toggleClass("fa-solid");
       $(this).toggleClass("heart_anim");
       $("#mn-q").css("display", "none");
+      setInterval(function(){window.location.href="favourite.html"},800);
     });
   }
 

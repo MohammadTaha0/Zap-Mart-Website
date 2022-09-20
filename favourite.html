@@ -85,6 +85,7 @@
     }
     .card {
       box-shadow: 2px 6px 15px -3px rgba(0, 0, 0, 0.71);
+      overflow: hidden !important;
     }
     .card-details {
       color: aliceblue;
@@ -188,34 +189,79 @@
     }
     @media (max-width: 768px) {
       .card {
-        display: block;
+        flex-wrap: wrap;
       }
-      .card-details {
-        margin-top: 20px;
+      .d-flex{
+        width: 100%;
+        height: auto;
+        align-items: center;
       }
-      .card-body {
-        margin-right: 0;
+      .card-img{
+        width: 40%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
+      .card-img img{
+        width: 100%;
+        height: 200px;
+        object-fit:fill;
+      }
+      .card-details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 20px 0px;
+        padding: 0px;
+      }
+      .card-details .buttons{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+      }
+      .card-details .buttons button{
+        width: 49.5% !important;
+        padding: 10px 0px;
+        margin: 0px;
+      }
+      .price, .cut-price, .shipping, .para{
+        display: none;
+      }
+      
     }
     @media (max-width: 500px) {
       .card {
-        display: block;
+        display: flex !important;
+        flex-wrap: wrap;
         text-align: center;
       }
-      .card-top {
-        display: block;
-        margin-left: 0;
+      .card-img{
+        width: 100% !important;
+        text-align: center;
+        justify-content: center;
       }
-      .card-body {
-        margin: 20px 0;
+      .card-img img{
+        object-fit: contain;
+        width: 100% !important;
       }
-      .btn1,
-      .btn2 {
-        margin: auto;
-        margin-top: 10px;
+      .card-details{
+        width: 100% !important;
       }
       .heading {
         font-size: 1.6rem;
+      }
+      .card-body{
+        width: 100% !important;
+        margin: 20px 0px;
+      }
+      .d-flex{
+        width: 100%;
+        flex-wrap: wrap;
       }
     }
     @media (max-width: 320px) {
@@ -358,7 +404,9 @@
             ></a>
           </div>
           <div class="heart design">
-            <i class="fas fa-heart"></i>
+            <a href="./favourite.html" class="heart design"
+              ><i class="fas fa-heart"></i
+            ></a>
           </div>
           <div class="bag design">
             <a href="./cart.html" class="design"
@@ -430,7 +478,7 @@
     <!-- second navbar end -->
 
     <div class="heading">
-      Your Favourites <span style="" class="fs-2">(3)</span>
+      Your Favourites <span class="fs-2">(3)</span>
     </div>
     <div class="container11 overflow">
       <div class="card overflow" data-aos="fade-up" data-aos-delay="100">

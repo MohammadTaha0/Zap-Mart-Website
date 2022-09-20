@@ -1601,6 +1601,22 @@
     width: 60%;
     height: 50%;
   }
+  .pro_cat_main_cont{
+    margin: 10px auto;
+    width: 95%;
+    padding: 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .trending_row{
+    margin-top: 20px;
+  }
+  .pro_cat_main_cont #cat_head
+  {
+    padding: 0px;
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 430px) {
@@ -1816,6 +1832,10 @@
   .shop-now {
     font-size: 10px !important;
     width: 100px !important;
+  } 
+  #mn-q .btns button{
+    padding: 10px;
+    font-size: 12px;
   }
 }
 
@@ -1962,6 +1982,11 @@
 
   header .portion_right .design {
     border: none;
+  }
+  .portion_right .design{
+    padding: 0px 5px !important;
+    margin: 0px !important;
+    width: auto;
   }
 
   .mn-slid-cont {
