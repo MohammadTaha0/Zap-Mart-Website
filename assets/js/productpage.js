@@ -85,6 +85,7 @@ for (i = 0; i < 17; i++) {
     $(this).toggleClass("fa-solid");
     $(this).toggleClass("heart_anim");
     $("#mn-q").css("display", "none");
+    setInterval(function(){window.location.href="favourite.html"},800);
   });
 }
 
